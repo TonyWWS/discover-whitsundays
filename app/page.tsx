@@ -13,7 +13,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url ('/images/discover-whitsunday-hero1.jpg')",
+            backgroundImage: "url('/images/home-hero.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-navy/60 via-ocean/50 to-coral/40"></div>
@@ -45,8 +45,9 @@ export default function Home() {
             <FeatureCard
               title="Whitehaven Beach"
               description="Experience one of the world's most beautiful beaches with pristine white silica sand"
-              image="🏖️"
+              image="/images/whitehaven.jpg"
               link="/whitehaven-beach"
+              isImageUrl={true}
             />
             <FeatureCard
               title="The Islands"
@@ -83,7 +84,7 @@ export default function Home() {
       </div>
 
       {/* Call to Action Section */}
-      <div className="bg-gradient-to-r from-coral via-sand to-ocean py-20">
+      <div className="bg-ocean py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-heading text-5xl font-bold text-white mb-6">
             Ready to Plan Your Whitsundays Adventure?
