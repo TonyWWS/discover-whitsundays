@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -11,489 +12,497 @@ export default function WhitehavenBeachPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/whitehaven.jpg')",
+            backgroundImage: "url('/images/discover-whitsunday-hero1.jpg')",
           }}
         >
-          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-navy/50 via-ocean/40 to-transparent"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-6xl font-bold text-white mb-4 drop-shadow-2xl">
+          <h1 className="font-heading text-7xl font-bold text-white mb-4 drop-shadow-2xl">
             Whitehaven Beach
           </h1>
-          <p className="text-2xl text-white drop-shadow-lg mb-6">
-            7km of Pure White Silica Sand Paradise
+          <p className="font-heading text-3xl text-white drop-shadow-lg mb-6">
+            98% Pure Silica Sand Paradise
           </p>
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors shadow-xl">
-            Book Your Visit
-          </button>
+          <p className="font-body text-xl text-white drop-shadow-lg max-w-2xl mx-auto">
+            Consistently rated as one of the world's most beautiful beaches
+          </p>
         </div>
       </div>
 
-      {/* Introduction */}
+      {/* Quick Facts */}
+      <div className="bg-gradient-to-br from-sand/20 via-white to-coral/10 py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="bg-white p-6 rounded-xl shadow-md text-center border-b-4 border-coral">
+                <div className="text-4xl mb-2">📍</div>
+                <div className="font-heading text-2xl font-bold text-navy mb-1">7km</div>
+                <div className="font-body text-sm text-gray-600">Pristine Beach</div>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-md text-center border-b-4 border-ocean">
+                <div className="text-4xl mb-2">⭐</div>
+                <div className="font-heading text-2xl font-bold text-navy mb-1">98%</div>
+                <div className="font-body text-sm text-gray-600">Pure Silica Sand</div>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-md text-center border-b-4 border-sand">
+                <div className="text-4xl mb-2">🏝️</div>
+                <div className="font-heading text-2xl font-bold text-navy mb-1">Protected</div>
+                <div className="font-body text-sm text-gray-600">National Park</div>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-md text-center border-b-4 border-coral">
+                <div className="text-4xl mb-2">🚤</div>
+                <div className="font-heading text-2xl font-bold text-navy mb-1">Boat Only</div>
+                <div className="font-body text-sm text-gray-600">No Road Access</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-xl text-gray-700 leading-relaxed">
-              Consistently ranked among the world's best beaches, Whitehaven Beach is a 7-kilometer stretch of
-              pristine white silica sand on Whitsunday Island. Its crystal-clear turquoise waters and
-              pure white sand create one of Australia's most photographed natural wonders.
-            </p>
-          </div>
 
-          {/* Quick Facts */}
-          <div className="grid md:grid-cols-4 gap-6 mb-16">
-            <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <div className="text-3xl mb-2">🏖️</div>
-              <div className="font-bold text-gray-900 mb-1">7km Long</div>
-              <div className="text-sm text-gray-600">Pristine coastline</div>
-            </div>
-            <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <div className="text-3xl mb-2">✨</div>
-              <div className="font-bold text-gray-900 mb-1">98% Silica</div>
-              <div className="text-sm text-gray-600">Pure white sand</div>
-            </div>
-            <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <div className="text-3xl mb-2">🌡️</div>
-              <div className="font-bold text-gray-900 mb-1">Cool Sand</div>
-              <div className="text-sm text-gray-600">Even in summer</div>
-            </div>
-            <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <div className="text-3xl mb-2">🏝️</div>
-              <div className="font-bold text-gray-900 mb-1">Uninhabited</div>
-              <div className="text-sm text-gray-600">National park</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Why Visit Section */}
-      <div className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+          {/* Introduction */}
+          <section className="mb-16">
+            <h2 className="font-heading text-4xl font-bold text-navy mb-6">
               Why Whitehaven Beach is Special
             </h2>
+            <div className="font-body text-lg text-gray-700 leading-relaxed space-y-4">
+              <p>
+                Whitehaven Beach stretches over 7 kilometers along Whitsunday Island and is renowned for
+                its brilliant white silica sand and crystal-clear turquoise waters. The sand is 98% pure
+                silica, which gives it a bright white color and makes it cool to walk on even in the
+                hottest weather.
+              </p>
+              <p>
+                Located on the largest island in the Whitsundays archipelago, Whitehaven Beach has been
+                consistently voted as one of the world's best beaches and is the most photographed location
+                in Queensland. The northern end features Hill Inlet, where the tide shifts create a stunning
+                fusion of colors that looks like an abstract painting from above.
+              </p>
+            </div>
+          </section>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-xl shadow-md">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Unique Sand Composition</h3>
-                <p className="text-gray-700 mb-4">
-                  The sand at Whitehaven Beach is 98% pure silica, which gives it its brilliant white
-                  color and incredibly fine texture. Unlike regular beach sand, the silica doesn't retain
-                  heat, so the sand stays cool even on the hottest days.
+          {/* Hill Inlet */}
+          <section className="mb-16">
+            <div className="bg-gradient-to-br from-ocean/10 to-sand/10 p-8 rounded-2xl border-l-4 border-ocean">
+              <h2 className="font-heading text-3xl font-bold text-navy mb-6">
+                Hill Inlet Lookout
+              </h2>
+              <div className="font-body text-gray-700 leading-relaxed space-y-4">
+                <p>
+                  The Hill Inlet lookout is the most iconic viewpoint in the Whitsundays. As the tide shifts,
+                  the inlet creates a stunning swirl of white sand and turquoise water that changes throughout
+                  the day.
                 </p>
-                <p className="text-gray-700">
-                  The sand is so pure that it was once used to manufacture the lenses for the Hubble
-                  Space Telescope. It's also believed to be millions of years old.
+                <p>
+                  To reach the lookout, you'll take a moderate 20-30 minute walk through bushland (about 1km each way).
+                  The track is well-maintained with some stairs and inclines. The view from the top is absolutely
+                  worth the effort.
                 </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-md">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Protected Paradise</h3>
-                <p className="text-gray-700 mb-4">
-                  Whitehaven Beach is part of the Whitsunday Islands National Park, which means it's
-                  protected and undeveloped. There are no resorts, hotels, or permanent structures -
-                  just pure natural beauty.
-                </p>
-                <p className="text-gray-700">
-                  The beach is accessible only by boat, helicopter, or seaplane, which helps preserve
-                  its pristine condition and limits visitor numbers.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-md">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Crystal Clear Waters</h3>
-                <p className="text-gray-700 mb-4">
-                  The waters surrounding Whitehaven Beach are some of the clearest in the world. The
-                  turquoise hues are created by the white sand reflecting through the shallow water.
-                </p>
-                <p className="text-gray-700">
-                  Visibility can extend up to 30 meters, making it perfect for swimming, snorkeling,
-                  and simply admiring the vibrant blues and greens.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-md">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Hill Inlet Lookout</h3>
-                <p className="text-gray-700 mb-4">
-                  The famous Hill Inlet lookout offers one of Australia's most photographed views - a
-                  swirling fusion of white sand and turquoise water as the tide shifts.
-                </p>
-                <p className="text-gray-700">
-                  The 15-20 minute walk to the lookout is moderately challenging but absolutely worth
-                  it for the spectacular panoramic views.
-                </p>
+                <div className="bg-white p-6 rounded-lg mt-4">
+                  <h3 className="font-heading text-xl font-bold text-navy mb-3">📸 Photography Tips:</h3>
+                  <ul className="space-y-2 font-body text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-coral mr-2 font-bold">•</span>
+                      <span><strong>Best time:</strong> Mid-morning (9-11am) for optimal light and tide conditions</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-coral mr-2 font-bold">•</span>
+                      <span><strong>Tide:</strong> Mid-tide shows the most dramatic swirling patterns</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-coral mr-2 font-bold">•</span>
+                      <span><strong>What to bring:</strong> Wide-angle lens if you have one, polarizing filter</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </section>
 
-      {/* How to Visit Section */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+          {/* The Sand */}
+          <section className="mb-16">
+            <h2 className="font-heading text-3xl font-bold text-navy mb-6">
+              The Famous Silica Sand
+            </h2>
+            <div className="font-body text-gray-700 leading-relaxed space-y-4">
+              <p>
+                Whitehaven's sand is 98% pure silica, one of the purest in the world. This unique composition
+                creates several remarkable properties:
+              </p>
+              <div className="grid md:grid-cols-2 gap-6 my-6">
+                <div className="bg-sand/10 p-6 rounded-xl border-l-4 border-sand">
+                  <h3 className="font-heading text-xl font-bold text-navy mb-3">Brilliant White</h3>
+                  <p className="font-body text-gray-700 text-sm">
+                    The high silica content reflects light, creating a dazzling white appearance that's
+                    stunning in photographs.
+                  </p>
+                </div>
+                <div className="bg-ocean/10 p-6 rounded-xl border-l-4 border-ocean">
+                  <h3 className="font-heading text-xl font-bold text-navy mb-3">Stays Cool</h3>
+                  <p className="font-body text-gray-700 text-sm">
+                    Unlike most beach sand, silica sand doesn't retain heat. You can walk barefoot comfortably
+                    even on hot days.
+                  </p>
+                </div>
+                <div className="bg-coral/10 p-6 rounded-xl border-l-4 border-coral">
+                  <h3 className="font-heading text-xl font-bold text-navy mb-3">Fine Texture</h3>
+                  <p className="font-body text-gray-700 text-sm">
+                    The sand is incredibly fine and soft, almost powder-like. It squeaks when you walk on it!
+                  </p>
+                </div>
+                <div className="bg-sand/10 p-6 rounded-xl border-l-4 border-sand">
+                  <h3 className="font-heading text-xl font-bold text-navy mb-3">Protected</h3>
+                  <p className="font-body text-gray-700 text-sm">
+                    Taking sand from the beach is illegal. This helps preserve this natural wonder for
+                    future generations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* How to Visit */}
+          <section className="mb-16">
+            <h2 className="font-heading text-4xl font-bold text-navy mb-6">
               How to Visit Whitehaven Beach
             </h2>
-            <p className="text-center text-gray-600 mb-12 text-lg">
-              Choose from day tours, sailing adventures, or scenic flights
+            <p className="font-body text-lg text-gray-700 mb-8">
+              Whitehaven Beach is only accessible by boat, seaplane, or helicopter. There are no roads to the beach,
+              which helps preserve its pristine condition.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="space-y-8">
               {/* Day Tours */}
-              <div className="bg-gradient-to-br from-blue-500 to-cyan-500 text-white p-8 rounded-xl">
-                <div className="text-4xl mb-4">⛵</div>
-                <h3 className="text-2xl font-bold mb-4">Day Tours</h3>
-                <p className="mb-6">
-                  Most popular option. Full-day tours include swimming, snorkeling, beach time, and
-                  Hill Inlet lookout visit.
-                </p>
-                <div className="space-y-2 text-sm mb-6">
-                  <div>✓ Depart from Airlie Beach</div>
-                  <div>✓ 6-8 hours total</div>
-                  <div>✓ Lunch included</div>
-                  <div>✓ From $130-200 per person</div>
+              <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-coral transition-all">
+                <div className="flex items-start mb-4">
+                  <span className="text-4xl mr-4">⛵</span>
+                  <div>
+                    <h3 className="font-heading text-2xl font-bold text-navy mb-2">Day Tours by Boat</h3>
+                    <p className="font-body text-gray-600">Most popular and affordable option</p>
+                  </div>
                 </div>
-                <button className="w-full bg-white text-blue-600 py-3 rounded-lg font-bold hover:bg-blue-50 transition-colors">
-                  View Day Tours
-                </button>
-              </div>
-
-              {/* Sailing */}
-              <div className="bg-gradient-to-br from-cyan-500 to-teal-500 text-white p-8 rounded-xl">
-                <div className="text-4xl mb-4">🌅</div>
-                <h3 className="text-2xl font-bold mb-4">Sailing Trips</h3>
-                <p className="mb-6">
-                  Overnight sailing adventures include Whitehaven Beach, snorkeling the reef, and
-                  sleeping under the stars.
-                </p>
-                <div className="space-y-2 text-sm mb-6">
-                  <div>✓ 2-3 day trips</div>
-                  <div>✓ All meals included</div>
-                  <div>✓ Multiple stops</div>
-                  <div>✓ From $400-600 total</div>
+                <div className="font-body text-gray-700 space-y-3">
+                  <p>
+                    Full-day or half-day tours depart from Airlie Beach. Most include the Hill Inlet lookout walk,
+                    time on the beach, lunch, and snorkeling at other locations.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4 mt-4">
+                    <div>
+                      <strong className="text-navy">Duration:</strong> 6-8 hours (full day) or 4 hours (half day)
+                    </div>
+                    <div>
+                      <strong className="text-navy">Price:</strong> $130-220 per person
+                    </div>
+                    <div>
+                      <strong className="text-navy">Includes:</strong> Lunch, snorkel gear, guided walk
+                    </div>
+                    <div>
+                      <strong className="text-navy">Best for:</strong> Budget travelers, groups
+                    </div>
+                  </div>
+                  <Link
+                    href="/tours/whitehaven-beach-tours"
+                    className="mt-6 bg-coral text-white px-8 py-3 rounded-xl font-heading font-bold hover:bg-coral/80 transition-colors shadow-lg w-full md:w-auto inline-block text-center">
+                    View Day Tours
+                  </Link>
                 </div>
-                <button className="w-full bg-white text-cyan-600 py-3 rounded-lg font-bold hover:bg-blue-50 transition-colors">
-                  View Sailing Trips
-                </button>
               </div>
 
               {/* Scenic Flights */}
-              <div className="bg-gradient-to-br from-orange-500 to-pink-500 text-white p-8 rounded-xl">
-                <div className="text-4xl mb-4">🚁</div>
-                <h3 className="text-2xl font-bold mb-4">Scenic Flights</h3>
-                <p className="mb-6">
-                  Helicopter or seaplane tours offer aerial views of Hill Inlet's swirling sands and
-                  Heart Reef.
-                </p>
-                <div className="space-y-2 text-sm mb-6">
-                  <div>✓ 30-60 minute flights</div>
-                  <div>✓ Spectacular views</div>
-                  <div>✓ Some include beach landing</div>
-                  <div>✓ From $250-500 per person</div>
+              <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-ocean transition-all">
+                <div className="flex items-start mb-4">
+                  <span className="text-4xl mr-4">🚁</span>
+                  <div>
+                    <h3 className="font-heading text-2xl font-bold text-navy mb-2">Scenic Flights</h3>
+                    <p className="font-body text-gray-600">See Hill Inlet from above</p>
+                  </div>
                 </div>
-                <button className="w-full bg-white text-orange-600 py-3 rounded-lg font-bold hover:bg-blue-50 transition-colors">
-                  View Scenic Flights
-                </button>
+                <div className="font-body text-gray-700 space-y-3">
+                  <p>
+                    Helicopter or seaplane flights offer stunning aerial views of Hill Inlet's swirling sands.
+                    Some include beach landings for the best of both worlds.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4 mt-4">
+                    <div>
+                      <strong className="text-navy">Duration:</strong> 15-60 minutes
+                    </div>
+                    <div>
+                      <strong className="text-navy">Price:</strong> $180-650 per person
+                    </div>
+                    <div>
+                      <strong className="text-navy">Includes:</strong> Aerial views, some include beach landing
+                    </div>
+                    <div>
+                      <strong className="text-navy">Best for:</strong> Special occasions, photographers
+                    </div>
+                  </div>
+                  <button className="mt-6 bg-ocean text-white px-8 py-3 rounded-xl font-heading font-bold hover:bg-ocean-600 transition-colors shadow-lg w-full md:w-auto">
+                    View Scenic Flights
+                  </button>
+                </div>
+              </div>
+
+              {/* Overnight Sailing */}
+              <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-sand transition-all">
+                <div className="flex items-start mb-4">
+                  <span className="text-4xl mr-4">🌅</span>
+                  <div>
+                    <h3 className="font-heading text-2xl font-bold text-navy mb-2">Overnight Sailing Trips</h3>
+                    <p className="font-body text-gray-600">Experience sunrise on the beach</p>
+                  </div>
+                </div>
+                <div className="font-body text-gray-700 space-y-3">
+                  <p>
+                    Multi-day sailing trips include stops at Whitehaven Beach, often visiting at sunset or sunrise
+                    when day-trippers are gone. You'll have the beach nearly to yourself.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4 mt-4">
+                    <div>
+                      <strong className="text-navy">Duration:</strong> 2-3 days
+                    </div>
+                    <div>
+                      <strong className="text-navy">Price:</strong> $400-700 total
+                    </div>
+                    <div>
+                      <strong className="text-navy">Includes:</strong> Accommodation, all meals, multiple stops
+                    </div>
+                    <div>
+                      <strong className="text-navy">Best for:</strong> Adventure seekers, avoiding crowds
+                    </div>
+                  </div>
+                  <button className="mt-6 bg-sand text-navy px-8 py-3 rounded-xl font-heading font-bold hover:bg-sand/80 transition-colors shadow-lg w-full md:w-auto">
+                    View Sailing Trips
+                  </button>
+                </div>
               </div>
             </div>
+          </section>
 
-            {/* Tour Comparison */}
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                Which Tour is Right for You?
-              </h3>
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead className="bg-blue-100">
-                    <tr>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-900">Tour Type</th>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-900">Best For</th>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-900">Time at Beach</th>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-900">Price Range</th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-white">
-                    <tr className="border-b border-gray-200">
-                      <td className="px-4 py-4 font-semibold text-gray-900">Day Tour</td>
-                      <td className="px-4 py-4 text-gray-700">First-time visitors, families</td>
-                      <td className="px-4 py-4 text-gray-700">2-3 hours</td>
-                      <td className="px-4 py-4 text-gray-700">$130-200</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="px-4 py-4 font-semibold text-gray-900">Sailing Trip</td>
-                      <td className="px-4 py-4 text-gray-700">Adventure seekers, couples</td>
-                      <td className="px-4 py-4 text-gray-700">3-4 hours</td>
-                      <td className="px-4 py-4 text-gray-700">$400-600</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="px-4 py-4 font-semibold text-gray-900">Half-Day Tour</td>
-                      <td className="px-4 py-4 text-gray-700">Time-limited visitors</td>
-                      <td className="px-4 py-4 text-gray-700">1-2 hours</td>
-                      <td className="px-4 py-4 text-gray-700">$100-150</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-4 font-semibold text-gray-900">Scenic Flight</td>
-                      <td className="px-4 py-4 text-gray-700">Photographers, special occasions</td>
-                      <td className="px-4 py-4 text-gray-700">Aerial views only*</td>
-                      <td className="px-4 py-4 text-gray-700">$250-500</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p className="text-sm text-gray-600 mt-2">*Some scenic flights include beach landing</p>
+          {/* What to Bring */}
+          <section className="mb-16">
+            <div className="bg-gradient-to-br from-coral/10 to-ocean/10 p-8 rounded-2xl">
+              <h2 className="font-heading text-3xl font-bold text-navy mb-6">
+                What to Bring
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h3 className="font-heading text-xl font-bold text-navy mb-4">✅ Essential Items</h3>
+                  <ul className="space-y-2 font-body text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-coral mr-2">•</span>
+                      <span><strong>Reef-safe sunscreen</strong> - Regular sunscreen is banned to protect the reef</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-coral mr-2">•</span>
+                      <span><strong>Hat and sunglasses</strong> - Limited shade on the beach</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-coral mr-2">•</span>
+                      <span><strong>Water bottle</strong> - Stay hydrated in the tropical heat</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-coral mr-2">•</span>
+                      <span><strong>Camera/phone</strong> - You'll want to capture this!</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-coral mr-2">•</span>
+                      <span><strong>Comfortable walking shoes</strong> - For the Hill Inlet walk</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold text-navy mb-4">❌ Leave at Home</h3>
+                  <ul className="space-y-2 font-body text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-coral mr-2">•</span>
+                      <span><strong>Plastic bags</strong> - Banned in the marine park</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-coral mr-2">•</span>
+                      <span><strong>Regular sunscreen</strong> - Only reef-safe allowed</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-coral mr-2">•</span>
+                      <span><strong>Glass containers</strong> - Not permitted on most boats</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-coral mr-2">•</span>
+                      <span><strong>Drones</strong> - Prohibited in the national park</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </section>
 
-      {/* Best Time to Visit */}
-      <div className="bg-gradient-to-br from-blue-50 to-cyan-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+          {/* Important Rules */}
+          <section className="mb-16">
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg">
+              <h3 className="font-heading text-xl font-bold text-gray-900 mb-4">⚠️ Important Rules & Etiquette</h3>
+              <ul className="space-y-2 font-body text-gray-700">
+                <li className="flex items-start">
+                  <span className="mr-2 font-bold">1.</span>
+                  <span><strong>Do not take sand or shells</strong> - It's illegal and helps preserve the beach</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 font-bold">2.</span>
+                  <span><strong>Take all rubbish with you</strong> - Leave no trace</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 font-bold">3.</span>
+                  <span><strong>Stay on marked walking tracks</strong> - Protects native vegetation</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 font-bold">4.</span>
+                  <span><strong>No dogs allowed</strong> - Protects native wildlife</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 font-bold">5.</span>
+                  <span><strong>No camping</strong> - Day visits only, protected national park</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Best Time to Visit */}
+          <section className="mb-16">
+            <h2 className="font-heading text-3xl font-bold text-navy mb-6">
               Best Time to Visit
             </h2>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">🏆 Peak Season (June-August)</h3>
-                  <p className="text-gray-700 mb-4">
-                    Winter months offer the best conditions - calm seas, comfortable temperatures, and
-                    clear skies perfect for photography.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-start">
-                      <span className="text-green-600 mr-2">✓</span>
-                      <span className="text-gray-700">Best weather and sea conditions</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-green-600 mr-2">✓</span>
-                      <span className="text-gray-700">Ideal for Hill Inlet photography</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-red-600 mr-2">✗</span>
-                      <span className="text-gray-700">Most crowded and expensive</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-red-600 mr-2">✗</span>
-                      <span className="text-gray-700">Book 2-3 months in advance</span>
-                    </div>
-                  </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-ocean/10 p-6 rounded-xl border-t-4 border-ocean">
+                <h3 className="font-heading text-xl font-bold text-navy mb-3">☀️ Peak Season</h3>
+                <div className="font-body text-sm text-gray-700 mb-3">
+                  <strong>June - August</strong>
                 </div>
-
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">💰 Shoulder Season (April-May, Sept-Nov)</h3>
-                  <p className="text-gray-700 mb-4">
-                    Great weather with fewer crowds and better prices. Seas are generally calm with
-                    pleasant temperatures.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-start">
-                      <span className="text-green-600 mr-2">✓</span>
-                      <span className="text-gray-700">Still excellent weather</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-green-600 mr-2">✓</span>
-                      <span className="text-gray-700">20-30% cheaper than peak</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-green-600 mr-2">✓</span>
-                      <span className="text-gray-700">Fewer tourists</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-green-600 mr-2">✓</span>
-                      <span className="text-gray-700">Book 2-4 weeks in advance</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Hill Inlet Tide Times */}
-            <div className="bg-blue-500 text-white p-8 rounded-xl">
-              <h3 className="text-2xl font-bold mb-4">📸 Photography Tip: Tide Timing</h3>
-              <p className="mb-4">
-                The iconic swirling sands of Hill Inlet are most dramatic during the transition between
-                high and low tide - roughly 2 hours before or after high tide.
-              </p>
-              <p className="text-blue-100">
-                Check tide times before booking your tour to maximize your chances of seeing Hill Inlet
-                at its most spectacular. Most operators plan tours around optimal viewing times.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* What to Bring */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
-              What to Bring
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-green-50 p-8 rounded-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">✓ Essential Items</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-green-600 font-bold mr-3">•</span>
-                    <span className="text-gray-700"><strong>Reef-safe sunscreen</strong> - Chemical sunscreens damage the reef</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 font-bold mr-3">•</span>
-                    <span className="text-gray-700"><strong>Hat and sunglasses</strong> - Sun protection is crucial</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 font-bold mr-3">•</span>
-                    <span className="text-gray-700"><strong>Water shoes or sandals</strong> - For boats and rocky areas</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 font-bold mr-3">•</span>
-                    <span className="text-gray-700"><strong>Towel</strong> - Not always provided on tours</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 font-bold mr-3">•</span>
-                    <span className="text-gray-700"><strong>Swimwear</strong> - Bring multiple if staying overnight</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 font-bold mr-3">•</span>
-                    <span className="text-gray-700"><strong>Waterproof camera/phone case</strong> - Protect electronics</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 font-bold mr-3">•</span>
-                    <span className="text-gray-700"><strong>Light cover-up</strong> - For sun protection</span>
-                  </li>
+                <ul className="space-y-1 font-body text-sm text-gray-700">
+                  <li>✓ Perfect weather</li>
+                  <li>✓ No stingers</li>
+                  <li>✓ Calm seas</li>
+                  <li>✗ Most crowded</li>
+                  <li>✗ Highest prices</li>
                 </ul>
               </div>
-
-              <div className="bg-red-50 p-8 rounded-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">✗ Leave Behind</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-red-600 font-bold mr-3">•</span>
-                    <span className="text-gray-700"><strong>Sand/shells/coral</strong> - Taking anything from the beach is illegal</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 font-bold mr-3">•</span>
-                    <span className="text-gray-700"><strong>Plastic bags</strong> - Can blow into the water</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 font-bold mr-3">•</span>
-                    <span className="text-gray-700"><strong>Alcohol</strong> - Not permitted in national parks</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 font-bold mr-3">•</span>
-                    <span className="text-gray-700"><strong>Drones</strong> - Restricted without permits</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 font-bold mr-3">•</span>
-                    <span className="text-gray-700"><strong>Pets</strong> - No dogs allowed</span>
-                  </li>
-                </ul>
-
-                <div className="mt-6 p-4 bg-red-100 rounded-lg">
-                  <p className="text-sm text-gray-800">
-                    <strong>Important:</strong> Whitehaven Beach is part of a protected national park.
-                    Respect the environment by taking only photos and leaving only footprints.
-                  </p>
+              <div className="bg-sand/20 p-6 rounded-xl border-t-4 border-sand">
+                <h3 className="font-heading text-xl font-bold text-navy mb-3">🌤️ Shoulder Season</h3>
+                <div className="font-body text-sm text-gray-700 mb-3">
+                  <strong>April-May, Sep-Nov</strong>
                 </div>
+                <ul className="space-y-1 font-body text-sm text-gray-700">
+                  <li>✓ Great weather</li>
+                  <li>✓ Fewer crowds</li>
+                  <li>✓ Better prices</li>
+                  <li>✓ Still excellent conditions</li>
+                  <li>✓ Best value</li>
+                </ul>
+              </div>
+              <div className="bg-coral/10 p-6 rounded-xl border-t-4 border-coral">
+                <h3 className="font-heading text-xl font-bold text-navy mb-3">🌧️ Summer</h3>
+                <div className="font-body text-sm text-gray-700 mb-3">
+                  <strong>December - March</strong>
+                </div>
+                <ul className="space-y-1 font-body text-sm text-gray-700">
+                  <li>✓ Lowest prices</li>
+                  <li>✓ Quieter</li>
+                  <li>✗ Stinger season</li>
+                  <li>✗ Humidity</li>
+                  <li>✗ Possible rain</li>
+                </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </section>
 
-      {/* FAQ Section */}
-      <div className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+          {/* FAQ */}
+          <section>
+            <h2 className="font-heading text-3xl font-bold text-navy mb-8">
               Frequently Asked Questions
             </h2>
-
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Can you stay overnight at Whitehaven Beach?
-                </h3>
-                <p className="text-gray-700">
-                  No permanent accommodation exists, but you can camp at designated camping areas on
-                  Whitsunday Island with a permit. Most visitors choose day tours or overnight sailing
-                  trips that anchor nearby.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Are there facilities at Whitehaven Beach?
-                </h3>
-                <p className="text-gray-700">
-                  Facilities are minimal - there's a basic toilet at Tongue Bay camping area, but no
-                  shops, cafes, or showers. Tours typically include lunch and refreshments. Bring
-                  everything you need for the day.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Is Whitehaven Beach safe for swimming?
-                </h3>
-                <p className="text-gray-700">
-                  Yes, generally very safe. There are no lifeguards, but the waters are calm and clear.
-                  During stinger season (November-May), wear a stinger suit. Always swim with your tour
-                  group and follow operator guidelines.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <div className="bg-white border-2 border-gray-200 p-6 rounded-xl">
+                <h3 className="font-heading text-xl font-bold text-navy mb-3">
                   How long should I spend at Whitehaven Beach?
                 </h3>
-                <p className="text-gray-700">
-                  Most day tours allow 2-3 hours on the beach, which is enough to swim, relax, walk to
-                  Hill Inlet lookout, and take photos. Overnight sailing trips give you more time to
-                  explore at your own pace.
+                <p className="font-body text-gray-700">
+                  Most day tours allocate 2-3 hours at the beach, which is enough time to swim, walk, take photos,
+                  and do the Hill Inlet lookout walk. If you want a more relaxed pace, consider an overnight sailing
+                  trip that visits at quieter times.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Can I visit Whitehaven Beach on my own?
+              <div className="bg-white border-2 border-gray-200 p-6 rounded-xl">
+                <h3 className="font-heading text-xl font-bold text-navy mb-3">
+                  Can I visit Whitehaven Beach independently?
                 </h3>
-                <p className="text-gray-700">
-                  Only if you have your own boat and required permits. For most visitors, joining an
-                  organized tour is the easiest, safest, and most affordable option. Tours include
-                  transport, equipment, and expert local knowledge.
+                <p className="font-body text-gray-700">
+                  Only if you have your own boat or charter a private vessel. There's no public transport or road
+                  access. Most visitors join organized tours, which handle all logistics and include additional
+                  activities like snorkeling.
+                </p>
+              </div>
+
+              <div className="bg-white border-2 border-gray-200 p-6 rounded-xl">
+                <h3 className="font-heading text-xl font-bold text-navy mb-3">
+                  Are there facilities at Whitehaven Beach?
+                </h3>
+                <p className="font-body text-gray-700">
+                  No. Whitehaven Beach is a protected national park with no permanent structures. There are composting
+                  toilets at the southern end, but no shops, kiosks, or shade structures. Tour operators bring portable
+                  toilets and all necessary facilities on their boats.
+                </p>
+              </div>
+
+              <div className="bg-white border-2 border-gray-200 p-6 rounded-xl">
+                <h3 className="font-heading text-xl font-bold text-navy mb-3">
+                  Is Whitehaven Beach suitable for children?
+                </h3>
+                <p className="font-body text-gray-700">
+                  Yes! The beach is family-friendly with shallow, calm water perfect for young children. The Hill Inlet
+                  lookout walk may be challenging for very young kids, but the beach itself is ideal for families.
+                  Most tour operators welcome children aged 4+.
+                </p>
+              </div>
+
+              <div className="bg-white border-2 border-gray-200 p-6 rounded-xl">
+                <h3 className="font-heading text-xl font-bold text-navy mb-3">
+                  What's the water temperature like?
+                </h3>
+                <p className="font-body text-gray-700">
+                  The water is warm year-round, ranging from 23°C (73°F) in winter to 29°C (84°F) in summer. You won't
+                  need a wetsuit - just swimmers and a rash vest for sun protection (and stinger suit in summer months).
                 </p>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
 
-      {/* Final CTA */}
-      <div className="bg-gradient-to-r from-blue-600 to-cyan-600 py-16">
+      {/* CTA Section */}
+      <div className="bg-ocean py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Experience Whitehaven Beach?
+          <h2 className="font-heading text-5xl font-bold text-white mb-6">
+            Ready to Visit Whitehaven Beach?
           </h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Book your Whitehaven Beach tour today and discover why it's consistently ranked among the
-            world's most beautiful beaches
+          <p className="font-body text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+            Book your tour today and experience one of the world's most beautiful beaches
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors shadow-xl">
-              Compare Tours
-            </button>
-            <button className="bg-blue-800 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition-colors">
-              Plan Your Visit
-            </button>
+            <Link
+              href="/things-to-do"
+              className="bg-coral text-white px-10 py-4 rounded-xl font-heading font-bold text-lg hover:bg-white hover:text-ocean transition-all duration-300 shadow-xl transform hover:scale-105"
+            >
+              View All Tours
+            </Link>
+            <Link
+              href="/itinerary-3-day"
+              className="bg-white text-ocean px-10 py-4 rounded-xl font-heading font-bold text-lg hover:bg-sand hover:text-navy transition-all duration-300 shadow-xl"
+            >
+              Plan Your Trip
+            </Link>
           </div>
         </div>
       </div>
