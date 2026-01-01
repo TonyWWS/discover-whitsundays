@@ -1,53 +1,72 @@
+
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-12">
+    <footer className="bg-gray-900 text-gray-300 py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* About Section */}
+
+          {/* About Column */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Discover Whitsundays</h3>
-            <p className="text-gray-300">
+            <h3 className="text-white text-lg font-semibold mb-4">Discover Whitsundays</h3>
+            <p className="text-sm leading-relaxed">
               Your comprehensive guide to exploring the beautiful Whitsunday Islands and the Great Barrier Reef.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Legal & Info Column */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-white">Home</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Islands</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Things to Do</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Plan Your Trip</a></li>
+            <h3 className="text-white text-lg font-semibold mb-4">Information</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/about-tony" className="hover:text-white transition-colors">
+                  About Tony
+                </Link>
+              </li>
+              <li>
+                <Link href="/affiliate-disclosure" className="hover:text-white transition-colors">
+                  Affiliate Disclosure
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy-policy" className="hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Popular Destinations */}
+          {/* Popular Destinations Column */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Popular Destinations</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-white">Whitehaven Beach</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Hamilton Island</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Airlie Beach</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Heart Reef</a></li>
+            <h3 className="text-white text-lg font-semibold mb-4">Popular Destinations</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/whitehaven-beach" className="hover:text-white transition-colors">
+                  Whitehaven Beach
+                </Link>
+              </li>
+              <li>
+                <Link href="/islands" className="hover:text-white transition-colors">
+                  The Islands
+                </Link>
+              </li>
+              <li>
+                <Link href="/where-to-stay" className="hover:text-white transition-colors">
+                  Where to Stay
+                </Link>
+              </li>
+              <li>
+                <Link href="/things-to-do" className="hover:text-white transition-colors">
+                  Things to Do
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Contact</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li>📧 info@discoverwhitsundays.com</li>
-              <li>📱 +61 123 456 789</li>
-              <li>📍 Airlie Beach, QLD</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Discover Whitsundays. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-  );
-}
+          {/* Contact Column */}
+          <div></div>

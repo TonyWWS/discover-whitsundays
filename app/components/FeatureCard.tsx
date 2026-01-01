@@ -4,23 +4,22 @@ interface FeatureCardProps {
   title: string;
   description: string;
   image: string;
-  link?: string;  // Optional link prop
+  link?: string;
 }
 
 export default function FeatureCard({ title, description, image, link }: FeatureCardProps) {
   const cardContent = (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full cursor-pointer">
-      <div className="h-48 bg-gradient-to-br from-blue-400 to-cyan-300 flex items-center justify-center">
-        <span className="text-6xl">{image}</span>
+    <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full cursor-pointer transform hover:-translate-y-1 border-b-4 border-coral">
+      <div className="h-48 bg-gradient-to-br from-coral/10 via-sand/10 to-ocean/10 flex items-center justify-center">
+        <span className="text-7xl">{image}</span>
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
-        <p className="text-gray-600">{description}</p>
+        <h3 className="font-heading text-2xl font-bold text-navy mb-3">{title}</h3>
+        <p className="font-body text-gray-600 leading-relaxed">{description}</p>
       </div>
     </div>
   );
 
-  // If link is provided, wrap in Link component
   if (link) {
     return (
       <Link href={link}>
@@ -29,6 +28,5 @@ export default function FeatureCard({ title, description, image, link }: Feature
     );
   }
 
-  // Otherwise, return just the card
   return cardContent;
 }

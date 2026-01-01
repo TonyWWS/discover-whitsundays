@@ -5,13 +5,6 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -22,5 +15,101 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+/* Custom typography improvements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better focus states */
+button:focus,
+a:focus {
+  outline: 2px solid #FF6B35;
+  outline-offset: 2px;
+}
+
+/* Improved readability */
+p {
+  line-height: 1.7;
+}
+
+/* Utility classes for new color system */
+@layer utilities {
+  .text-coral {
+    color: #FF6B35;
+  }
+
+  .bg-coral {
+    background-color: #FF6B35;
+  }
+
+  .border-coral {
+    border-color: #FF6B35;
+  }
+
+  .text-ocean {
+    color: #118AB2;
+  }
+
+  .bg-ocean {
+    background-color: #118AB2;
+  }
+
+  .border-ocean {
+    border-color: #118AB2;
+  }
+
+  .text-sand {
+    color: #FFD166;
+  }
+
+  .bg-sand {
+    background-color: #FFD166;
+  }
+
+  .border-sand {
+    border-color: #FFD166;
+  }
+
+  .text-navy {
+    color: #073B4C;
+  }
+
+  .bg-navy {
+    background-color: #073B4C;
+  }
+
+  .border-navy {
+    border-color: #073B4C;
+  }
+
+  /* Hover states */
+  .hover\:bg-coral-600:hover {
+    background-color: #F44F1A;
+  }
+
+  .hover\:bg-ocean-600:hover {
+    background-color: #0E6F92;
+  }
+
+  .hover\:text-coral:hover {
+    color: #FF6B35;
+  }
+
+  .hover\:text-ocean:hover {
+    color: #118AB2;
+  }
 }

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Navbar from './components/Navbar';
 import FeatureCard from './components/FeatureCard';
 import Footer from './components/Footer';
@@ -9,26 +10,23 @@ export default function Home() {
 
       {/* Hero Section with Background Image */}
       <div className="relative h-[600px] flex items-center justify-center">
-        {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/discover-whitsunday-hero1.jpg')",
+            backgroundImage: "url ('/images/discover-whitsunday-hero1.jpg')",
           }}
         >
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-navy/60 via-ocean/50 to-coral/40"></div>
         </div>
 
-        {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-6xl font-bold text-white mb-4 drop-shadow-lg">
+          <h1 className="font-heading text-7xl font-bold text-white mb-4 drop-shadow-2xl">
             Discover Whitsundays
           </h1>
-          <p className="text-2xl text-white mb-8 drop-shadow-lg">
+          <p className="font-heading text-3xl text-white mb-8 drop-shadow-lg">
             Your Ultimate Guide to Paradise
           </p>
-          <p className="text-lg text-white/90 drop-shadow-lg">
+          <p className="font-body text-xl text-white drop-shadow-lg">
             Explore pristine beaches, island adventures, and tropical experiences
           </p>
         </div>
@@ -37,9 +35,12 @@ export default function Home() {
       {/* Features Section */}
       <div className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+          <h2 className="font-heading text-5xl font-bold text-center text-navy mb-4">
             Explore the Whitsundays
           </h2>
+          <p className="font-body text-center text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
+            Everything you need to plan the perfect tropical getaway
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard
               title="Whitehaven Beach"
@@ -48,47 +49,54 @@ export default function Home() {
               link="/whitehaven-beach"
             />
             <FeatureCard
-              title="Island Hopping"
+              title="The Islands"
               description="Discover 74 tropical islands, each with unique charm and experiences"
               image="🏝️"
               link="/islands"
             />
             <FeatureCard
-              title="Sailing Adventures"
-              description="Sail through crystal clear waters on luxury yachts or traditional vessels"
+              title="Things to Do"
+              description="Sailing, diving, scenic flights, and endless island adventures"
               image="⛵"
+              link="/things-to-do"
             />
             <FeatureCard
-              title="Snorkeling & Diving"
-              description="Explore the Great Barrier Reef's incredible marine life and coral gardens"
-              image="🤿"
+              title="What's On"
+              description="Local events, festivals, and seasonal highlights in the Whitsundays"
+              image="🎉"
+              link="/whats-on"
             />
             <FeatureCard
-              title="Scenic Flights"
-              description="Take in breathtaking aerial views of Heart Reef and the islands"
-              image="🚁"
+              title="Plan Your Trip"
+              description="Complete 3-day itinerary with tours, accommodation, and budget breakdown"
+              image="📅"
+              link="/itinerary-3-day"
             />
             <FeatureCard
-              title="Luxury Resorts"
-              description="Stay at world-class resorts with stunning views and premium amenities"
+              title="Where to Stay"
+              description="From budget-friendly Airlie Beach to luxury island resorts"
               image="🏨"
+              link="/where-to-stay"
             />
           </div>
         </div>
       </div>
 
       {/* Call to Action Section */}
-      <div className="bg-gradient-to-r from-blue-500 to-cyan-500 py-16">
+      <div className="bg-gradient-to-r from-coral via-sand to-ocean py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="font-heading text-5xl font-bold text-white mb-6">
             Ready to Plan Your Whitsundays Adventure?
           </h2>
-          <p className="text-xl text-white mb-8">
-            Get insider tips, itineraries, and exclusive recommendations
+          <p className="font-body text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+            Get insider tips, detailed itineraries, and exclusive recommendations from a local expert
           </p>
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors duration-300">
+          <Link
+            href="/itinerary-3-day"
+            className="inline-block bg-white text-coral px-10 py-4 rounded-xl font-heading font-bold text-lg hover:bg-navy hover:text-white transition-all duration-300 shadow-2xl transform hover:scale-105"
+          >
             Start Planning Now
-          </button>
+          </Link>
         </div>
       </div>
 
