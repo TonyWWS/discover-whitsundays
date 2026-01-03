@@ -18,7 +18,8 @@ export default function WhitehavenBeachToursPage() {
               Curated recommendations from a local expert
             </p>
             <p className="font-body text-lg opacity-90">
-              I've researched the best tours to help you experience Whitehaven Beach without the overwhelm
+              I've researched dozens of Whitehaven Beach tours. Rather than overwhelm you with every option,
+              I've hand-picked these 5 tours to cover different budgets, styles, and preferences.
             </p>
           </div>
         </div>
@@ -27,8 +28,8 @@ export default function WhitehavenBeachToursPage() {
       {/* Introduction */}
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-sand/20 border-l-4 border-sand p-8 rounded-lg mb-12">
-            <h2 className="font-heading text-2xl font-bold text-navy mb-4">
+          <div className="bg-yellow-100 border-l-4 border-yellow-500 p-8 rounded-lg mb-12">
+            <h2 className="font-heading text-2xl font-bold text-gray-800 mb-4">
               Why These 5 Tours?
             </h2>
             <p className="font-body text-gray-700 leading-relaxed">
@@ -41,14 +42,14 @@ export default function WhitehavenBeachToursPage() {
 
           {/* Quick Comparison Table */}
           <div className="mb-16">
-            <h2 className="font-heading text-3xl font-bold text-navy mb-8 text-center">
+            <h2 className="font-heading text-3xl font-bold text-gray-800 mb-8 text-center">
               Quick Comparison
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-xl shadow-lg overflow-hidden">
-                <thead className="bg-ocean text-white">
+                <thead className="bg-blue-600 text-white">
                   <tr>
-                    <th className="font-heading p-4 text-left">Tour Type</th>
+                    <th className="font-heading p-4 text-left">Tour</th>
                     <th className="font-heading p-4 text-left">Price</th>
                     <th className="font-heading p-4 text-left">Duration</th>
                     <th className="font-heading p-4 text-left">Best For</th>
@@ -56,315 +57,418 @@ export default function WhitehavenBeachToursPage() {
                 </thead>
                 <tbody className="font-body">
                   <tr className="border-b border-gray-200">
-                    <td className="p-4 font-semibold text-navy">Budget Day Sail</td>
-                    <td className="p-4">$140-160</td>
-                    <td className="p-4">Full Day (8hrs)</td>
-                    <td className="p-4">Budget travelers</td>
+                    <td className="p-4 font-semibold text-gray-900">Ocean Rafting</td>
+                    <td className="p-4 text-gray-800">$199-219</td>
+                    <td className="p-4 text-gray-800">7 hours</td>
+                    <td className="p-4 text-gray-800">Snorkelers, adventure</td>
                   </tr>
                   <tr className="border-b border-gray-200 bg-gray-50">
-                    <td className="p-4 font-semibold text-navy">Premium Catamaran</td>
-                    <td className="p-4">$200-230</td>
-                    <td className="p-4">Full Day (8hrs)</td>
-                    <td className="p-4">Quality seekers</td>
+                    <td className="p-4 font-semibold text-gray-900">Chill & Grill</td>
+                    <td className="p-4 text-gray-800">$255-279</td>
+                    <td className="p-4 text-gray-800">Full day</td>
+                    <td className="p-4 text-gray-800">Beach lovers, families</td>
                   </tr>
                   <tr className="border-b border-gray-200">
-                    <td className="p-4 font-semibold text-navy">Half-Day Express</td>
-                    <td className="p-4">$120-140</td>
-                    <td className="p-4">4-5 hours</td>
-                    <td className="p-4">Time-limited</td>
+                    <td className="p-4 font-semibold text-gray-900">Half-Day Express</td>
+                    <td className="p-4 text-gray-800">$139-159</td>
+                    <td className="p-4 text-gray-800">5-6 hours</td>
+                    <td className="p-4 text-gray-800">Time-limited, budget</td>
                   </tr>
                   <tr className="border-b border-gray-200 bg-gray-50">
-                    <td className="p-4 font-semibold text-navy">Helicopter + Beach</td>
-                    <td className="p-4">$450-550</td>
-                    <td className="p-4">3 hours</td>
-                    <td className="p-4">Special occasions</td>
+                    <td className="p-4 font-semibold text-gray-900">Whitehaven Xpress</td>
+                    <td className="p-4 text-gray-800">$189-209</td>
+                    <td className="p-4 text-gray-800">8.5 hours</td>
+                    <td className="p-4 text-gray-800">Best value, families</td>
                   </tr>
                   <tr>
-                    <td className="p-4 font-semibold text-navy">Luxury Experience</td>
-                    <td className="p-4">$600-800</td>
-                    <td className="p-4">Full Day</td>
-                    <td className="p-4">Ultimate luxury</td>
+                    <td className="p-4 font-semibold text-gray-900">Helicopter + Beach</td>
+                    <td className="p-4 text-gray-800">$450-550</td>
+                    <td className="p-4 text-gray-800">3 hours</td>
+                    <td className="p-4 text-gray-800">Special occasions</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
 
-          {/* Tour 1: Budget Day Sail */}
-          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-coral">
+          {/* Tour 1: Ocean Rafting Northern Exposure */}
+          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-orange-500">
             <div
               className="h-64 bg-cover bg-center"
               style={{
                 backgroundImage: "url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200')",
               }}
             >
-              <div className="h-full bg-gradient-to-br from-navy/60 to-transparent flex items-end p-8">
+              <div className="h-full bg-gradient-to-br from-gray-900/60 to-transparent flex items-end p-8">
                 <div>
-                  <div className="bg-coral text-white px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
-                    BEST VALUE
+                  <div className="bg-orange-500 text-white px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
+                    ADVENTURE CHAMPION
                   </div>
-                  <h3 className="font-heading text-4xl font-bold text-white">Budget Day Sail to Whitehaven</h3>
+                  <h3 className="font-heading text-4xl font-bold text-white">Ocean Rafting Northern Exposure</h3>
                 </div>
               </div>
             </div>
             <div className="p-8">
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <div className="font-heading text-4xl font-bold text-coral mb-2">$140-160</div>
+                  <div className="font-heading text-4xl font-bold text-orange-500 mb-2">$199-219</div>
                   <div className="font-body text-gray-600">per person</div>
                 </div>
                 <div className="text-right">
-                  <div className="font-heading text-2xl font-bold text-navy">Full Day</div>
-                  <div className="font-body text-gray-600">8 hours</div>
+                  <div className="font-heading text-2xl font-bold text-gray-800">7 Hours</div>
+                  <div className="font-body text-gray-600">8:45am - 3:30pm</div>
                 </div>
               </div>
 
               <p className="font-body text-gray-700 leading-relaxed mb-6">
-                The most affordable way to experience Whitehaven Beach. This full-day sailing tour includes
-                everything you need: 2-3 hours at Whitehaven Beach, Hill Inlet lookout walk, snorkeling at a
-                fringing reef, and a buffet lunch onboard. While boats can be larger (25-35 passengers),
-                operators are reliable and the experience is excellent for the price.
+                Multi-award winning Ocean Rafting is the ONLY operator with special permits to access all areas
+                of Hill Inlet—including cruising through the famous swirling sands. Their semi-rigid inflatable boats
+                (originally designed as rescue crafts) reach speeds up to 35 knots, giving you an exhilarating ride
+                plus maximum snorkeling time at two different pristine reef locations.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <h4 className="font-heading text-lg font-bold text-navy mb-3">✓ What's Included</h4>
+                  <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">✓ What's Included</h4>
                   <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• 2-3 hours at Whitehaven Beach</li>
-                    <li>• Hill Inlet lookout walk (30 mins)</li>
-                    <li>• Snorkeling at fringing reef</li>
-                    <li>• Buffet lunch and refreshments</li>
-                    <li>• All snorkel equipment provided</li>
-                    <li>• Transfers from Airlie Beach</li>
+                    <li>• 2 premium snorkel sites (Hook Island)</li>
+                    <li>• Exclusive Hill Inlet beach access</li>
+                    <li>• Guided Hill Inlet lookout walk</li>
+                    <li>• North Whitehaven Beach time</li>
+                    <li>• All snorkel gear provided</li>
+                    <li>• Afternoon tea and refreshments</li>
+                    <li>• Hotel pickup from Airlie Beach</li>
+                    <li>• Max 32 passengers (small groups)</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-heading text-lg font-bold text-navy mb-3">👥 Perfect For</h4>
+                  <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">👥 Perfect For</h4>
                   <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Budget-conscious travelers</li>
-                    <li>• Backpackers and solo travelers</li>
-                    <li>• Groups and families</li>
-                    <li>• First-time visitors</li>
-                    <li>• Those who don't mind larger groups</li>
+                    <li>• Snorkel enthusiasts</li>
+                    <li>• Adventure seekers</li>
+                    <li>• Photographers (best Hill Inlet access)</li>
+                    <li>• Active travelers</li>
+                    <li>• Those wanting the thrill factor</li>
+                    <li>• Ages 6 months to seniors</li>
                   </ul>
                 </div>
               </div>
 
               <div className="bg-blue-50 p-6 rounded-lg mb-6">
-                <h4 className="font-heading font-bold text-navy mb-2">💡 Local Tip:</h4>
+                <h4 className="font-heading font-bold text-gray-800 mb-2">💡 Local Tip:</h4>
                 <p className="font-body text-gray-700 text-sm">
-                  Book the earliest departure time available. You'll reach Whitehaven before most other tours,
-                  giving you prime time on the beach with fewer crowds. The light is also better for photos
-                  in the morning.
+                  Ocean Rafting is the ONLY tour that can cruise through Hill Inlet's swirling sands—not just view
+                  them from the lookout. This unique access makes for incredible photos and a one-of-a-kind experience.
+                  The high-speed ride is thrilling but stable—even families with young kids love it.
                 </p>
               </div>
 
-              <button className="w-full bg-coral text-white py-4 rounded-xl font-heading font-bold text-lg hover:bg-coral-600 transition-colors shadow-lg">
+              <div className="bg-green-50 p-6 rounded-lg mb-6">
+                <h4 className="font-heading font-bold text-gray-800 mb-2">⭐ Why This Tour Stands Out:</h4>
+                <ul className="font-body text-gray-700 text-sm space-y-2">
+                  <li>• 30+ years operating (most awarded Whitsundays operator)</li>
+                  <li>• Eco-certified Advanced status</li>
+                  <li>• TWO snorkel locations vs one for most tours</li>
+                  <li>• Smaller groups (32 max vs 80+ on big boats)</li>
+                  <li>• 4.8/5 stars from 1000+ TripAdvisor reviews</li>
+                </ul>
+              </div>
+
+              <button className="w-full bg-orange-500 text-white py-4 rounded-xl font-heading font-bold text-lg hover:bg-orange-600 transition-colors shadow-lg">
                 Check Availability & Book
               </button>
             </div>
           </div>
 
-          {/* Tour 2: Premium Catamaran */}
-          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-ocean">
+          {/* Tour 2: Cruise Whitsundays Chill & Grill */}
+          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-blue-600">
             <div
               className="h-64 bg-cover bg-center"
               style={{
                 backgroundImage: "url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200')",
               }}
             >
-              <div className="h-full bg-gradient-to-br from-ocean/60 to-transparent flex items-end p-8">
+              <div className="h-full bg-gradient-to-br from-blue-900/60 to-transparent flex items-end p-8">
                 <div>
-                  <div className="bg-ocean text-white px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
-                    MOST POPULAR
+                  <div className="bg-blue-600 text-white px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
+                    MOST BEACH TIME
                   </div>
-                  <h3 className="font-heading text-4xl font-bold text-white">Premium Catamaran Experience</h3>
+                  <h3 className="font-heading text-4xl font-bold text-white">Whitehaven Beach Chill & Grill</h3>
                 </div>
               </div>
             </div>
             <div className="p-8">
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <div className="font-heading text-4xl font-bold text-ocean mb-2">$200-230</div>
+                  <div className="font-heading text-4xl font-bold text-blue-600 mb-2">$255-279</div>
                   <div className="font-body text-gray-600">per person</div>
                 </div>
                 <div className="text-right">
-                  <div className="font-heading text-2xl font-bold text-navy">Full Day</div>
-                  <div className="font-body text-gray-600">8 hours</div>
+                  <div className="font-heading text-2xl font-bold text-gray-800">Full Day</div>
+                  <div className="font-body text-gray-600">7:15am - 2:30pm</div>
                 </div>
               </div>
 
               <p className="font-body text-gray-700 leading-relaxed mb-6">
-                Step up to a premium experience with smaller group sizes (12-18 passengers), modern catamarans,
-                and upgraded service. More personal attention from crew, better quality food, and extra time at
-                the best spots. This is the sweet spot between budget and luxury - the best overall value.
+                Cruise Whitsundays' "Chill & Grill" offers MORE time at Whitehaven Beach than any other day tour
+                (4-5 hours total). You'll visit both the northern AND southern ends of the beach, enjoy a full Aussie
+                BBQ lunch served right on the sand, and take a guided walk to the famous Hill Inlet lookout. This is
+                the most relaxed, unhurried way to experience Whitehaven.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <h4 className="font-heading text-lg font-bold text-navy mb-3">✓ What's Included</h4>
+                  <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">✓ What's Included</h4>
                   <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• 3+ hours at Whitehaven Beach</li>
-                    <li>• Hill Inlet lookout (guided)</li>
-                    <li>• Premium snorkel locations</li>
-                    <li>• Restaurant-quality lunch</li>
-                    <li>• Beer, wine, and soft drinks</li>
-                    <li>• Smaller group (max 18)</li>
-                    <li>• Boom netting (weather permitting)</li>
+                    <li>• 4-5 hours total at Whitehaven Beach</li>
+                    <li>• Visit BOTH North & South beach</li>
+                    <li>• Full Aussie BBQ lunch on the beach</li>
+                    <li>• Guided Hill Inlet lookout walk</li>
+                    <li>• Beach games and activities</li>
+                    <li>• Stinger suits (seasonal)</li>
+                    <li>• Comfortable air-conditioned catamaran</li>
+                    <li>• Optional snorkeling (time permitting)</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-heading text-lg font-bold text-navy mb-3">👥 Perfect For</h4>
+                  <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">👥 Perfect For</h4>
                   <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Couples and honeymooners</li>
-                    <li>• Quality-conscious travelers</li>
-                    <li>• Those wanting more beach time</li>
-                    <li>• Photography enthusiasts</li>
-                    <li>• People who value comfort</li>
+                    <li>• Beach lovers wanting max beach time</li>
+                    <li>• Families with children</li>
+                    <li>• Those who prefer relaxation over adventure</li>
+                    <li>• Photography enthusiasts (more time = better photos)</li>
+                    <li>• People wanting a full day without rush</li>
+                    <li>• Couples seeking a leisurely pace</li>
                   </ul>
                 </div>
               </div>
 
               <div className="bg-green-50 p-6 rounded-lg mb-6">
-                <h4 className="font-heading font-bold text-navy mb-2">⭐ Why I Recommend This:</h4>
+                <h4 className="font-heading font-bold text-gray-800 mb-2">⭐ Why I Recommend This:</h4>
                 <p className="font-body text-gray-700 text-sm">
-                  This is what I'd book for friends visiting. The extra $50-70 over budget tours buys you
-                  significantly more beach time, better food, smaller crowds, and a more relaxed pace. Best
-                  bang for your buck if you can stretch the budget slightly.
+                  If you've come all this way to see Whitehaven Beach, why rush? This tour gives you the TIME to
+                  truly experience it—walk the entire 7km stretch, swim in multiple spots, play beach cricket, find
+                  the perfect photo angle. The BBQ lunch on the beach (not back on the boat) is a highlight everyone
+                  loves. Best overall experience for the money.
                 </p>
               </div>
 
-              <button className="w-full bg-ocean text-white py-4 rounded-xl font-heading font-bold text-lg hover:bg-ocean-600 transition-colors shadow-lg">
+              <button className="w-full bg-blue-600 text-white py-4 rounded-xl font-heading font-bold text-lg hover:bg-blue-700 transition-colors shadow-lg">
                 Check Availability & Book
               </button>
             </div>
           </div>
 
           {/* Tour 3: Half-Day Express */}
-          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-sand">
+          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-yellow-500">
             <div
               className="h-64 bg-cover bg-center"
               style={{
                 backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200')",
               }}
             >
-              <div className="h-full bg-gradient-to-br from-navy/60 to-transparent flex items-end p-8">
+              <div className="h-full bg-gradient-to-br from-gray-900/60 to-transparent flex items-end p-8">
                 <div>
-                  <div className="bg-sand text-navy px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
-                    QUICK OPTION
+                  <div className="bg-yellow-500 text-gray-900 px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
+                    BUDGET CHAMPION
                   </div>
-                  <h3 className="font-heading text-4xl font-bold text-white">Half-Day Express Tour</h3>
+                  <h3 className="font-heading text-4xl font-bold text-white">Half-Day Whitehaven Beach Cruise</h3>
                 </div>
               </div>
             </div>
             <div className="p-8">
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <div className="font-heading text-4xl font-bold text-sand mb-2">$120-140</div>
+                  <div className="font-heading text-4xl font-bold text-yellow-600 mb-2">$139-159</div>
                   <div className="font-body text-gray-600">per person</div>
                 </div>
                 <div className="text-right">
-                  <div className="font-heading text-2xl font-bold text-navy">Half Day</div>
-                  <div className="font-body text-gray-600">4-5 hours</div>
+                  <div className="font-heading text-2xl font-bold text-gray-800">Half Day</div>
+                  <div className="font-body text-gray-600">Morning or afternoon</div>
                 </div>
               </div>
 
               <p className="font-body text-gray-700 leading-relaxed mb-6">
-                Short on time? This half-day option gets you to Whitehaven Beach and back in 4-5 hours.
-                You'll spend about 1.5 hours at the beach with a quick Hill Inlet lookout visit. Perfect
-                for cruise ship passengers or those with limited time in the Whitsundays.
+                Short on time or budget? Cruise Whitsundays' half-day option gets you to Whitehaven Beach and back
+                in 5-6 hours. You'll spend about 2 hours on South Whitehaven Beach—enough time to swim, walk the sand,
+                and appreciate why it's Australia's #1 beach. Perfect for cruise ship passengers or those combining
+                multiple activities in one day.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <h4 className="font-heading text-lg font-bold text-navy mb-3">✓ What's Included</h4>
+                  <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">✓ What's Included</h4>
                   <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• 1.5 hours at Whitehaven Beach</li>
-                    <li>• Hill Inlet lookout walk</li>
-                    <li>• Light refreshments</li>
-                    <li>• Transfers included</li>
-                    <li>• Morning or afternoon departure</li>
+                    <li>• 2 hours at South Whitehaven Beach</li>
+                    <li>• Morning or afternoon tea</li>
+                    <li>• Comfortable air-conditioned catamaran</li>
+                    <li>• Scenic cruise through Whitsunday Passage</li>
+                    <li>• Knowledgeable skipper commentary</li>
+                    <li>• All ages welcome (infants free 0-3)</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-heading text-lg font-bold text-navy mb-3">👥 Perfect For</h4>
+                  <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">👥 Perfect For</h4>
                   <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Cruise ship passengers</li>
-                    <li>• Time-limited visitors</li>
-                    <li>• Those combining with other activities</li>
-                    <li>• Quick Whitehaven tick-off</li>
+                    <li>• Cruise ship passengers (limited time)</li>
+                    <li>• Budget-conscious travelers</li>
+                    <li>• Those doing other activities same day</li>
+                    <li>• Quick Whitehaven "tick-off"</li>
+                    <li>• Families with very young children</li>
                   </ul>
                 </div>
               </div>
 
               <div className="bg-yellow-50 p-6 rounded-lg mb-6">
-                <h4 className="font-heading font-bold text-navy mb-2">⚠️ Honest Take:</h4>
+                <h4 className="font-heading font-bold text-gray-800 mb-2">⚠️ Honest Take:</h4>
                 <p className="font-body text-gray-700 text-sm">
-                  If you have the time, I'd recommend the full-day tour instead. You'll feel rushed on the
-                  half-day option. But if it's this or nothing, absolutely do it - even 1.5 hours at Whitehaven
-                  is magical.
+                  This tour does NOT visit Hill Inlet lookout (not enough time). You'll see Whitehaven Beach and have
+                  a lovely 2 hours there, but if you have the time, I'd recommend the full-day tours instead. That said,
+                  if it's this or nothing, absolutely do it—even 2 hours at Whitehaven is worth it, and $139 is the
+                  cheapest way to get there.
                 </p>
               </div>
 
-              <button className="w-full bg-sand text-navy py-4 rounded-xl font-heading font-bold text-lg hover:bg-sand/80 transition-colors shadow-lg">
+              <button className="w-full bg-yellow-500 text-gray-900 py-4 rounded-xl font-heading font-bold text-lg hover:bg-yellow-600 transition-colors shadow-lg">
                 Check Availability & Book
               </button>
             </div>
           </div>
 
-          {/* Tour 4: Helicopter + Beach Landing */}
-          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-coral">
+          {/* Tour 4: Whitehaven Xpress */}
+          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-green-600">
+            <div
+              className="h-64 bg-cover bg-center"
+              style={{
+                backgroundImage: "url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=1200')",
+              }}
+            >
+              <div className="h-full bg-gradient-to-br from-green-900/60 to-transparent flex items-end p-8">
+                <div>
+                  <div className="bg-green-600 text-white px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
+                    BEST VALUE
+                  </div>
+                  <h3 className="font-heading text-4xl font-bold text-white">Whitehaven Xpress Full Day Tour</h3>
+                </div>
+              </div>
+            </div>
+            <div className="p-8">
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <div className="font-heading text-4xl font-bold text-green-600 mb-2">$189-209</div>
+                  <div className="font-body text-gray-600">per person</div>
+                </div>
+                <div className="text-right">
+                  <div className="font-heading text-2xl font-bold text-gray-800">Full Day</div>
+                  <div className="font-body text-gray-600">8.5 hours</div>
+                </div>
+              </div>
+
+              <p className="font-body text-gray-700 leading-relaxed mb-6">
+                Family-owned since the 1990s, Whitehaven Xpress offers the MOST time at both Whitehaven Beach AND
+                Hill Inlet of any tour at this price point. Their signature feature? An authentic Aussie beach BBQ
+                served right on the sand. This is the tour that best balances time, value, and experience—perfect
+                for first-time visitors who want to see everything without breaking the bank.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">✓ What's Included</h4>
+                  <ul className="space-y-2 font-body text-gray-700 text-sm">
+                    <li>• MOST time at Whitehaven & Hill Inlet</li>
+                    <li>• Visit North AND South Whitehaven</li>
+                    <li>• Aussie beach BBQ lunch (on the sand!)</li>
+                    <li>• Extended Hill Inlet lookout time</li>
+                    <li>• Betty's Beach visit (hidden gem)</li>
+                    <li>• Optional snorkeling location</li>
+                    <li>• Comfortable catamaran with toilets/bar</li>
+                    <li>• Family-friendly (stroller space!)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">👥 Perfect For</h4>
+                  <ul className="space-y-2 font-body text-gray-700 text-sm">
+                    <li>• Families with kids (very kid-friendly)</li>
+                    <li>• First-time visitors wanting to see it all</li>
+                    <li>• Those wanting great value for money</li>
+                    <li>• People who appreciate family-owned service</li>
+                    <li>• Travelers wanting max time at top spots</li>
+                    <li>• Suitable from 3 months to seniors</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-green-50 p-6 rounded-lg mb-6">
+                <h4 className="font-heading font-bold text-gray-800 mb-2">⭐ Why This is Best Value:</h4>
+                <p className="font-body text-gray-700 text-sm">
+                  For just $30-40 more than the half-day tour, you get 6+ extra hours, full BBQ lunch, Hill Inlet
+                  lookout, and visits to BOTH ends of Whitehaven. The family-owned vibe means personalized service,
+                  and they genuinely care about giving you the best day possible. This is what I'd book for visiting
+                  family and friends.
+                </p>
+              </div>
+
+              <button className="w-full bg-green-600 text-white py-4 rounded-xl font-heading font-bold text-lg hover:bg-green-700 transition-colors shadow-lg">
+                Check Availability & Book
+              </button>
+            </div>
+          </div>
+
+          {/* Tour 5: Helicopter + Beach Landing */}
+          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-pink-500">
             <div
               className="h-64 bg-cover bg-center"
               style={{
                 backgroundImage: "url('https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=1200')",
               }}
             >
-              <div className="h-full bg-gradient-to-br from-coral/60 to-transparent flex items-end p-8">
+              <div className="h-full bg-gradient-to-br from-pink-900/60 to-transparent flex items-end p-8">
                 <div>
-                  <div className="bg-white text-coral px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
+                  <div className="bg-pink-500 text-white px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
                     BUCKET LIST
                   </div>
-                  <h3 className="font-heading text-4xl font-bold text-white">Helicopter & Beach Landing</h3>
+                  <h3 className="font-heading text-4xl font-bold text-white">Helicopter Flight & Beach Landing</h3>
                 </div>
               </div>
             </div>
             <div className="p-8">
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <div className="font-heading text-4xl font-bold text-coral mb-2">$450-550</div>
+                  <div className="font-heading text-4xl font-bold text-pink-500 mb-2">$450-550</div>
                   <div className="font-body text-gray-600">per person</div>
                 </div>
                 <div className="text-right">
-                  <div className="font-heading text-2xl font-bold text-navy">3 Hours</div>
+                  <div className="font-heading text-2xl font-bold text-gray-800">3 Hours</div>
                   <div className="font-body text-gray-600">Total experience</div>
                 </div>
               </div>
 
               <p className="font-body text-gray-700 leading-relaxed mb-6">
-                The ultimate Whitehaven experience. Helicopter flight over Hill Inlet (you'll get THE photo),
-                land directly on the beach for 1-2 hours, then scenic flight back over the reef. This is a
-                once-in-a-lifetime experience that combines aerial views with beach time.
+                The ultimate Whitehaven experience. Soar over Hill Inlet in a helicopter for THE iconic aerial photo,
+                land directly on Whitehaven Beach for 1-2 hours of exclusive beach time, then return via scenic flight
+                over the Great Barrier Reef and Heart Reef. This is the experience you'll remember forever—and the
+                photo you'll frame on your wall.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <h4 className="font-heading text-lg font-bold text-navy mb-3">✓ What's Included</h4>
+                  <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">✓ What's Included</h4>
                   <ul className="space-y-2 font-body text-gray-700 text-sm">
                     <li>• 30-minute scenic helicopter flight</li>
-                    <li>• Aerial views of Hill Inlet</li>
-                    <li>• 1-2 hours on Whitehaven Beach</li>
+                    <li>• Aerial views of Hill Inlet (THE photo!)</li>
+                    <li>• Direct beach landing on Whitehaven</li>
+                    <li>• 1-2 hours private beach time</li>
                     <li>• Champagne and refreshments</li>
-                    <li>• Return flight over reef/islands</li>
-                    <li>• Small group (2-6 passengers)</li>
-                    <li>• Pilot commentary</li>
+                    <li>• Return flight over Heart Reef</li>
+                    <li>• Small group (2-6 passengers max)</li>
+                    <li>• Guaranteed window seat</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-heading text-lg font-bold text-navy mb-3">👥 Perfect For</h4>
+                  <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">👥 Perfect For</h4>
                   <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Special occasions</li>
-                    <li>• Proposals/honeymoons</li>
+                    <li>• Special occasions (proposals, anniversaries)</li>
+                    <li>• Honeymooners</li>
                     <li>• Photography enthusiasts</li>
                     <li>• Bucket list travelers</li>
                     <li>• Those wanting VIP experience</li>
@@ -374,181 +478,141 @@ export default function WhitehavenBeachToursPage() {
               </div>
 
               <div className="bg-pink-50 p-6 rounded-lg mb-6">
-                <h4 className="font-heading font-bold text-navy mb-2">📸 Photo Opportunity:</h4>
+                <h4 className="font-heading font-bold text-gray-800 mb-2">📸 The Photo Everyone Wants:</h4>
                 <p className="font-body text-gray-700 text-sm">
-                  The aerial view of Hill Inlet from a helicopter is THE iconic Whitsundays photo. You'll
-                  circle multiple times so everyone gets the shot. Worth every cent if photography or a
-                  special occasion is important to you.
+                  You know that iconic swirling sands photo of Hill Inlet you see EVERYWHERE? This is how you get it.
+                  The helicopter circles multiple times so everyone gets the perfect shot. No other vantage point comes
+                  close. If photography is important to you, or this is a once-in-a-lifetime trip, this experience is
+                  worth every cent.
                 </p>
               </div>
 
-              <button className="w-full bg-coral text-white py-4 rounded-xl font-heading font-bold text-lg hover:bg-coral-600 transition-colors shadow-lg">
+              <button className="w-full bg-pink-500 text-white py-4 rounded-xl font-heading font-bold text-lg hover:bg-pink-600 transition-colors shadow-lg">
                 Check Availability & Book
-              </button>
-            </div>
-          </div>
-
-          {/* Tour 5: Luxury Private Charter */}
-          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-navy">
-            <div
-              className="h-64 bg-cover bg-center"
-              style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1200')",
-              }}
-            >
-              <div className="h-full bg-gradient-to-br from-navy/70 to-transparent flex items-end p-8">
-                <div>
-                  <div className="bg-sand text-navy px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
-                    ULTIMATE LUXURY
-                  </div>
-                  <h3 className="font-heading text-4xl font-bold text-white">Private Luxury Charter</h3>
-                </div>
-              </div>
-            </div>
-            <div className="p-8">
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <div className="font-heading text-4xl font-bold text-navy mb-2">$600-800</div>
-                  <div className="font-body text-gray-600">per person (min 4)</div>
-                </div>
-                <div className="text-right">
-                  <div className="font-heading text-2xl font-bold text-navy">Full Day</div>
-                  <div className="font-body text-gray-600">Flexible timing</div>
-                </div>
-              </div>
-
-              <p className="font-body text-gray-700 leading-relaxed mb-6">
-                The absolute pinnacle of Whitehaven Beach experiences. Private yacht or catamaran, dedicated
-                crew, gourmet catering, and complete flexibility in itinerary. Visit Whitehaven at your own
-                pace, snorkel pristine reefs, and enjoy 5-star service throughout. This is how celebrities
-                experience the Whitsundays.
-              </p>
-
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <h4 className="font-heading text-lg font-bold text-navy mb-3">✓ What's Included</h4>
-                  <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Private yacht/catamaran charter</li>
-                    <li>• Dedicated crew (captain + host)</li>
-                    <li>• Gourmet meals and premium drinks</li>
-                    <li>• Flexible itinerary and timing</li>
-                    <li>• Water toys and equipment</li>
-                    <li>• Multiple snorkel locations</li>
-                    <li>• Privacy and exclusivity</li>
-                    <li>• Champagne and premium spirits</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-heading text-lg font-bold text-navy mb-3">👥 Perfect For</h4>
-                  <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Luxury travelers</li>
-                    <li>• Special celebrations</li>
-                    <li>• Families wanting privacy</li>
-                    <li>• Corporate groups</li>
-                    <li>• VIPs and celebrities</li>
-                    <li>• Those who value exclusivity</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="bg-purple-50 p-6 rounded-lg mb-6">
-                <h4 className="font-heading font-bold text-navy mb-2">💎 The Ultimate Experience:</h4>
-                <p className="font-body text-gray-700 text-sm">
-                  With a private charter, you control everything. Want to arrive at Whitehaven before anyone
-                  else? Done. Want to spend 4 hours there instead of 2? No problem. This is for those who
-                  want the absolute best and have the budget to match.
-                </p>
-              </div>
-
-              <button className="w-full bg-navy text-white py-4 rounded-xl font-heading font-bold text-lg hover:bg-navy/90 transition-colors shadow-lg">
-                Enquire About Private Charter
               </button>
             </div>
           </div>
 
           {/* Decision Guide */}
           <div className="mb-16">
-            <h2 className="font-heading text-3xl font-bold text-navy mb-8 text-center">
+            <h2 className="font-heading text-3xl font-bold text-gray-800 mb-8 text-center">
               Which Tour Should You Choose?
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-coral/10 to-sand/10 p-6 rounded-xl border-l-4 border-coral">
-                <h3 className="font-heading text-xl font-bold text-navy mb-4">Choose Budget Sail if you:</h3>
+              <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-6 rounded-xl border-l-4 border-orange-500">
+                <h3 className="font-heading text-xl font-bold text-gray-800 mb-4">Choose Ocean Rafting if you:</h3>
                 <ul className="space-y-2 font-body text-gray-700">
-                  <li>✓ Are on a tight budget</li>
-                  <li>✓ Don't mind larger groups (25-35 people)</li>
-                  <li>✓ Want all the essentials covered</li>
-                  <li>✓ Are backpacking or traveling long-term</li>
+                  <li>✓ Love snorkeling (TWO sites)</li>
+                  <li>✓ Want exclusive Hill Inlet access</li>
+                  <li>✓ Enjoy adventure and thrills</li>
+                  <li>✓ Value unique experiences</li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-ocean/10 to-sand/10 p-6 rounded-xl border-l-4 border-ocean">
-                <h3 className="font-heading text-xl font-bold text-navy mb-4">Choose Premium Catamaran if you:</h3>
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border-l-4 border-blue-600">
+                <h3 className="font-heading text-xl font-bold text-gray-800 mb-4">Choose Chill & Grill if you:</h3>
                 <ul className="space-y-2 font-body text-gray-700">
-                  <li>✓ Want the best overall value</li>
-                  <li>✓ Prefer smaller groups and better service</li>
-                  <li>✓ Can stretch the budget slightly</li>
-                  <li>✓ Value quality food and more beach time</li>
+                  <li>✓ Want MAXIMUM beach time</li>
+                  <li>✓ Prefer relaxation over adventure</li>
+                  <li>✓ Are traveling with family</li>
+                  <li>✓ Want the full Whitehaven experience</li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-sand/20 to-coral/10 p-6 rounded-xl border-l-4 border-sand">
-                <h3 className="font-heading text-xl font-bold text-navy mb-4">Choose Half-Day Express if you:</h3>
+              <div className="bg-gradient-to-br from-yellow-50 to-amber-50 p-6 rounded-xl border-l-4 border-yellow-500">
+                <h3 className="font-heading text-xl font-bold text-gray-800 mb-4">Choose Half-Day if you:</h3>
                 <ul className="space-y-2 font-body text-gray-700">
-                  <li>✓ Are on a cruise ship</li>
-                  <li>✓ Have very limited time</li>
-                  <li>✓ Want to see other things same day</li>
-                  <li>✓ Just need to "tick off" Whitehaven</li>
+                  <li>✓ Are on a cruise ship (limited time)</li>
+                  <li>✓ Have a tight budget</li>
+                  <li>✓ Want to do other things same day</li>
+                  <li>✓ Just need to see Whitehaven</li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-coral/20 to-pink/10 p-6 rounded-xl border-l-4 border-coral">
-                <h3 className="font-heading text-xl font-bold text-navy mb-4">Choose Helicopter if you:</h3>
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-l-4 border-green-600">
+                <h3 className="font-heading text-xl font-bold text-gray-800 mb-4">Choose Whitehaven Xpress if you:</h3>
                 <ul className="space-y-2 font-body text-gray-700">
-                  <li>✓ Are celebrating something special</li>
-                  <li>✓ Want THE iconic aerial photo</li>
-                  <li>✓ Have the budget for a splurge</li>
-                  <li>✓ Love unique experiences</li>
+                  <li>✓ Want best overall value</li>
+                  <li>✓ Have kids (very family-friendly)</li>
+                  <li>✓ Want to see everything</li>
+                  <li>✓ Appreciate family-owned businesses</li>
                 </ul>
               </div>
             </div>
 
-            <div className="mt-8 bg-gradient-to-br from-navy/10 to-ocean/10 p-8 rounded-xl border-l-4 border-navy">
-              <h3 className="font-heading text-xl font-bold text-navy mb-4">Choose Luxury Charter if you:</h3>
+            <div className="mt-8 bg-gradient-to-br from-pink-50 to-purple-50 p-8 rounded-xl border-l-4 border-pink-500">
+              <h3 className="font-heading text-xl font-bold text-gray-800 mb-4">Choose Helicopter if you:</h3>
               <ul className="space-y-2 font-body text-gray-700">
-                <li>✓ Want complete privacy and flexibility</li>
-                <li>✓ Are traveling with family/group (4+ people)</li>
-                <li>✓ Celebrating a major milestone</li>
-                <li>✓ Value 5-star service and exclusivity</li>
-                <li>✓ Have a comfortable budget for the best</li>
+                <li>✓ Are celebrating something special</li>
+                <li>✓ Want THE iconic aerial photo</li>
+                <li>✓ Have the budget for a splurge</li>
+                <li>✓ Love unique, once-in-a-lifetime experiences</li>
+                <li>✓ Value photography and memories over time</li>
               </ul>
+            </div>
+          </div>
+
+          {/* Want Your Own Boat Section */}
+          <div className="mb-16">
+            <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-8 rounded-2xl text-white">
+              <h2 className="font-heading text-3xl font-bold mb-4">
+                🚤 Want Your Own Boat?
+              </h2>
+              <p className="font-body text-lg mb-6 leading-relaxed">
+                If you're an experienced sailor or traveling with a larger group (8+ people), consider renting your
+                own yacht or booking a private skippered charter. You'll have complete flexibility to explore Whitehaven
+                at your own pace, with your own itinerary, and total privacy.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="bg-white/10 p-6 rounded-xl">
+                  <h3 className="font-heading text-xl font-bold mb-3">⛵ Bareboating</h3>
+                  <p className="font-body text-sm mb-3">
+                    Rent and captain your own yacht. Perfect for experienced sailors wanting ultimate freedom.
+                  </p>
+                  <p className="text-sm opacity-90">From $500/day | Sailing certification required</p>
+                </div>
+                <div className="bg-white/10 p-6 rounded-xl">
+                  <h3 className="font-heading text-xl font-bold mb-3">🛥️ Private Charters</h3>
+                  <p className="font-body text-sm mb-3">
+                    Professional crew, gourmet meals, custom itinerary. Great for groups splitting costs.
+                  </p>
+                  <p className="text-sm opacity-90">From $2,500/charter | Works out to ~$125-250pp for groups</p>
+                </div>
+              </div>
+              <Link
+                href="/tours/bareboating-and-private-charters"
+                className="inline-block bg-white text-blue-600 px-8 py-4 rounded-xl font-heading font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl"
+              >
+                Explore Bareboating & Private Charters →
+              </Link>
             </div>
           </div>
 
           {/* Booking Tips */}
           <div className="mb-16">
             <div className="bg-blue-50 p-8 rounded-xl">
-              <h2 className="font-heading text-2xl font-bold text-navy mb-6">
+              <h2 className="font-heading text-2xl font-bold text-gray-800 mb-6">
                 💡 Booking Tips from a Local
               </h2>
               <div className="grid md:grid-cols-2 gap-6 font-body text-gray-700">
                 <div>
-                  <h3 className="font-heading font-bold text-navy mb-3">When to Book:</h3>
+                  <h3 className="font-heading font-bold text-gray-800 mb-3">When to Book:</h3>
                   <ul className="space-y-2">
-                    <li>• Peak season (Jun-Aug): Book 4-6 weeks ahead</li>
-                    <li>• Shoulder (Apr-May, Sep-Nov): 2-3 weeks ahead</li>
-                    <li>• Summer (Dec-Mar): 1-2 weeks usually fine</li>
-                    <li>• Last-minute: Sometimes available but risky</li>
+                    <li>• <strong>Peak season (Jun-Aug):</strong> Book 4-6 weeks ahead</li>
+                    <li>• <strong>Shoulder (Apr-May, Sep-Nov):</strong> 2-3 weeks ahead</li>
+                    <li>• <strong>Summer (Dec-Mar):</strong> 1-2 weeks usually fine</li>
+                    <li>• <strong>Last-minute:</strong> Sometimes available but risky in peak season</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-heading font-bold text-navy mb-3">What to Know:</h3>
+                  <h3 className="font-heading font-bold text-gray-800 mb-3">What to Know:</h3>
                   <ul className="space-y-2">
                     <li>• Tours reschedule in bad weather (not refund)</li>
-                    <li>• Bring reef-safe sunscreen only</li>
+                    <li>• Bring <strong>reef-safe sunscreen only</strong></li>
                     <li>• Seasickness tablets if prone to it</li>
                     <li>• Camera/phone in waterproof case</li>
+                    <li>• Cash for onboard bar purchases</li>
                   </ul>
                 </div>
               </div>
@@ -557,39 +621,57 @@ export default function WhitehavenBeachToursPage() {
 
           {/* FAQ */}
           <div className="mb-16">
-            <h2 className="font-heading text-3xl font-bold text-navy mb-8">
+            <h2 className="font-heading text-3xl font-bold text-gray-800 mb-8">
               Common Questions
             </h2>
             <div className="space-y-6">
               <div className="bg-white border-2 border-gray-200 p-6 rounded-xl">
-                <h3 className="font-heading text-xl font-bold text-navy mb-3">
+                <h3 className="font-heading text-xl font-bold text-gray-800 mb-3">
                   Can I book these tours last minute?
                 </h3>
                 <p className="font-body text-gray-700">
-                  Sometimes, yes - especially in low season. But peak season (June-August), most tours sell
-                  out 2-4 weeks ahead. If you have fixed dates, book as early as possible.
+                  Sometimes, yes—especially in low season (December-March). But in peak season (June-August), most
+                  tours sell out 2-4 weeks ahead, particularly Ocean Rafting and Chill & Grill. If you have fixed
+                  dates, book as early as possible.
                 </p>
               </div>
 
               <div className="bg-white border-2 border-gray-200 p-6 rounded-xl">
-                <h3 className="font-heading text-xl font-bold text-navy mb-3">
+                <h3 className="font-heading text-xl font-bold text-gray-800 mb-3">
                   What if the weather is bad?
                 </h3>
                 <p className="font-body text-gray-700">
-                  Tours will reschedule rather than refund. If you have flexible dates, this works fine. If
-                  you can't reschedule, most operators offer credit for future use. Weather cancellations are
-                  rare but do happen, especially in summer.
+                  Tours will reschedule rather than refund. If you have flexible dates, this works fine. If you can't
+                  reschedule, most operators offer credit for future use or transfer to another person. Weather
+                  cancellations are rare (operators sail in most conditions), but do happen especially in summer
+                  cyclone season.
                 </p>
               </div>
 
               <div className="bg-white border-2 border-gray-200 p-6 rounded-xl">
-                <h3 className="font-heading text-xl font-bold text-navy mb-3">
+                <h3 className="font-heading text-xl font-bold text-gray-800 mb-3">
+                  Do I need to be a strong swimmer?
+                </h3>
+                <p className="font-body text-gray-700">
+                  No! All tours provide life jackets and floatation devices. Non-swimmers can enjoy the beach, lookout
+                  walks, and boat rides. If you want to snorkel but aren't confident, tell the crew—they provide pool
+                  noodles and extra assistance. Ocean Rafting and Whitehaven Xpress are particularly good with
+                  non-swimmers.
+                </p>
+              </div>
+
+              <div className="bg-white border-2 border-gray-200 p-6 rounded-xl">
+                <h3 className="font-heading text-xl font-bold text-gray-800 mb-3">
                   Are these affiliate links?
                 </h3>
                 <p className="font-body text-gray-700">
-                  Yes - when you book through the links on this page, I may earn a small commission at no extra
-                  cost to you. This helps me maintain this free guide. I only recommend tours I genuinely believe
-                  offer good value. See my <Link href="/affiliate-disclosure" className="text-coral hover:underline">affiliate disclosure</Link> for more details.
+                  Yes—when you book through the links on this page, I may earn a small commission at no extra cost
+                  to you. This helps me maintain this free guide and keep researching the best tours. I only recommend
+                  tours I genuinely believe offer good value. See my{' '}
+                  <Link href="/affiliate-disclosure" className="text-orange-500 hover:underline font-semibold">
+                    affiliate disclosure
+                  </Link>{' '}
+                  for more details.
                 </p>
               </div>
             </div>
@@ -599,7 +681,7 @@ export default function WhitehavenBeachToursPage() {
       </div>
 
       {/* CTA */}
-      <div className="bg-ocean py-16">
+      <div className="bg-blue-600 py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-heading text-4xl font-bold text-white mb-6">
             Still Have Questions?
@@ -610,13 +692,13 @@ export default function WhitehavenBeachToursPage() {
           <div className="flex gap-4 justify-center flex-wrap">
             <Link
               href="/whitehaven-beach"
-              className="bg-coral text-white px-8 py-4 rounded-xl font-heading font-bold text-lg hover:bg-white hover:text-ocean transition-all duration-300 shadow-xl"
+              className="bg-orange-500 text-white px-8 py-4 rounded-xl font-heading font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 shadow-xl"
             >
               Read Full Beach Guide
             </Link>
             <Link
               href="/contact"
-              className="bg-white text-ocean px-8 py-4 rounded-xl font-heading font-bold text-lg hover:bg-sand hover:text-navy transition-all duration-300 shadow-xl"
+              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-heading font-bold text-lg hover:bg-yellow-500 hover:text-gray-900 transition-all duration-300 shadow-xl"
             >
               Contact Me
             </Link>

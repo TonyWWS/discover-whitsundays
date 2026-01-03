@@ -241,9 +241,10 @@ export default function WhitehavenBeachPage() {
                       <strong className="text-navy">Best for:</strong> Special occasions, photographers
                     </div>
                   </div>
-                  <button className="mt-6 bg-ocean text-white px-8 py-3 rounded-xl font-heading font-bold hover:bg-ocean-600 transition-colors shadow-lg w-full md:w-auto">
+                  <Link href="/tours/scenic-flights"
+                    className="mt-6 bg-ocean text-white px-8 py-3 rounded-xl font-heading font-bold hover:bg-ocean-600 transition-colors shadow-lg w-full md:w-auto">
                     View Scenic Flights
-                  </button>
+                  </Link>
                 </div>
               </div>
 
@@ -275,9 +276,10 @@ export default function WhitehavenBeachPage() {
                       <strong className="text-navy">Best for:</strong> Adventure seekers, avoiding crowds
                     </div>
                   </div>
-                  <button className="mt-6 bg-sand text-navy px-8 py-3 rounded-xl font-heading font-bold hover:bg-sand/80 transition-colors shadow-lg w-full md:w-auto">
+                  <Link href="things-to-do/overnight-sailing"
+                    className="mt-6 bg-sand text-navy px-8 py-3 rounded-xl font-heading font-bold hover:bg-sand/80 transition-colors shadow-lg w-full md:w-auto">
                     View Sailing Trips
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
