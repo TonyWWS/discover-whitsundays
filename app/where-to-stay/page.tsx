@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Link from 'next/link';
 
 export default function WhereToStayPage() {
   return (
@@ -14,14 +15,14 @@ export default function WhereToStayPage() {
             backgroundImage: "url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920')",
           }}
         >
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-6xl font-bold text-white mb-4 drop-shadow-2xl">
+          <h1 className="font-['Plus_Jakarta_Sans'] text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-2xl">
             Where to Stay in the Whitsundays
           </h1>
-          <p className="text-2xl text-white drop-shadow-lg">
+          <p className="font-['Inter'] text-xl md:text-2xl text-white/95 drop-shadow-lg max-w-3xl mx-auto">
             From budget-friendly Airlie Beach to luxury island resorts
           </p>
         </div>
@@ -29,88 +30,86 @@ export default function WhereToStayPage() {
 
       {/* Introduction */}
       <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xl text-gray-700 leading-relaxed mb-8">
+        <div className="max-w-4xl mx-auto">
+          <p className="font-['Inter'] text-xl text-gray-700 leading-relaxed text-center mb-12">
             Choosing where to stay in the Whitsundays depends on your budget, travel style, and what
             you want to experience. From the vibrant mainland town of Airlie Beach to secluded island
             resorts, there's accommodation to suit every traveler.
           </p>
 
+          {/* Quick Overview Cards */}
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <div className="text-3xl mb-2">🏖️</div>
-              <h3 className="font-bold text-gray-900 mb-2">Airlie Beach</h3>
-              <p className="text-gray-700 text-sm">Budget-friendly, nightlife, tour departure point</p>
+            <div className="bg-white border-b-4 border-[#FF6B6B] p-6 rounded-2xl shadow-xl">
+              <h3 className="font-['Plus_Jakarta_Sans'] text-lg font-bold text-gray-900 mb-2">Airlie Beach</h3>
+              <p className="font-['Inter'] text-sm text-gray-600">Budget-friendly, nightlife, tour departure point</p>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <div className="text-3xl mb-2">🏝️</div>
-              <h3 className="font-bold text-gray-900 mb-2">Island Resorts</h3>
-              <p className="text-gray-700 text-sm">Luxury, seclusion, all-inclusive options</p>
+            <div className="bg-white border-b-4 border-[#4ECDC4] p-6 rounded-2xl shadow-xl">
+              <h3 className="font-['Plus_Jakarta_Sans'] text-lg font-bold text-gray-900 mb-2">Island Resorts</h3>
+              <p className="font-['Inter'] text-sm text-gray-600">Luxury, seclusion, all-inclusive options</p>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <div className="text-3xl mb-2">⛵</div>
-              <h3 className="font-bold text-gray-900 mb-2">Overnight Sailing</h3>
-              <p className="text-gray-700 text-sm">Adventure, unique experience, great value</p>
+            <div className="bg-white border-b-4 border-[#FFE66D] p-6 rounded-2xl shadow-xl">
+              <h3 className="font-['Plus_Jakarta_Sans'] text-lg font-bold text-gray-900 mb-2">Overnight Sailing</h3>
+              <p className="font-['Inter'] text-sm text-gray-600">Adventure, unique experience, great value</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Quick Decision Guide */}
-      <div className="bg-gradient-to-br from-blue-500 to-cyan-500 py-16">
+      <div className="bg-gradient-to-br from-[#1E3A8A] via-[#2563EB] to-[#4ECDC4] py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold text-white mb-8 text-center">
+            <h2 className="font-['Plus_Jakarta_Sans'] text-4xl md:text-5xl font-bold text-white mb-12 text-center">
               Quick Decision Guide
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-4">Choose Airlie Beach if you:</h3>
-                <ul className="space-y-2">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl text-white border border-white/20">
+                <h3 className="font-['Plus_Jakarta_Sans'] text-2xl font-bold mb-6">Choose Airlie Beach if you:</h3>
+                <ul className="space-y-3 font-['Inter']">
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
+                    <span className="text-[#FFE66D] mr-3 font-bold text-lg">•</span>
                     <span>Want to save money on accommodation</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
+                    <span className="text-[#FFE66D] mr-3 font-bold text-lg">•</span>
                     <span>Like nightlife, restaurants, and shopping</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
+                    <span className="text-[#FFE66D] mr-3 font-bold text-lg">•</span>
                     <span>Plan to take multiple day tours</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
+                    <span className="text-[#FFE66D] mr-3 font-bold text-lg">•</span>
                     <span>Prefer more dining and entertainment options</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
+                    <span className="text-[#FFE66D] mr-3 font-bold text-lg">•</span>
                     <span>Want easy access to the mainland</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-4">Choose Island Resort if you:</h3>
-                <ul className="space-y-2">
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl text-white border border-white/20">
+                <h3 className="font-['Plus_Jakarta_Sans'] text-2xl font-bold mb-6">Choose Island Resort if you:</h3>
+                <ul className="space-y-3 font-['Inter']">
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
+                    <span className="text-[#4ECDC4] mr-3 font-bold text-lg">•</span>
                     <span>Want a luxury, all-inclusive experience</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
+                    <span className="text-[#4ECDC4] mr-3 font-bold text-lg">•</span>
                     <span>Prefer seclusion and privacy</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
+                    <span className="text-[#4ECDC4] mr-3 font-bold text-lg">•</span>
                     <span>Don't mind spending more on accommodation</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
+                    <span className="text-[#4ECDC4] mr-3 font-bold text-lg">•</span>
                     <span>Want to wake up on the water</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-2">✓</span>
+                    <span className="text-[#4ECDC4] mr-3 font-bold text-lg">•</span>
                     <span>Looking for a honeymoon/special occasion stay</span>
                   </li>
                 </ul>
@@ -124,176 +123,191 @@ export default function WhereToStayPage() {
       <div className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+            <h2 className="font-['Plus_Jakarta_Sans'] text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">
               Airlie Beach Accommodation
             </h2>
-            <p className="text-center text-gray-600 mb-12 text-lg max-w-3xl mx-auto">
+            <p className="font-['Inter'] text-center text-gray-600 mb-12 text-xl max-w-3xl mx-auto">
               The mainland hub offers the best value and variety. All tours depart from here,
               and you'll find plenty of restaurants, bars, and shops.
             </p>
 
             {/* Budget */}
             <div className="mb-12">
-              <div className="bg-green-50 p-8 rounded-xl">
+              <div className="bg-white border-b-4 border-[#228B22] p-8 rounded-2xl shadow-xl mb-8">
                 <div className="flex items-center mb-6">
-                  <div className="text-4xl mr-4">💰</div>
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-900">Budget ($50-120/night)</h3>
-                    <p className="text-gray-600">Hostels, budget hotels, and basic motels</p>
+                    <h3 className="font-['Plus_Jakarta_Sans'] text-3xl font-bold text-gray-900">Budget ($50-120/night)</h3>
+                    <p className="font-['Inter'] text-gray-600 text-lg">Hostels, budget hotels, and basic motels</p>
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-white p-6 rounded-lg">
-                    <h4 className="font-bold text-xl text-gray-900 mb-3">What to Expect</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li>• Clean, basic rooms with essential amenities</li>
-                      <li>• Shared or private bathroom options</li>
-                      <li>• Central location near the main street</li>
-                      <li>• Pool and communal areas (most properties)</li>
-                      <li>• Great for meeting other travelers</li>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
+                    <h4 className="font-['Plus_Jakarta_Sans'] font-bold text-xl text-gray-900 mb-4">What to Expect</h4>
+                    <ul className="space-y-2 font-['Inter'] text-gray-700">
+                      <li className="flex items-start">
+                        <span className="text-[#228B22] mr-2 font-bold">•</span>
+                        <span>Clean, basic rooms with essential amenities</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#228B22] mr-2 font-bold">•</span>
+                        <span>Shared or private bathroom options</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#228B22] mr-2 font-bold">•</span>
+                        <span>Central location near the main street</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#228B22] mr-2 font-bold">•</span>
+                        <span>Pool and communal areas (most properties)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#228B22] mr-2 font-bold">•</span>
+                        <span>Great for meeting other travelers</span>
+                      </li>
                     </ul>
                   </div>
 
-                  <div className="bg-white p-6 rounded-lg">
-                    <h4 className="font-bold text-xl text-gray-900 mb-3">Best For</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li>• Backpackers and solo travelers</li>
-                      <li>• Budget-conscious couples</li>
-                      <li>• People who spend most time on tours</li>
-                      <li>• Social atmosphere seekers</li>
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
+                    <h4 className="font-['Plus_Jakarta_Sans'] font-bold text-xl text-gray-900 mb-4">Best For</h4>
+                    <ul className="space-y-2 font-['Inter'] text-gray-700">
+                      <li className="flex items-start">
+                        <span className="text-[#228B22] mr-2 font-bold">•</span>
+                        <span>Backpackers and solo travelers</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#228B22] mr-2 font-bold">•</span>
+                        <span>Budget-conscious couples</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#228B22] mr-2 font-bold">•</span>
+                        <span>People who spend most time on tours</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#228B22] mr-2 font-bold">•</span>
+                        <span>Social atmosphere seekers</span>
+                      </li>
                     </ul>
-                    <div className="mt-4 pt-4 border-t border-gray-200">
-                      <button className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                        View Budget Options
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Mid-Range */}
-            <div className="mb-12">
-              <div className="bg-blue-50 p-8 rounded-xl">
+              {/* Mid-Range */}
+              <div className="bg-white border-b-4 border-[#FF6B6B] p-8 rounded-2xl shadow-xl mb-8">
                 <div className="flex items-center mb-6">
-                  <div className="text-4xl mr-4">🏨</div>
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-900">Mid-Range ($120-250/night)</h3>
-                    <p className="text-gray-600">Comfortable hotels and modern apartments</p>
+                    <h3 className="font-['Plus_Jakarta_Sans'] text-3xl font-bold text-gray-900">Mid-Range ($120-250/night)</h3>
+                    <p className="font-['Inter'] text-gray-600 text-lg">Hotels, apartments, and resort-style properties</p>
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-white p-6 rounded-lg">
-                    <h4 className="font-bold text-xl text-gray-900 mb-3">What to Expect</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li>• Private balconies with views</li>
-                      <li>• Modern amenities and comfortable beds</li>
-                      <li>• Swimming pools and BBQ areas</li>
-                      <li>• Kitchen facilities (apartments)</li>
-                      <li>• Some include breakfast</li>
-                      <li>• Walking distance to marina and lagoon</li>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-xl">
+                    <h4 className="font-['Plus_Jakarta_Sans'] font-bold text-xl text-gray-900 mb-4">What to Expect</h4>
+                    <ul className="space-y-2 font-['Inter'] text-gray-700">
+                      <li className="flex items-start">
+                        <span className="text-[#FF6B6B] mr-2 font-bold">•</span>
+                        <span>Private rooms with ensuite bathrooms</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#FF6B6B] mr-2 font-bold">•</span>
+                        <span>Air conditioning, TV, WiFi</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#FF6B6B] mr-2 font-bold">•</span>
+                        <span>Resort pools, gyms, spas (many properties)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#FF6B6B] mr-2 font-bold">•</span>
+                        <span>Apartments with kitchens and laundry</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#FF6B6B] mr-2 font-bold">•</span>
+                        <span>Often include breakfast or access to BBQ</span>
+                      </li>
                     </ul>
                   </div>
 
-                  <div className="bg-white p-6 rounded-lg">
-                    <h4 className="font-bold text-xl text-gray-900 mb-3">Best For</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li>• Couples seeking comfort</li>
-                      <li>• Families wanting space</li>
-                      <li>• Longer stays (self-catering)</li>
-                      <li>• Balance of comfort and value</li>
+                  <div className="bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-xl">
+                    <h4 className="font-['Plus_Jakarta_Sans'] font-bold text-xl text-gray-900 mb-4">Best For</h4>
+                    <ul className="space-y-2 font-['Inter'] text-gray-700">
+                      <li className="flex items-start">
+                        <span className="text-[#FF6B6B] mr-2 font-bold">•</span>
+                        <span>Couples wanting comfort and privacy</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#FF6B6B] mr-2 font-bold">•</span>
+                        <span>Families needing space</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#FF6B6B] mr-2 font-bold">•</span>
+                        <span>Extended stays (3+ nights)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#FF6B6B] mr-2 font-bold">•</span>
+                        <span>Those wanting resort amenities without island prices</span>
+                      </li>
                     </ul>
-                    <div className="mt-4 pt-4 border-t border-gray-200">
-                      <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                        View Mid-Range Hotels
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Luxury Airlie Beach */}
-            <div className="mb-12">
-              <div className="bg-purple-50 p-8 rounded-xl">
+              {/* Luxury */}
+              <div className="bg-white border-b-4 border-[#4ECDC4] p-8 rounded-2xl shadow-xl">
                 <div className="flex items-center mb-6">
-                  <div className="text-4xl mr-4">⭐</div>
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-900">Upscale Airlie Beach ($250-400/night)</h3>
-                    <p className="text-gray-600">Premium waterfront properties</p>
+                    <h3 className="font-['Plus_Jakarta_Sans'] text-3xl font-bold text-gray-900">Luxury ($250-500+/night)</h3>
+                    <p className="font-['Inter'] text-gray-600 text-lg">Premium hotels and beachfront resorts</p>
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-white p-6 rounded-lg">
-                    <h4 className="font-bold text-xl text-gray-900 mb-3">What to Expect</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li>• Waterfront or marina views</li>
-                      <li>• Spacious apartments with full kitchens</li>
-                      <li>• Premium finishes and furnishings</li>
-                      <li>• Resort-style pools and facilities</li>
-                      <li>• Concierge and tour booking services</li>
-                      <li>• Close to everything but quieter locations</li>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl">
+                    <h4 className="font-['Plus_Jakarta_Sans'] font-bold text-xl text-gray-900 mb-4">What to Expect</h4>
+                    <ul className="space-y-2 font-['Inter'] text-gray-700">
+                      <li className="flex items-start">
+                        <span className="text-[#4ECDC4] mr-2 font-bold">•</span>
+                        <span>Premium rooms with ocean views</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#4ECDC4] mr-2 font-bold">•</span>
+                        <span>High-end amenities (robes, quality toiletries)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#4ECDC4] mr-2 font-bold">•</span>
+                        <span>Multiple restaurants, bars, and pools</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#4ECDC4] mr-2 font-bold">•</span>
+                        <span>Spa, concierge, room service</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#4ECDC4] mr-2 font-bold">•</span>
+                        <span>Prime waterfront locations</span>
+                      </li>
                     </ul>
                   </div>
 
-                  <div className="bg-white p-6 rounded-lg">
-                    <h4 className="font-bold text-xl text-gray-900 mb-3">Best For</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li>• Luxury travelers on mainland</li>
-                      <li>• Extended stays with flexibility</li>
-                      <li>• Those wanting resort feel without island prices</li>
-                      <li>• Groups or families wanting space</li>
+                  <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl">
+                    <h4 className="font-['Plus_Jakarta_Sans'] font-bold text-xl text-gray-900 mb-4">Best For</h4>
+                    <ul className="space-y-2 font-['Inter'] text-gray-700">
+                      <li className="flex items-start">
+                        <span className="text-[#4ECDC4] mr-2 font-bold">•</span>
+                        <span>Honeymoons and special occasions</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#4ECDC4] mr-2 font-bold">•</span>
+                        <span>Those wanting island-style luxury on mainland</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#4ECDC4] mr-2 font-bold">•</span>
+                        <span>People who value top-tier service</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#4ECDC4] mr-2 font-bold">•</span>
+                        <span>Travelers combining tours with relaxation</span>
+                      </li>
                     </ul>
-                    <div className="mt-4 pt-4 border-t border-gray-200">
-                      <button className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
-                        View Luxury Properties
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Airlie Beach Neighborhoods */}
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Best Areas in Airlie Beach</h3>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-lg">
-                  <h4 className="font-bold text-lg text-gray-900 mb-2">Main Street Area</h4>
-                  <p className="text-gray-700 text-sm mb-4">
-                    Heart of the action - restaurants, bars, shops, and nightlife all within walking distance.
-                  </p>
-                  <div className="text-sm">
-                    <div className="text-green-600">✓ Most convenient</div>
-                    <div className="text-green-600">✓ Walking to everything</div>
-                    <div className="text-red-600">✗ Can be noisy at night</div>
-                  </div>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg">
-                  <h4 className="font-bold text-lg text-gray-900 mb-2">Waterfront/Marina</h4>
-                  <p className="text-gray-700 text-sm mb-4">
-                    Beautiful views, upscale dining, quieter than main street but still central.
-                  </p>
-                  <div className="text-sm">
-                    <div className="text-green-600">✓ Water views</div>
-                    <div className="text-green-600">✓ More peaceful</div>
-                    <div className="text-green-600">✓ Premium feel</div>
-                  </div>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg">
-                  <h4 className="font-bold text-lg text-gray-900 mb-2">Cannonvale</h4>
-                  <p className="text-gray-700 text-sm mb-4">
-                    Residential area 5 minutes from Airlie - supermarket, quieter, good for families.
-                  </p>
-                  <div className="text-sm">
-                    <div className="text-green-600">✓ Better value</div>
-                    <div className="text-green-600">✓ Family-friendly</div>
-                    <div className="text-red-600">✗ Need car/transport</div>
                   </div>
                 </div>
               </div>
@@ -303,102 +317,119 @@ export default function WhereToStayPage() {
       </div>
 
       {/* Island Resorts */}
-      <div className="bg-gradient-to-br from-cyan-50 to-blue-50 py-16">
+      <div className="bg-gradient-to-br from-blue-50 to-cyan-50 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+            <h2 className="font-['Plus_Jakarta_Sans'] text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">
               Island Resorts
             </h2>
-            <p className="text-center text-gray-600 mb-12 text-lg max-w-3xl mx-auto">
-              Wake up surrounded by turquoise waters. Island resorts offer seclusion, luxury,
-              and an all-inclusive tropical experience.
+            <p className="font-['Inter'] text-center text-gray-600 mb-12 text-xl max-w-3xl mx-auto">
+              Wake up surrounded by turquoise waters. Island resorts offer the ultimate tropical escape,
+              though they come at a premium price.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               {/* Hamilton Island */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="h-48 bg-gradient-to-br from-blue-400 to-cyan-300 flex items-center justify-center">
-                  <span className="text-6xl">🏝️</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Hamilton Island</h3>
-                  <p className="text-gray-700 mb-4">
-                    Most developed island with its own airport, marina village, multiple restaurants,
-                    and activities. Family-friendly with resort, apartments, and luxury options.
-                  </p>
-                  <div className="space-y-2 text-sm text-gray-700 mb-6">
-                    <div><strong>Price:</strong> $300-1000+/night</div>
-                    <div><strong>Best for:</strong> Families, convenience</div>
-                    <div><strong>Access:</strong> Direct flights or ferry</div>
+              <div className="bg-white border-b-4 border-[#4ECDC4] p-6 rounded-2xl shadow-xl">
+                <h3 className="font-['Plus_Jakarta_Sans'] text-2xl font-bold text-gray-900 mb-3">Hamilton Island</h3>
+                <p className="font-['Inter'] text-sm text-gray-600 mb-4">The largest and most developed resort island</p>
+                <div className="space-y-2 font-['Inter'] text-sm text-gray-700 mb-4">
+                  <div className="flex items-start">
+                    <span className="text-[#4ECDC4] mr-2 font-bold">•</span>
+                    <span>Multiple restaurants and bars</span>
                   </div>
-                  <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                    View Hamilton Island
-                  </button>
+                  <div className="flex items-start">
+                    <span className="text-[#4ECDC4] mr-2 font-bold">•</span>
+                    <span>Golf course, wildlife park, marina</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-[#4ECDC4] mr-2 font-bold">•</span>
+                    <span>Family-friendly with activities</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-[#4ECDC4] mr-2 font-bold">•</span>
+                    <span>Direct flights from major cities</span>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-r from-cyan-50 to-blue-50 p-3 rounded-lg">
+                  <p className="font-['Inter'] text-xs text-gray-700">
+                    <strong>From:</strong> $300-1,500+/night depending on room type
+                  </p>
                 </div>
               </div>
 
               {/* Daydream Island */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="h-48 bg-gradient-to-br from-teal-400 to-cyan-300 flex items-center justify-center">
-                  <span className="text-6xl">🌴</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Daydream Island</h3>
-                  <p className="text-gray-700 mb-4">
-                    All-inclusive resort perfect for families and couples. Living Reef, water sports,
-                    kids club, and multiple pools. Recently renovated with modern facilities.
-                  </p>
-                  <div className="space-y-2 text-sm text-gray-700 mb-6">
-                    <div><strong>Price:</strong> $400-700/night</div>
-                    <div><strong>Best for:</strong> All-inclusive seekers</div>
-                    <div><strong>Access:</strong> 30-min ferry from Airlie</div>
+              <div className="bg-white border-b-4 border-[#FFE66D] p-6 rounded-2xl shadow-xl">
+                <h3 className="font-['Plus_Jakarta_Sans'] text-2xl font-bold text-gray-900 mb-3">Daydream Island</h3>
+                <p className="font-['Inter'] text-sm text-gray-600 mb-4">All-inclusive luxury resort option</p>
+                <div className="space-y-2 font-['Inter'] text-sm text-gray-700 mb-4">
+                  <div className="flex items-start">
+                    <span className="text-[#FFE66D] mr-2 font-bold">•</span>
+                    <span>All-inclusive packages available</span>
                   </div>
-                  <button className="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
-                    View Daydream Island
-                  </button>
+                  <div className="flex items-start">
+                    <span className="text-[#FFE66D] mr-2 font-bold">•</span>
+                    <span>Living Reef, outdoor cinema</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-[#FFE66D] mr-2 font-bold">•</span>
+                    <span>Multiple pools and beach access</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-[#FFE66D] mr-2 font-bold">•</span>
+                    <span>20-min ferry from mainland</span>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-3 rounded-lg">
+                  <p className="font-['Inter'] text-xs text-gray-700">
+                    <strong>From:</strong> $400-800/night (packages from $600+)
+                  </p>
                 </div>
               </div>
 
-              {/* Hayman Island */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="h-48 bg-gradient-to-br from-purple-400 to-pink-300 flex items-center justify-center">
-                  <span className="text-6xl">👑</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Hayman Island</h3>
-                  <p className="text-gray-700 mb-4">
-                    Ultra-luxury resort at the northern end of the Whitsundays. InterContinental
-                    property with impeccable service, fine dining, and exclusive experiences.
-                  </p>
-                  <div className="space-y-2 text-sm text-gray-700 mb-6">
-                    <div><strong>Price:</strong> $800-2000+/night</div>
-                    <div><strong>Best for:</strong> Luxury, honeymoons</div>
-                    <div><strong>Access:</strong> Helicopter or private launch</div>
+              {/* Long Island */}
+              <div className="bg-white border-b-4 border-[#228B22] p-6 rounded-2xl shadow-xl">
+                <h3 className="font-['Plus_Jakarta_Sans'] text-2xl font-bold text-gray-900 mb-3">Long Island</h3>
+                <p className="font-['Inter'] text-sm text-gray-600 mb-4">Tranquil eco-resort experience</p>
+                <div className="space-y-2 font-['Inter'] text-sm text-gray-700 mb-4">
+                  <div className="flex items-start">
+                    <span className="text-[#228B22] mr-2 font-bold">•</span>
+                    <span>Eco-certified, boutique resort</span>
                   </div>
-                  <button className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
-                    View Hayman Island
-                  </button>
+                  <div className="flex items-start">
+                    <span className="text-[#228B22] mr-2 font-bold">•</span>
+                    <span>Walking trails and secluded beaches</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-[#228B22] mr-2 font-bold">•</span>
+                    <span>Smaller, more intimate atmosphere</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-[#228B22] mr-2 font-bold">•</span>
+                    <span>Great for couples seeking quiet</span>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 rounded-lg">
+                  <p className="font-['Inter'] text-xs text-gray-700">
+                    <strong>From:</strong> $250-500/night
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Other Island Options */}
-            <div className="bg-white p-8 rounded-xl shadow-md">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Other Island Options</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="border-l-4 border-blue-500 pl-4">
-                  <h4 className="font-bold text-lg text-gray-900 mb-2">Long Island</h4>
-                  <p className="text-gray-700 text-sm">
-                    Budget-friendly island resort with national park walks and peaceful beaches.
-                    Great for nature lovers. (~$150-250/night)
-                  </p>
+            {/* Island Resort Considerations */}
+            <div className="bg-white border-l-4 border-[#FF6B6B] p-6 rounded-xl shadow-lg">
+              <h3 className="font-['Plus_Jakarta_Sans'] text-xl font-bold text-gray-900 mb-4">
+                Important Island Resort Considerations
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6 font-['Inter'] text-gray-700">
+                <div>
+                  <p className="mb-3"><strong>Transfers Add Up:</strong> Ferry or helicopter transfers cost $50-200 per person each way. Factor this into your budget.</p>
+                  <p className="mb-3"><strong>Limited Tour Access:</strong> Most tours depart from Airlie Beach, not islands. You'll need to ferry back for tours.</p>
                 </div>
-                <div className="border-l-4 border-blue-500 pl-4">
-                  <h4 className="font-bold text-lg text-gray-900 mb-2">Paradise Bay Eco Resort</h4>
-                  <p className="text-gray-700 text-sm">
-                    Eco-friendly glamping experience on Long Island. Solar-powered, secluded,
-                    and intimate. (~$200-350/night)
-                  </p>
+                <div>
+                  <p className="mb-3"><strong>Food Costs:</strong> Island resort dining is expensive ($30-80 per meal). Most don't include meals in base rates.</p>
+                  <p className="mb-3"><strong>Activities Extra:</strong> Water sports, spa treatments, and experiences cost extra on top of accommodation.</p>
                 </div>
               </div>
             </div>
@@ -406,180 +437,128 @@ export default function WhereToStayPage() {
         </div>
       </div>
 
-      {/* Overnight Sailing */}
+      {/* Overnight Sailing as Accommodation */}
       <div className="py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
-              Overnight Sailing Adventures
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-['Plus_Jakarta_Sans'] text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">
+              Overnight Sailing as Accommodation
             </h2>
-            <p className="text-center text-gray-600 mb-12 text-lg max-w-3xl mx-auto">
-              A unique accommodation option - sleep on a yacht or catamaran while exploring
-              multiple islands and snorkel sites.
+            <p className="font-['Inter'] text-center text-gray-600 mb-12 text-xl max-w-3xl mx-auto">
+              Sleep under the stars on a sailing adventure — one of the best-value ways to experience
+              the islands with accommodation, meals, and activities included.
             </p>
 
-            <div className="bg-gradient-to-br from-blue-500 to-cyan-500 text-white p-8 rounded-xl mb-8">
+            <div className="bg-white border-b-4 border-[#4ECDC4] p-8 rounded-2xl shadow-xl mb-8">
+              <h3 className="font-['Plus_Jakarta_Sans'] text-2xl font-bold text-gray-900 mb-6">
+                Why Choose Overnight Sailing?
+              </h3>
               <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">What's Included</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <span className="mr-2">✓</span>
-                      <span>All meals and snacks</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">✓</span>
-                      <span>Snorkeling equipment</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">✓</span>
-                      <span>Visit to Whitehaven Beach</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">✓</span>
-                      <span>Multiple snorkel sites</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">✓</span>
-                      <span>Experienced crew</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">✓</span>
-                      <span>Sleeping quarters on boat</span>
-                    </li>
-                  </ul>
+                <div className="space-y-4 font-['Inter'] text-gray-700">
+                  <div className="flex items-start">
+                    <span className="text-[#4ECDC4] mr-3 font-bold text-lg">•</span>
+                    <div>
+                      <strong>All-Inclusive Value:</strong> Accommodation + all meals + tours + snorkel gear + Marine Park fees included
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-[#4ECDC4] mr-3 font-bold text-lg">•</span>
+                    <div>
+                      <strong>Unique Experience:</strong> Sleep on the water, wake up at Whitehaven Beach
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-[#4ECDC4] mr-3 font-bold text-lg">•</span>
+                    <div>
+                      <strong>Social Atmosphere:</strong> Meet fellow travelers from around the world
+                    </div>
+                  </div>
                 </div>
-
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">Trip Details</h3>
-                  <div className="space-y-4">
+                <div className="space-y-4 font-['Inter'] text-gray-700">
+                  <div className="flex items-start">
+                    <span className="text-[#4ECDC4] mr-3 font-bold text-lg">•</span>
                     <div>
-                      <div className="font-semibold mb-1">Duration Options:</div>
-                      <div className="text-blue-100">2 days/1 night or 3 days/2 nights</div>
+                      <strong>Maximum Time on Water:</strong> 2-3 full days exploring vs single day tours
                     </div>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-[#4ECDC4] mr-3 font-bold text-lg">•</span>
                     <div>
-                      <div className="font-semibold mb-1">Accommodation:</div>
-                      <div className="text-blue-100">Shared cabins (2-4 people) or private cabins</div>
+                      <strong>Great for Budgets:</strong> $270-540/night includes everything (compare to hotel + tours + meals separately)
                     </div>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-[#4ECDC4] mr-3 font-bold text-lg">•</span>
                     <div>
-                      <div className="font-semibold mb-1">Price Range:</div>
-                      <div className="text-blue-100">$400-700 total (includes everything!)</div>
-                    </div>
-                    <div>
-                      <div className="font-semibold mb-1">Best For:</div>
-                      <div className="text-blue-100">Adventure, meeting people, value</div>
+                      <strong>Adventurous Vibe:</strong> Perfect for backpackers, couples, and young-at-heart travelers
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="mt-6 pt-6 border-t border-white/30">
-                <button className="w-full bg-white text-blue-600 py-3 rounded-lg font-bold hover:bg-blue-50 transition-colors">
-                  Compare Sailing Trips
-                </button>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-2xl shadow-lg">
+                <h4 className="font-['Plus_Jakarta_Sans'] font-bold text-lg text-gray-900 mb-3">Budget Options</h4>
+                <p className="font-['Inter'] text-sm text-gray-700 mb-3">
+                  Backpacker boats with shared dorm-style bunks. Social, party atmosphere.
+                </p>
+                <p className="font-['Inter'] text-xs text-gray-600">
+                  <strong>From:</strong> $270/night (2D/2N trip)
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-2xl shadow-lg">
+                <h4 className="font-['Plus_Jakarta_Sans'] font-bold text-lg text-gray-900 mb-3">Mid-Range Options</h4>
+                <p className="font-['Inter'] text-sm text-gray-700 mb-3">
+                  Small group catamarans (10-16 guests) with mix of private cabins and shared spaces.
+                </p>
+                <p className="font-['Inter'] text-xs text-gray-600">
+                  <strong>From:</strong> $370/night (2D/2N trip)
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-2xl shadow-lg">
+                <h4 className="font-['Plus_Jakarta_Sans'] font-bold text-lg text-gray-900 mb-3">Luxury Options</h4>
+                <p className="font-['Inter'] text-sm text-gray-700 mb-3">
+                  Only 8 guests, private ensuite cabins, air-con, gourmet meals, romantic atmosphere.
+                </p>
+                <p className="font-['Inter'] text-xs text-gray-600">
+                  <strong>From:</strong> $540/night (2D/2N trip)
+                </p>
               </div>
             </div>
 
-            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg">
-              <h4 className="font-bold text-gray-900 mb-2">💡 Value Tip</h4>
-              <p className="text-gray-700">
-                A 2-night sailing trip (~$600) includes accommodation, all meals, tours, and activities.
-                Compare this to 2 nights in a mid-range hotel ($400) + meals ($200) + Whitehaven tour ($180)
-                + snorkel tour ($150) = $930. Sailing is actually better value AND a unique experience!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Comparison Table */}
-      <div className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
-              Accommodation Comparison
-            </h2>
-
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead className="bg-blue-600 text-white">
-                    <tr>
-                      <th className="px-6 py-4 text-left">Option</th>
-                      <th className="px-6 py-4 text-left">Price Range</th>
-                      <th className="px-6 py-4 text-left">Best For</th>
-                      <th className="px-6 py-4 text-left">Pros</th>
-                      <th className="px-6 py-4 text-left">Cons</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-200">
-                    <tr>
-                      <td className="px-6 py-4 font-semibold">Airlie Beach Budget</td>
-                      <td className="px-6 py-4">$50-120</td>
-                      <td className="px-6 py-4">Backpackers, budget travelers</td>
-                      <td className="px-6 py-4 text-sm">Central, social, affordable</td>
-                      <td className="px-6 py-4 text-sm">Basic facilities, can be noisy</td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="px-6 py-4 font-semibold">Airlie Beach Mid-Range</td>
-                      <td className="px-6 py-4">$120-250</td>
-                      <td className="px-6 py-4">Couples, families</td>
-                      <td className="px-6 py-4 text-sm">Comfortable, good facilities, central</td>
-                      <td className="px-6 py-4 text-sm">Not on an island</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 font-semibold">Hamilton Island</td>
-                      <td className="px-6 py-4">$300-1000+</td>
-                      <td className="px-6 py-4">Families, convenience seekers</td>
-                      <td className="px-6 py-4 text-sm">Island location, lots of amenities</td>
-                      <td className="px-6 py-4 text-sm">Expensive, can feel commercial</td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="px-6 py-4 font-semibold">Daydream Island</td>
-                      <td className="px-6 py-4">$400-700</td>
-                      <td className="px-6 py-4">All-inclusive seekers</td>
-                      <td className="px-6 py-4 text-sm">All-inclusive, family-friendly</td>
-                      <td className="px-6 py-4 text-sm">Expensive, limited island to explore</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 font-semibold">Overnight Sailing</td>
-                      <td className="px-6 py-4">$400-700 total</td>
-                      <td className="px-6 py-4">Adventure lovers, budget-conscious</td>
-                      <td className="px-6 py-4 text-sm">Unique experience, great value, social</td>
-                      <td className="px-6 py-4 text-sm">Shared spaces, not luxury</td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="px-6 py-4 font-semibold">Hayman Island</td>
-                      <td className="px-6 py-4">$800-2000+</td>
-                      <td className="px-6 py-4">Luxury travelers, honeymoons</td>
-                      <td className="px-6 py-4 text-sm">Ultimate luxury, exclusive, pristine</td>
-                      <td className="px-6 py-4 text-sm">Very expensive, requires transfers</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div className="mt-8 text-center">
+              <Link 
+                href="/overnight-sailing"
+                className="inline-block bg-gradient-to-r from-[#4ECDC4] to-[#6ED9D1] text-white px-8 py-4 rounded-xl font-['Plus_Jakarta_Sans'] font-bold text-lg hover:shadow-xl transition-all"
+              >
+                Compare Overnight Sailing Options
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
       {/* Booking Tips */}
-      <div className="py-16">
+      <div className="bg-gradient-to-br from-blue-50 to-cyan-50 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
-              Booking Tips & Advice
+            <h2 className="font-['Plus_Jakarta_Sans'] text-4xl font-bold text-gray-900 mb-12 text-center">
+              Booking & Planning Tips
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-blue-50 p-8 rounded-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">When to Book</h3>
-                <div className="space-y-4 text-gray-700">
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              {/* When to Book */}
+              <div className="bg-white border-b-4 border-[#1E3A8A] p-8 rounded-2xl shadow-xl">
+                <h3 className="font-['Plus_Jakarta_Sans'] text-2xl font-bold text-gray-900 mb-6">When to Book</h3>
+                <div className="space-y-4 font-['Inter'] text-gray-700">
                   <div>
-                    <strong>Peak Season (June-August):</strong> Book 2-3 months ahead. Prices are highest but weather is best.
+                    <strong>Peak (Jun-Aug):</strong> Book 3-6 months ahead. Highest prices but best weather.
                   </div>
                   <div>
-                    <strong>Shoulder Season (Apr-May, Sep-Nov):</strong> Book 4-6 weeks ahead. Best value with great weather.
+                    <strong>Shoulder (Apr-May, Sep-Nov):</strong> Book 6-8 weeks ahead. Great weather, better prices, fewer crowds.
                   </div>
                   <div>
                     <strong>Summer (Dec-Mar):</strong> Can book 2-4 weeks ahead. Lowest prices but stinger season and possible rain.
@@ -587,64 +566,79 @@ export default function WhereToStayPage() {
                 </div>
               </div>
 
-              <div className="bg-green-50 p-8 rounded-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Money-Saving Tips</h3>
-                <ul className="space-y-3 text-gray-700">
+              {/* Money-Saving Tips */}
+              <div className="bg-white border-b-4 border-[#228B22] p-8 rounded-2xl shadow-xl">
+                <h3 className="font-['Plus_Jakarta_Sans'] text-2xl font-bold text-gray-900 mb-6">Money-Saving Tips</h3>
+                <ul className="space-y-3 font-['Inter'] text-gray-700">
                   <li className="flex items-start">
-                    <span className="text-green-600 mr-2 font-bold">→</span>
+                    <span className="text-[#228B22] mr-3 font-bold text-lg">$</span>
                     <span>Book direct with properties for best rates and packages</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-600 mr-2 font-bold">→</span>
+                    <span className="text-[#228B22] mr-3 font-bold text-lg">$</span>
                     <span>Consider apartments with kitchens to save on dining</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-600 mr-2 font-bold">→</span>
+                    <span className="text-[#228B22] mr-3 font-bold text-lg">$</span>
                     <span>Airlie Beach + day tours often cheaper than island resorts</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-600 mr-2 font-bold">→</span>
+                    <span className="text-[#228B22] mr-3 font-bold text-lg">$</span>
                     <span>Overnight sailing includes accommodation + activities + meals</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-600 mr-2 font-bold">→</span>
+                    <span className="text-[#228B22] mr-3 font-bold text-lg">$</span>
                     <span>Stay longer (5+ nights) for better rates</span>
                   </li>
                 </ul>
               </div>
+            </div>
 
-              <div className="bg-purple-50 p-8 rounded-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Combination Strategies</h3>
-                <p className="text-gray-700 mb-4">
-                  Many travelers combine accommodation types for the best experience:
-                </p>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• 2 nights Airlie Beach + 2 nights island resort</li>
-                  <li>• 3 nights Airlie Beach + 2-night sailing trip</li>
-                  <li>• 1 night Airlie + 3 nights island + 1 night Airlie</li>
-                </ul>
+            {/* Combination Strategies */}
+            <div className="bg-white border-b-4 border-[#FFE66D] p-8 rounded-2xl shadow-xl mb-8">
+              <h3 className="font-['Plus_Jakarta_Sans'] text-2xl font-bold text-gray-900 mb-4">Combination Strategies</h3>
+              <p className="font-['Inter'] text-gray-700 mb-6">
+                Many travelers combine accommodation types for the best experience:
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 font-['Inter'] text-gray-700">
+                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 p-4 rounded-xl">
+                  <strong>Budget + Luxury:</strong> 2 nights Airlie Beach + 2 nights island resort
+                </div>
+                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 p-4 rounded-xl">
+                  <strong>Adventure Mix:</strong> 3 nights Airlie Beach + 2-night sailing trip
+                </div>
+                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 p-4 rounded-xl">
+                  <strong>Full Experience:</strong> 1 night Airlie + 3 nights island + 1 night Airlie
+                </div>
               </div>
+            </div>
 
-              <div className="bg-orange-50 p-8 rounded-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">What to Know Before Booking</h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
+            {/* What to Know */}
+            <div className="bg-white border-l-4 border-[#FF6B6B] p-8 rounded-xl shadow-lg">
+              <h3 className="font-['Plus_Jakarta_Sans'] text-2xl font-bold text-gray-900 mb-6">
+                What to Know Before Booking
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6 font-['Inter'] text-gray-700">
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <span className="text-[#FF6B6B] mr-3 font-bold text-lg">•</span>
                     <span>All tours depart from Airlie Beach (not islands)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-[#FF6B6B] mr-3 font-bold text-lg">•</span>
                     <span>Island transfers add $50-200 to your costs</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <span className="text-[#FF6B6B] mr-3 font-bold text-lg">•</span>
                     <span>Airlie Beach has free lagoon for swimming</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-[#FF6B6B] mr-3 font-bold text-lg">•</span>
                     <span>Most island resorts don't include meals in base price</span>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -652,63 +646,63 @@ export default function WhereToStayPage() {
       </div>
 
       {/* FAQ */}
-      <div className="bg-gray-50 py-16">
+      <div className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+            <h2 className="font-['Plus_Jakarta_Sans'] text-4xl font-bold text-gray-900 mb-12 text-center">
               Frequently Asked Questions
             </h2>
 
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <div className="bg-white border-l-4 border-[#4ECDC4] p-6 rounded-xl shadow-lg">
+                <h3 className="font-['Plus_Jakarta_Sans'] text-xl font-bold text-gray-900 mb-3">
                   Is it better to stay on the mainland or an island?
                 </h3>
-                <p className="text-gray-700">
+                <p className="font-['Inter'] text-gray-700">
                   Mainland (Airlie Beach) is better for budget, convenience, and variety of dining/activities.
                   Islands are better for luxury, seclusion, and an all-in-one resort experience. Many visitors
                   do both - a few nights on mainland and a few on an island.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <div className="bg-white border-l-4 border-[#FFE66D] p-6 rounded-xl shadow-lg">
+                <h3 className="font-['Plus_Jakarta_Sans'] text-xl font-bold text-gray-900 mb-3">
                   How many nights should I stay?
                 </h3>
-                <p className="text-gray-700">
+                <p className="font-['Inter'] text-gray-700">
                   Minimum 3 nights to experience the highlights (Whitehaven Beach, snorkeling, sailing).
                   5-7 nights is ideal for a relaxed pace with multiple tours, island visits, and downtime.
                   2 nights works if you're time-limited but will feel rushed.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <div className="bg-white border-l-4 border-[#FF6B6B] p-6 rounded-xl shadow-lg">
+                <h3 className="font-['Plus_Jakarta_Sans'] text-xl font-bold text-gray-900 mb-3">
                   Do I need a car in Airlie Beach?
                 </h3>
-                <p className="text-gray-700">
+                <p className="font-['Inter'] text-gray-700">
                   Not essential. Airlie Beach is walkable, and tours pick up from accommodations. However,
                   a car is useful for: exploring nearby areas (Cedar Creek Falls, Conway National Park),
                   grocery shopping, or staying in Cannonvale. Airport transfers and taxis are readily available.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <div className="bg-white border-l-4 border-[#1E3A8A] p-6 rounded-xl shadow-lg">
+                <h3 className="font-['Plus_Jakarta_Sans'] text-xl font-bold text-gray-900 mb-3">
                   Are island resorts all-inclusive?
                 </h3>
-                <p className="text-gray-700">
+                <p className="font-['Inter'] text-gray-700">
                   Most are NOT all-inclusive. Daydream Island offers all-inclusive packages. Hamilton Island
                   and others typically charge separately for meals, activities, and extras. Always check
                   what's included when comparing prices.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <div className="bg-white border-l-4 border-[#4ECDC4] p-6 rounded-xl shadow-lg">
+                <h3 className="font-['Plus_Jakarta_Sans'] text-xl font-bold text-gray-900 mb-3">
                   Can I visit Whitehaven Beach from any accommodation?
                 </h3>
-                <p className="text-gray-700">
+                <p className="font-['Inter'] text-gray-700">
                   Yes! All day tours depart from Airlie Beach. If you're on an island, you'll need to take
                   a ferry back to Airlie Beach to join tours (adds time and cost). Some island resorts offer
                   their own Whitehaven trips, but they're often more expensive.
@@ -720,21 +714,31 @@ export default function WhereToStayPage() {
       </div>
 
       {/* Final CTA */}
-      <div className="bg-gradient-to-r from-blue-600 to-cyan-600 py-16">
+      <div className="bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#4ECDC4] py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="font-['Plus_Jakarta_Sans'] text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Book Your Stay?
           </h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
+          <p className="font-['Inter'] text-xl text-white/95 mb-8 max-w-2xl mx-auto">
             Compare prices and find the perfect accommodation for your Whitsundays adventure
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors shadow-xl">
+            <a 
+              href="https://www.booking.com/searchresults.html?ss=Airlie+Beach"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-[#1E3A8A] px-8 py-4 rounded-xl font-['Plus_Jakarta_Sans'] font-bold text-lg hover:bg-blue-50 transition-colors shadow-xl"
+            >
               Search Airlie Beach Hotels
-            </button>
-            <button className="bg-blue-800 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition-colors">
+            </a>
+            <a 
+              href="https://www.booking.com/searchresults.html?ss=Whitsunday+Islands"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#4ECDC4] text-white px-8 py-4 rounded-xl font-['Plus_Jakarta_Sans'] font-bold text-lg hover:bg-[#3db9b0] transition-colors shadow-xl"
+            >
               Compare Island Resorts
-            </button>
+            </a>
           </div>
         </div>
       </div>
