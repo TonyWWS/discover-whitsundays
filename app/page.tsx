@@ -1,6 +1,13 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+
+// SEO Metadata
+export const metadata = {
+  title: 'Whitsundays Local Guide | Plan Your Perfect Island Getaway',
+  description: 'Resident-led guide to the Whitsundays. Insider tips on Whitehaven Beach, Great Barrier Reef tours, and Airlie Beach accommodation from someone who lives here.',
+}
 
 export default function Home() {
   return (
@@ -9,14 +16,14 @@ export default function Home() {
 
       {/* Hero Section with Background Image */}
       <div className="relative h-[600px] flex items-center justify-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/images/home-hero.jpg')",
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-navy/60 via-ocean/50 to-coral/40"></div>
-        </div>
+        <Image
+          src="/images/home-hero.jpg"
+          alt="Whitsundays tropical paradise with pristine beaches and turquoise waters"
+          fill
+          style={{ objectFit: 'cover' }}
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy/60 via-ocean/50 to-coral/40"></div>
 
         <div className="relative z-10 container mx-auto px-4 text-center">
           <h1 className="font-heading text-7xl font-bold text-white mb-4 drop-shadow-2xl">
@@ -44,14 +51,15 @@ export default function Home() {
             
             {/* Whitehaven Beach Card */}
             <Link href="/whitehaven-beach" className="group">
-              <div className="relative h-80 bg-cover bg-center rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{
-                    backgroundImage: "url('/images/Whitehaven.jpg')",
-                  }}
-                ></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 via-blue-900/50 to-gray-900/80"></div>
+              <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <Image
+                  src="/images/Whitehaven.jpg"
+                  alt="Whitehaven Beach with pristine white silica sand and turquoise waters"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900/75"></div>
                 <div className="relative p-8 h-full flex flex-col justify-end text-white">
                   <div className="bg-coral/90 text-white px-3 py-1 rounded-lg font-heading font-bold inline-block mb-3 w-fit">
                     MUST-SEE
@@ -68,14 +76,15 @@ export default function Home() {
 
             {/* The Islands Card */}
             <Link href="/islands" className="group">
-              <div className="relative h-80 bg-cover bg-center rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1540202404-d0c7fe46a087?w=1200')",
-                  }}
-                ></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-teal-900/40 via-ocean/50 to-gray-900/80"></div>
+              <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <Image
+                  src="https://images.unsplash.com/photo-1540202404-d0c7fe46a087?w=1200"
+                  alt="Aerial view of tropical islands in the Whitsundays"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900/75"></div>
                 <div className="relative p-8 h-full flex flex-col justify-end text-white">
                   <div className="bg-teal-500/90 text-white px-3 py-1 rounded-lg font-heading font-bold inline-block mb-3 w-fit">
                     74 ISLANDS
@@ -92,14 +101,15 @@ export default function Home() {
 
             {/* Things to Do Card */}
             <Link href="/things-to-do" className="group">
-              <div className="relative h-80 bg-cover bg-center rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200')",
-                  }}
-                ></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-ocean/50 to-gray-900/80"></div>
+              <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <Image
+                  src="/images/Things-to-do.jpg"
+                  alt="Marina at sunset with sailing boats in the Whitsundays"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900/75"></div>
                 <div className="relative p-8 h-full flex flex-col justify-end text-white">
                   <div className="bg-blue-500/90 text-white px-3 py-1 rounded-lg font-heading font-bold inline-block mb-3 w-fit">
                     ADVENTURES
@@ -116,14 +126,15 @@ export default function Home() {
 
             {/* What's On Card */}
             <Link href="/whats-on" className="group">
-              <div className="relative h-80 bg-cover bg-center rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200')",
-                  }}
-                ></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-900/40 via-pink-900/50 to-gray-900/80"></div>
+              <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <Image
+                  src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200"
+                  alt="Beach festival and events in the Whitsundays"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900/75"></div>
                 <div className="relative p-8 h-full flex flex-col justify-end text-white">
                   <div className="bg-pink-500/90 text-white px-3 py-1 rounded-lg font-heading font-bold inline-block mb-3 w-fit">
                     EVENTS
@@ -140,14 +151,15 @@ export default function Home() {
 
             {/* Plan Your Trip Card */}
             <Link href="/itinerary-3-day" className="group">
-              <div className="relative h-80 bg-cover bg-center rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200')",
-                  }}
-                ></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-indigo-900/40 via-blue-900/50 to-gray-900/80"></div>
+              <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <Image
+                  src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200"
+                  alt="Planning your Whitsundays itinerary and vacation"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900/75"></div>
                 <div className="relative p-8 h-full flex flex-col justify-end text-white">
                   <div className="bg-indigo-500/90 text-white px-3 py-1 rounded-lg font-heading font-bold inline-block mb-3 w-fit">
                     ITINERARY
@@ -164,14 +176,15 @@ export default function Home() {
 
             {/* Where to Stay Card */}
             <Link href="/where-to-stay" className="group">
-              <div className="relative h-80 bg-cover bg-center rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{
-                    backgroundImage: "url('/images/accom-hero.jpg')",
-                  }}
-                ></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-orange-900/40 via-amber-900/50 to-gray-900/80"></div>
+              <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <Image
+                  src="/images/accom-hero.jpg"
+                  alt="Luxury waterfront accommodation in the Whitsundays"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900/75"></div>
                 <div className="relative p-8 h-full flex flex-col justify-end text-white">
                   <div className="bg-orange-500/90 text-white px-3 py-1 rounded-lg font-heading font-bold inline-block mb-3 w-fit">
                     ACCOMMODATION

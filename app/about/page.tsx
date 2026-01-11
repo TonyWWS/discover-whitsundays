@@ -8,22 +8,22 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <div 
+      <div
         className="relative h-[500px] bg-cover bg-center"
         style={{
-          backgroundImage: "url('/images/about-hero.jpg')",
+          backgroundImage: "url('/images/about-hero1.jpg')",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-blue-900/50 to-gray-900/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from- transparent via -transparent to gray-900/70"></div>
         <div className="relative container mx-auto px-4 h-full flex items-center justify-center">
           <div className="max-w-3xl text-white text-center">
-            <h1 className="font-heading text-7xl font-bold mb-6">
+            <h1 className="font-heading text-7xl font-bold mb-4 drop-shadow-2xl">
               About the Whitsundays
             </h1>
-            <p className="font-body text-2xl mb-4 leading-relaxed">
+            <p className="font-body text-3xl text-white mb-8 drop-shadow-lg">
               Australia's tropical paradise in the heart of the Great Barrier Reef
             </p>
-            <p className="font-body text-lg opacity-90">
+            <p className="font-body text-xl text-white drop-shadow-lg">
               74 pristine islands, crystal-clear waters, and world-class sailing await you
             </p>
           </div>
@@ -229,13 +229,13 @@ export default function AboutPage() {
                 <div className="text-6xl mb-4">✈️</div>
                 <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">By Air</h3>
                 <p className="font-body text-gray-700 mb-4 leading-relaxed">
-                  Fly direct to Hamilton Island (HTI) or Whitsunday Coast Airport (PPP) at Proserpine. 
+                  Fly direct to Hamilton Island (HTI) or Whitsunday Coast Airport (PPP) at Proserpine.
                   Direct flights from Sydney, Melbourne, and Brisbane.
                 </p>
                 <div className="bg-orange-50 p-4 rounded-lg">
                   <div className="text-sm font-body text-gray-700">
-                    <strong>From Brisbane:</strong> ~1.5 hours<br/>
-                    <strong>From Sydney:</strong> ~2.5 hours<br/>
+                    <strong>From Brisbane:</strong> ~1.5 hours<br />
+                    <strong>From Sydney:</strong> ~2.5 hours<br />
                     <strong>From Melbourne:</strong> ~3 hours
                   </div>
                 </div>
@@ -245,13 +245,13 @@ export default function AboutPage() {
                 <div className="text-6xl mb-4">🚗</div>
                 <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">By Road</h3>
                 <p className="font-body text-gray-700 mb-4 leading-relaxed">
-                  Scenic coastal drive along the Bruce Highway through Queensland's tropical regions. 
+                  Scenic coastal drive along the Bruce Highway through Queensland's tropical regions.
                   Perfect road trip opportunity!
                 </p>
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <div className="text-sm font-body text-gray-700">
-                    <strong>From Brisbane:</strong> ~11 hours (1,100km)<br/>
-                    <strong>From Cairns:</strong> ~7 hours (650km)<br/>
+                    <strong>From Brisbane:</strong> ~11 hours (1,100km)<br />
+                    <strong>From Cairns:</strong> ~7 hours (650km)<br />
                     <strong>From Mackay:</strong> ~2 hours (150km)
                   </div>
                 </div>
@@ -261,13 +261,13 @@ export default function AboutPage() {
                 <div className="text-6xl mb-4">🚂</div>
                 <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">By Train</h3>
                 <p className="font-body text-gray-700 mb-4 leading-relaxed">
-                  Take the Queensland Rail Spirit of Queensland to Proserpine, then bus or taxi to 
+                  Take the Queensland Rail Spirit of Queensland to Proserpine, then bus or taxi to
                   Airlie Beach (25 minutes).
                 </p>
                 <div className="bg-cyan-50 p-4 rounded-lg">
                   <div className="text-sm font-body text-gray-700">
-                    <strong>From Brisbane:</strong> ~11 hours overnight<br/>
-                    <strong>From Cairns:</strong> ~8 hours<br/>
+                    <strong>From Brisbane:</strong> ~11 hours overnight<br />
+                    <strong>From Cairns:</strong> ~8 hours<br />
                     <strong>Scenic coastal journey</strong>
                   </div>
                 </div>
@@ -277,8 +277,8 @@ export default function AboutPage() {
             <div className="mt-12 bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg">
               <h4 className="font-heading font-bold text-gray-800 mb-2">💡 Getting Around:</h4>
               <p className="font-body text-gray-700 text-sm">
-                Once you arrive, most activities are boat-based. Airlie Beach is walkable, but rental cars 
-                are useful for exploring the mainland. Hamilton Island uses golf buggies—no cars allowed! 
+                Once you arrive, most activities are boat-based. Airlie Beach is walkable, but rental cars
+                are useful for exploring the mainland. Hamilton Island uses golf buggies—no cars allowed!
                 Ferry services connect Airlie Beach to Hamilton Island and Daydream Island.
               </p>
             </div>
@@ -295,18 +295,18 @@ export default function AboutPage() {
             </h2>
             <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-8 rounded-2xl border-l-4 border-orange-500">
               <p className="font-body text-gray-700 leading-relaxed mb-4">
-                The Whitsunday Islands are the traditional lands of the Ngaro people (also known as the 
-                Gia and Juru people), who have lived in this region for thousands of years. The Ngaro were 
+                The Whitsunday Islands are the traditional lands of the Ngaro people (also known as the
+                Gia and Juru people), who have lived in this region for thousands of years. The Ngaro were
                 seafaring people who traveled between the mainland and islands in bark canoes.
               </p>
               <p className="font-body text-gray-700 leading-relaxed mb-4">
-                Evidence of their rich history can still be found throughout the islands, including rock art, 
-                stone arrangements, and midden sites. The name "Whitsunday" comes from Captain Cook's 1770 
-                voyage, though he mistakenly thought he'd passed through the islands on Whit Sunday (he was 
+                Evidence of their rich history can still be found throughout the islands, including rock art,
+                stone arrangements, and midden sites. The name "Whitsunday" comes from Captain Cook's 1770
+                voyage, though he mistakenly thought he'd passed through the islands on Whit Sunday (he was
                 actually a day off due to crossing the International Date Line).
               </p>
               <p className="font-body text-gray-700 leading-relaxed italic">
-                When visiting the islands, please respect Aboriginal heritage sites and follow Leave No Trace 
+                When visiting the islands, please respect Aboriginal heritage sites and follow Leave No Trace
                 principles to help preserve these culturally significant places for future generations.
               </p>
             </div>
@@ -321,7 +321,7 @@ export default function AboutPage() {
             <h2 className="font-heading text-4xl font-bold text-gray-900 mb-12 text-center">
               Marine Life & Conservation
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-2xl shadow-lg">
                 <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">
@@ -360,7 +360,7 @@ export default function AboutPage() {
                   Great Barrier Reef Marine Park
                 </h3>
                 <p className="font-body mb-4">
-                  The Whitsundays are part of the Great Barrier Reef Marine Park, a UNESCO World Heritage 
+                  The Whitsundays are part of the Great Barrier Reef Marine Park, a UNESCO World Heritage
                   Site and one of the seven natural wonders of the world.
                 </p>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">
@@ -373,7 +373,7 @@ export default function AboutPage() {
                   </ul>
                 </div>
                 <p className="font-body text-sm italic">
-                  Marine park fees ($6.50/day) help fund conservation efforts and protect this incredible 
+                  Marine park fees ($6.50/day) help fund conservation efforts and protect this incredible
                   ecosystem for future generations.
                 </p>
               </div>
@@ -392,13 +392,13 @@ export default function AboutPage() {
             Start planning your Whitsundays adventure today
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link 
+            <Link
               href="/things-to-do"
               className="bg-white text-orange-500 px-8 py-4 rounded-xl font-heading font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl"
             >
               Explore Activities
             </Link>
-            <Link 
+            <Link
               href="/islands"
               className="bg-blue-600 text-white px-8 py-4 rounded-xl font-heading font-bold text-lg hover:bg-blue-700 transition-all duration-300 shadow-xl"
             >

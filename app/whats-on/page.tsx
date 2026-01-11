@@ -12,7 +12,7 @@ export default function WhatsOnPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1920')",
+            backgroundImage: "url('images/whats-on-hero.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-black/40"></div>
