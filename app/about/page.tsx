@@ -11,7 +11,7 @@ export default function AboutPage() {
       <div 
         className="relative h-[500px] bg-cover bg-center"
         style={{
-          backgroundImage: "url('/images/Cannon.jpg')",
+          backgroundImage: "url('/images/about-hero.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-blue-900/50 to-gray-900/70"></div>

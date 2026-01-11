@@ -11,7 +11,7 @@ export default function IslandsPage() {
       <div
         className="relative h-[500px] bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600')",
+          backgroundImage: "url('/images/islands-hero.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-blue-900/50 to-gray-900/70"></div>
@@ -154,29 +154,29 @@ export default function IslandsPage() {
                     <li>• 20-minute ferry from Airlie Beach ($72 return)</li>
                     <li>• 3 pools including kids' pool</li>
                     <li>• Spa and wellness center</li>
-                    <li>• Kids' club (free for guests)</li>
-                    <li>• 3 restaurants</li>
-                    <li>• Smaller and more intimate than Hamilton</li>
+                    <li>• Multiple dining options</li>
+                    <li>• Water sports and activities</li>
+                    <li>• Kids' club</li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">👥 Perfect For:</h4>
                   <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Families with young kids</li>
-                    <li>• Couples wanting a quieter island</li>
-                    <li>• Short island getaway (2-3 nights)</li>
-                    <li>• Those on a tighter budget than Hamilton</li>
+                    <li>• Families with young children</li>
+                    <li>• Budget-conscious travelers</li>
                     <li>• Day trippers from Airlie Beach</li>
+                    <li>• Those who want island experience without flying</li>
+                    <li>• Snorkeling enthusiasts</li>
                   </ul>
                 </div>
               </div>
 
-              <div className="bg-green-50 p-6 rounded-lg mb-6">
-                <h4 className="font-heading font-bold text-gray-800 mb-2">⭐ What Makes It Special:</h4>
+              <div className="bg-blue-50 p-6 rounded-lg mb-6">
+                <h4 className="font-heading font-bold text-gray-800 mb-2">💡 Local Tip:</h4>
                 <p className="font-body text-gray-700 text-sm">
-                  The Living Reef is genuinely unique—imagine a massive outdoor pool filled with coral, tropical
-                  fish, stingrays, and small reef sharks. Kids (and adults!) love snorkeling here. It's also the
-                  only resort island you can easily visit as a day trip from Airlie Beach without breaking the bank.
+                  Even if you're not staying on Daydream, you can take a day trip via ferry and use the resort
+                  facilities for a day-use fee. The Living Reef fish feeding at 10am is a must-see. Book the
+                  ferry in advance during school holidays—it fills up quickly.
                 </p>
               </div>
 
@@ -191,24 +191,24 @@ export default function IslandsPage() {
                   href="/things-to-do"
                   className="flex-1 border-2 border-blue-600 text-blue-600 py-3 rounded-xl font-heading font-bold text-center hover:bg-blue-50 transition-colors"
                 >
-                  Day Trip Info
+                  Day Trip Options
                 </Link>
               </div>
             </div>
           </div>
 
           {/* Island 3: Whitsunday Island */}
-          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-cyan-500">
+          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-teal-500">
             <div
               className="h-80 bg-cover bg-center"
               style={{
                 backgroundImage: "url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200')",
               }}
             >
-              <div className="h-full bg-gradient-to-br from-cyan-900/60 to-transparent flex items-end p-8">
+              <div className="h-full bg-gradient-to-br from-teal-900/60 to-transparent flex items-end p-8">
                 <div>
-                  <div className="bg-cyan-500 text-white px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
-                    NATIONAL PARK
+                  <div className="bg-teal-500 text-white px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
+                    MOST FAMOUS
                   </div>
                   <h3 className="font-heading text-5xl font-bold text-white">Whitsunday Island</h3>
                 </div>
@@ -216,9 +216,10 @@ export default function IslandsPage() {
             </div>
             <div className="p-8">
               <p className="font-body text-gray-700 leading-relaxed mb-6 text-lg">
-                The largest island in the Whitsundays (109 km²) and home to the world-famous Whitehaven Beach.
-                The entire island is uninhabited national park with no facilities—just pristine beaches,
-                walking trails, and camping grounds. This is the Whitsundays in its most natural, untouched state.
+                The largest island in the group and home to Whitehaven Beach—consistently rated one of the
+                world's best beaches. The entire island is uninhabited national park. There are no resorts,
+                shops, or facilities—just pristine wilderness. You can only visit via day tour, sailing charter,
+                or camping permit.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -226,48 +227,46 @@ export default function IslandsPage() {
                   <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">🎯 Key Features:</h4>
                   <ul className="space-y-2 font-body text-gray-700 text-sm">
                     <li>• Whitehaven Beach (7km of pure silica sand)</li>
-                    <li>• Hill Inlet with famous swirling sands</li>
-                    <li>• Camping at Tongue Bay, Sawmill Beach, Joe's Beach</li>
-                    <li>• Walking trails and lookouts</li>
-                    <li>• Completely uninhabited</li>
-                    <li>• Protected national park</li>
-                    <li>• Access by tour boat only (no ferry service)</li>
+                    <li>• Hill Inlet lookout (Instagram-famous swirling sands)</li>
+                    <li>• Walking trails through national park</li>
+                    <li>• Multiple camping spots (permit required)</li>
+                    <li>• Completely undeveloped—pristine nature</li>
+                    <li>• Snorkeling spots around the island</li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">👥 Perfect For:</h4>
                   <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Day trippers on tours</li>
-                    <li>• Camping enthusiasts (permit required)</li>
-                    <li>• Bareboaters looking for anchorage</li>
-                    <li>• Nature lovers</li>
-                    <li>• Those wanting untouched wilderness</li>
+                    <li>• Beach lovers and photographers</li>
+                    <li>• Day trippers from Airlie Beach</li>
+                    <li>• Sailing charter guests</li>
+                    <li>• Adventurous campers</li>
+                    <li>• Nature enthusiasts</li>
                   </ul>
                 </div>
               </div>
 
-              <div className="bg-orange-50 p-6 rounded-lg mb-6">
-                <h4 className="font-heading font-bold text-gray-800 mb-2">⚠️ Important to Know:</h4>
+              <div className="bg-teal-50 p-6 rounded-lg mb-6">
+                <h4 className="font-heading font-bold text-gray-800 mb-2">💡 Local Tip:</h4>
                 <p className="font-body text-gray-700 text-sm">
-                  There are NO facilities on Whitsunday Island—no shops, toilets, water, or shelter. You can only
-                  visit via day tour or by chartering a boat. Camping is allowed at designated sites but you must
-                  bring everything with you and pack everything out. Permits required for camping (book through
-                  Queensland Parks).
+                  Visit Hill Inlet at low tide for the best view of the swirling sand patterns. The northern
+                  end of Whitehaven Beach is usually less crowded. The sand is 98% pure silica—so fine it
+                  doesn't retain heat and squeaks when you walk on it. Don't forget reef-safe sunscreen!
                 </p>
               </div>
 
               <div className="flex gap-4">
                 <Link
-                  href="/whitehaven-beach"
-                  className="flex-1 bg-cyan-500 text-white py-3 rounded-xl font-heading font-bold text-center hover:bg-cyan-600 transition-colors"
+                  href="/things-to-do"
+                  className="flex-1 bg-teal-500 text-white py-3 rounded-xl font-heading font-bold text-center hover:bg-teal-600 transition-colors"
                 >
-                  Whitehaven Beach Guide
+                  Book Whitehaven Tour
                 </Link>
                 <Link
-                  href="/tours/whitehaven-beach-tours"
-                  className="flex-1 border-2 border-cyan-500 text-cyan-500 py-3 rounded-xl font-heading font-bold text-center hover:bg-cyan-50 transition-colors"
+                  href="/whitehaven-beach"
+                  className="flex-1 border-2 border-teal-500 text-teal-500 py-3 rounded-xl font-heading font-bold text-center hover:bg-teal-50 transition-colors"
                 >
-                  Book a Tour
+                  Complete Beach Guide
                 </Link>
               </div>
             </div>
@@ -292,40 +291,40 @@ export default function IslandsPage() {
             </div>
             <div className="p-8">
               <p className="font-body text-gray-700 leading-relaxed mb-6 text-lg">
-                The closest island to Airlie Beach (just 1km offshore), Long Island is 11km long and covered
-                in national park rainforest. It's home to two small resorts: Palm Bay and Elysian Retreat.
-                Much quieter and more secluded than Hamilton or Daydream—perfect if you want to truly disconnect.
+                Just 9km from Airlie Beach, Long Island is the closest resort island and one of the least
+                developed. Most of the island is national park with walking trails. It offers a more intimate,
+                peaceful experience compared to Hamilton or Daydream. Perfect if you want to disconnect and
+                experience raw island nature while still having resort comforts.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">🎯 Key Features:</h4>
                   <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• 20km of walking trails through rainforest</li>
-                    <li>• Palm Bay Resort (budget-friendly)</li>
-                    <li>• Elysian Retreat (luxury eco-resort)</li>
-                    <li>• Multiple secluded beaches</li>
-                    <li>• Rich wildlife (parrots, wallabies)</li>
-                    <li>• Kayaking and paddleboarding</li>
-                    <li>• Very quiet and peaceful</li>
+                    <li>• Paradise Bay Resort (intimate accommodation)</li>
+                    <li>• 13km of walking trails through rainforest</li>
+                    <li>• Sandy Bay (secluded beach)</li>
+                    <li>• 20-minute ferry from Shute Harbour</li>
+                    <li>• Mostly national park</li>
+                    <li>• Limited phone/internet (digital detox!)</li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-heading text-lg font-bold text-gray-800 mb-3">👥 Perfect For:</h4>
                   <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Nature lovers and hikers</li>
-                    <li>• Couples wanting seclusion</li>
-                    <li>• Digital detox (limited wifi)</li>
-                    <li>• Budget travelers (Palm Bay)</li>
-                    <li>• Eco-conscious travelers</li>
+                    <li>• Couples seeking peace and quiet</li>
+                    <li>• Bush walkers and nature lovers</li>
+                    <li>• Those wanting to disconnect</li>
+                    <li>• Budget-conscious travelers</li>
+                    <li>• People who want "real" island experience</li>
                   </ul>
                 </div>
               </div>
 
               <div className="bg-green-50 p-6 rounded-lg mb-6">
-                <h4 className="font-heading font-bold text-gray-800 mb-2">🌿 Nature Lover's Paradise:</h4>
+                <h4 className="font-heading font-bold text-gray-800 mb-2">💡 Local Tip:</h4>
                 <p className="font-body text-gray-700 text-sm">
-                  Long Island has the best hiking in the Whitsundays. The 11km rainforest trail from Palm Bay
+                  Long Island is for people who want nature over nightlife. The 20km Ngaro Sea Trail walk
                   to Sandy Bay takes you through dense jungle teeming with birds, butterflies, and wallabies.
                   If you want peace, nature, and isolation while still being close to Airlie Beach, this is your island.
                 </p>

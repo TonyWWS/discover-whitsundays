@@ -1,13 +1,17 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
 
 export default function OvernightSailingPage() {
   return (
     <div className="min-h-screen bg-white">
+      <Navbar />
+      
       {/* Hero Section */}
       <div className="relative h-[60vh] min-h-[500px]">
         <Image
-          src="/images/overnight-sailing-hero.jpg"
+          src="/images/overnight-sailing.jpg"
           alt="Overnight sailing in the Whitsundays under the stars"
           fill
           className="object-cover"
@@ -30,10 +34,10 @@ export default function OvernightSailingPage() {
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg mb-12">
           <p className="font-body text-lg text-gray-800 leading-relaxed">
-            An overnight sailing trip is the ultimate way to experience the Whitsundays. You'll spend 2-3+ hours at Whitehaven Beach 
-            (compared to just 1-2 hours on day trips), often arriving first thing in the morning or late afternoon to beat the crowds. 
-            Watch the sunset from your boat, sleep under a blanket of stars, and wake up to breathtaking island views. Most trips include 
-            multiple snorkel locations, all meals, and the magic of living on the water for 2-3 days.
+            An overnight sailing trip is the ultimate way to experience the Whitsundays. Instead of rushing through highlights in one 
+            day, you'll live on the water for 2-3 days, visiting Whitehaven Beach, snorkeling at multiple reef sites, and exploring 
+            secluded anchorages. Watch the sunset from your boat, sleep under a blanket of stars, and wake up to breathtaking island 
+            views with no crowds. It's the journey AND the destination – the complete Whitsundays experience.
           </p>
         </div>
 
@@ -52,15 +56,16 @@ export default function OvernightSailingPage() {
 
         {/* Option 1: Prosail Maxi Yachts - BUDGET ADVENTURE */}
         <div className="mb-16 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-pink-500">
-          <div className="relative h-80">
-            <Image
-              src="/images/prosail-maxi-yacht.jpg"
-              alt="Prosail maxi yacht sailing in the Whitsundays"
-              fill
-              className="object-cover"
-            />
+          <div className="relative h-80 bg-gradient-to-br from-pink-500 via-pink-600 to-rose-700">
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <div className="absolute bottom-6 left-6">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <svg className="w-32 h-32 mx-auto mb-4 text-white/20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M3.5 19l1.5-6L3 7l1.5-6h15L21 7l-2 6 1.5 6h-15M6.5 7L8 13l-1.5 6h11L16 13l1.5-6h-11m2.5 3h6v2h-6V10z"/>
+                </svg>
+              </div>
+            </div>
+            <div className="absolute bottom-6 left-6 z-10">
               <span className="inline-block bg-pink-500 text-white px-4 py-2 rounded-full font-body font-semibold text-sm mb-2">
                 BUDGET ADVENTURE
               </span>
@@ -75,7 +80,7 @@ export default function OvernightSailingPage() {
 
           <div className="p-8">
             <div className="flex items-baseline gap-3 mb-6">
-              <span className="font-heading text-5xl font-bold text-pink-600">$669</span>
+              <span className="font-heading text-5xl font-bold text-pink-600">$699</span>
               <span className="font-body text-xl text-gray-600">per person (2D/2N)</span>
             </div>
 
@@ -85,7 +90,7 @@ export default function OvernightSailingPage() {
                 <br />
                 <strong>Boats:</strong> Three ex-racing maxi yachts (22.5-24m long)
                 <br />
-                <strong>Note:</strong> Price increases to $699 from January 1, 2026
+                <strong>Note:</strong> Current 2026 pricing. Daily departures across 3 boats.
               </p>
             </div>
 
@@ -102,8 +107,7 @@ export default function OvernightSailingPage() {
                 <ul className="font-body text-gray-700 space-y-2">
                   <li>✓ 2 nights dorm-style accommodation</li>
                   <li>✓ All meals (roast chicken, fresh bread, Tim Tams!)</li>
-                  <li>✓ 3+ hours at Whitehaven Beach</li>
-                  <li>✓ Hill Inlet Lookout bushwalk</li>
+                  <li>✓ Whitehaven Beach & Hill Inlet Lookout</li>
                   <li>✓ 2-3 snorkel locations</li>
                   <li>✓ Snorkel gear & stinger suits</li>
                   <li>✓ Hot showers, USB charging, hammocks</li>
@@ -139,20 +143,30 @@ export default function OvernightSailingPage() {
                 of making friends while sailing on a real racing yacht, this is your trip.
               </p>
             </div>
+
+            <a
+              href="https://prosail.com.au/book-now/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 block w-full bg-pink-500 hover:bg-pink-600 text-white text-center font-heading font-bold py-4 px-6 rounded-lg transition-colors duration-200"
+            >
+              Check Availability & Book
+            </a>
           </div>
         </div>
 
         {/* Option 2: Avatar Trimaran - FASTEST & MOST SOCIAL */}
         <div className="mb-16 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-orange-500">
-          <div className="relative h-80">
-            <Image
-              src="/images/avatar-trimaran.jpg"
-              alt="Avatar trimaran with nets for sunbathing"
-              fill
-              className="object-cover"
-            />
+          <div className="relative h-80 bg-gradient-to-br from-orange-500 via-orange-600 to-amber-700">
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <div className="absolute bottom-6 left-6">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <svg className="w-32 h-32 mx-auto mb-4 text-white/20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M11 3L5.5 11h3.25L7 21l5.5-8h-3.25L11 3m9 0l-5.5 8h3.25L16 21l5.5-8h-3.25L20 3z"/>
+                </svg>
+              </div>
+            </div>
+            <div className="absolute bottom-6 left-6 z-10">
               <span className="inline-block bg-orange-500 text-white px-4 py-2 rounded-full font-body font-semibold text-sm mb-2">
                 FASTEST & MOST SOCIAL
               </span>
@@ -167,7 +181,7 @@ export default function OvernightSailingPage() {
 
           <div className="p-8">
             <div className="flex items-baseline gap-3 mb-6">
-              <span className="font-heading text-5xl font-bold text-orange-600">$540</span>
+              <span className="font-heading text-5xl font-bold text-orange-600">$689</span>
               <span className="font-body text-xl text-gray-600">per person (2D/2N)</span>
             </div>
 
@@ -238,20 +252,30 @@ export default function OvernightSailingPage() {
                 on the fastest, most unique boat with a party atmosphere, Avatar is your jam.
               </p>
             </div>
+
+            <a
+              href="https://avatarwhitsundays.com.au/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 block w-full bg-orange-500 hover:bg-orange-600 text-white text-center font-heading font-bold py-4 px-6 rounded-lg transition-colors duration-200"
+            >
+              Check Availability & Book
+            </a>
           </div>
         </div>
 
         {/* Option 3: Whitsunday Blue - LUXURY COUPLES */}
         <div className="mb-16 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-cyan-500">
-          <div className="relative h-80">
-            <Image
-              src="/images/whitsunday-blue.jpg"
-              alt="Whitsunday Blue luxury catamaran"
-              fill
-              className="object-cover"
-            />
+          <div className="relative h-80 bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-600">
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <div className="absolute bottom-6 left-6">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <svg className="w-32 h-32 mx-auto mb-4 text-white/20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"/>
+                </svg>
+              </div>
+            </div>
+            <div className="absolute bottom-6 left-6 z-10">
               <span className="inline-block bg-cyan-500 text-white px-4 py-2 rounded-full font-body font-semibold text-sm mb-2">
                 LUXURY COUPLES
               </span>
@@ -338,20 +362,30 @@ export default function OvernightSailingPage() {
                 the backpacker scene entirely, Whitsunday Blue is your boat.
               </p>
             </div>
+
+            <a
+              href="https://sailing-whitsundays.com/whitsundays/whitsunday-blue-2d2n"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 block w-full bg-cyan-500 hover:bg-cyan-600 text-white text-center font-heading font-bold py-4 px-6 rounded-lg transition-colors duration-200"
+            >
+              Check Availability & Book
+            </a>
           </div>
         </div>
 
         {/* Option 4: Powerplay - FAMILY FUN */}
         <div className="mb-16 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-blue-600">
-          <div className="relative h-80">
-            <Image
-              src="/images/powerplay-catamaran.jpg"
-              alt="Powerplay catamaran with jacuzzi"
-              fill
-              className="object-cover"
-            />
+          <div className="relative h-80 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800">
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <div className="absolute bottom-6 left-6">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <svg className="w-32 h-32 mx-auto mb-4 text-white/20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9,10A3.04,3.04 0 0,1 12,7A3.04,3.04 0 0,1 15,10A3.04,3.04 0 0,1 12,13A3.04,3.04 0 0,1 9,10M12,19L16,20V16.92A7.54,7.54 0 0,1 12,18A7.54,7.54 0 0,1 8,16.92V20M12,4A5.78,5.78 0 0,0 7.76,5.74A5.78,5.78 0 0,0 6,10A5.78,5.78 0 0,0 7.76,14.23A5.78,5.78 0 0,0 12,16A5.78,5.78 0 0,0 16.24,14.23A5.78,5.78 0 0,0 18,10A5.78,5.78 0 0,0 16.24,5.74A5.78,5.78 0 0,0 12,4M20,10A8.04,8.04 0 0,1 19.43,12.8A7.84,7.84 0 0,1 18,15.28V23L12,21L6,23V15.28A7.9,7.9 0 0,1 4,10A7.68,7.68 0 0,1 6.33,4.36A7.73,7.73 0 0,1 12,2A7.73,7.73 0 0,1 17.67,4.36A7.68,7.68 0 0,1 20,10Z"/>
+                </svg>
+              </div>
+            </div>
+            <div className="absolute bottom-6 left-6 z-10">
               <span className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full font-body font-semibold text-sm mb-2">
                 FAMILY FUN
               </span>
@@ -366,8 +400,9 @@ export default function OvernightSailingPage() {
 
           <div className="p-8">
             <div className="flex items-baseline gap-3 mb-6">
-              <span className="font-heading text-5xl font-bold text-blue-600">Contact</span>
-              <span className="font-body text-xl text-gray-600">for current pricing</span>
+              <span className="font-body text-xl text-gray-600">From</span>
+              <span className="font-heading text-5xl font-bold text-blue-600">$690</span>
+              <span className="font-body text-xl text-gray-600">per person</span>
             </div>
 
             <div className="bg-gray-100 rounded-lg p-4 mb-6">
@@ -377,6 +412,8 @@ export default function OvernightSailingPage() {
                 <strong>Boat:</strong> 45ft purpose-built catamaran
                 <br />
                 <strong>Options:</strong> 2D/2N or 3D/3N available
+                <br />
+                <strong>Note:</strong> Prices vary by cabin type. 3D/3N option also available.
               </p>
             </div>
 
@@ -430,20 +467,30 @@ export default function OvernightSailingPage() {
                 more social than pure luxury. Great middle-ground option.
               </p>
             </div>
+
+            <a
+              href="https://powerplaywhitsundays.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 block w-full bg-blue-600 hover:bg-blue-700 text-white text-center font-heading font-bold py-4 px-6 rounded-lg transition-colors duration-200"
+            >
+              Check Availability & Book
+            </a>
           </div>
         </div>
 
         {/* Option 5: Entice/O'Nice - SMALL GROUP ADVENTURE */}
         <div className="mb-16 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-purple-600">
-          <div className="relative h-80">
-            <Image
-              src="/images/entice-catamaran.jpg"
-              alt="Entice catamaran with water toys"
-              fill
-              className="object-cover"
-            />
+          <div className="relative h-80 bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800">
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <div className="absolute bottom-6 left-6">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <svg className="w-32 h-32 mx-auto mb-4 text-white/20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/>
+                </svg>
+              </div>
+            </div>
+            <div className="absolute bottom-6 left-6 z-10">
               <span className="inline-block bg-purple-600 text-white px-4 py-2 rounded-full font-body font-semibold text-sm mb-2">
                 SMALL GROUP ADVENTURE
               </span>
@@ -458,17 +505,18 @@ export default function OvernightSailingPage() {
 
           <div className="p-8">
             <div className="flex items-baseline gap-3 mb-6">
-              <span className="font-heading text-5xl font-bold text-purple-600">$745</span>
+              <span className="font-body text-xl text-gray-600">From</span>
+              <span className="font-heading text-5xl font-bold text-purple-600">$749</span>
               <span className="font-body text-xl text-gray-600">per person (2D/2N)</span>
             </div>
 
             <div className="bg-gray-100 rounded-lg p-4 mb-6">
               <p className="font-body text-sm text-gray-700">
-                <strong>Operator:</strong> Whitsunday Sailing Adventures
+                <strong>Operator:</strong> ISail Whitsundays (family-owned)
                 <br />
                 <strong>Boats:</strong> Two identical sister catamarans
                 <br />
-                <strong>Note:</strong> Book either boat – they're the same experience
+                <strong>Note:</strong> Prices vary by cabin type. Private ensuites from $901.
               </p>
             </div>
 
@@ -522,6 +570,15 @@ export default function OvernightSailingPage() {
                 if you love water sports and want a quality catamaran experience without luxury pricing.
               </p>
             </div>
+
+            <a
+              href="https://isailwhitsundays.com/entice-catamarans"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 block w-full bg-purple-600 hover:bg-purple-700 text-white text-center font-heading font-bold py-4 px-6 rounded-lg transition-colors duration-200"
+            >
+              Check Availability & Book
+            </a>
           </div>
         </div>
       </div>
@@ -547,14 +604,14 @@ export default function OvernightSailingPage() {
                 <tbody className="font-body divide-y divide-gray-200">
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 font-semibold text-gray-900">Prosail Maxi Yachts</td>
-                    <td className="px-6 py-4 text-gray-700">$669</td>
+                    <td className="px-6 py-4 text-gray-700">$699</td>
                     <td className="px-6 py-4 text-gray-700">23-26</td>
                     <td className="px-6 py-4 text-gray-700">Dorm bunks</td>
                     <td className="px-6 py-4 text-gray-700">Budget, social, backpackers</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 font-semibold text-gray-900">Avatar Trimaran</td>
-                    <td className="px-6 py-4 text-gray-700">$540</td>
+                    <td className="px-6 py-4 text-gray-700">$689</td>
                     <td className="px-6 py-4 text-gray-700">26</td>
                     <td className="px-6 py-4 text-gray-700">Dorm + doubles</td>
                     <td className="px-6 py-4 text-gray-700">Party, unique boat, 18-35s</td>
@@ -568,14 +625,14 @@ export default function OvernightSailingPage() {
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 font-semibold text-gray-900">Powerplay</td>
-                    <td className="px-6 py-4 text-gray-700">Varies</td>
+                    <td className="px-6 py-4 text-gray-700">From $690</td>
                     <td className="px-6 py-4 text-gray-700">16</td>
                     <td className="px-6 py-4 text-gray-700">Mix private/shared</td>
                     <td className="px-6 py-4 text-gray-700">Families, teens, mid-range</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 font-semibold text-gray-900">Entice/O'Nice</td>
-                    <td className="px-6 py-4 text-gray-700">$745</td>
+                    <td className="px-6 py-4 text-gray-700">From $749</td>
                     <td className="px-6 py-4 text-gray-700">10</td>
                     <td className="px-6 py-4 text-gray-700">Mix private/shared</td>
                     <td className="px-6 py-4 text-gray-700">Small groups, water toys</td>
@@ -670,9 +727,10 @@ export default function OvernightSailingPage() {
                 How much time do we actually spend at Whitehaven Beach?
               </h3>
               <p className="font-body text-gray-700 leading-relaxed">
-                Most overnight trips spend 2.5-3+ hours at Whitehaven, compared to just 1-2 hours on day trips. You'll typically 
-                arrive mid-morning on Day 2, do the Hill Inlet Lookout walk (15-20 minutes), then have plenty of time to swim, relax, 
-                and take photos before lunch. Some boats visit both the north and south ends of the beach.
+                Most overnight trips spend 2-3 hours at Whitehaven Beach, typically visiting on Day 2. However, if your main goal 
+                is maximizing beach time, specialized day tours like Cruise Whitsundays Chill & Grill offer up to 6 hours there. 
+                The real advantage of overnight trips isn't more beach time – it's the complete experience: sleeping under the stars, 
+                exploring multiple locations, snorkeling at several reef sites, and enjoying the journey as much as the destination.
               </p>
             </div>
 
@@ -762,6 +820,8 @@ export default function OvernightSailingPage() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   )
 }

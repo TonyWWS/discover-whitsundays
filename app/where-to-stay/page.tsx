@@ -12,7 +12,7 @@ export default function WhereToStayPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920')",
+            backgroundImage: "url('/images/where-to-stay-hero.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30"></div>
@@ -530,7 +530,7 @@ export default function WhereToStayPage() {
             </div>
 
             <div className="mt-8 text-center">
-              <Link 
+              <Link
                 href="/overnight-sailing"
                 className="inline-block bg-gradient-to-r from-[#4ECDC4] to-[#6ED9D1] text-white px-8 py-4 rounded-xl font-['Plus_Jakarta_Sans'] font-bold text-lg hover:shadow-xl transition-all"
               >
@@ -723,7 +723,7 @@ export default function WhereToStayPage() {
             Compare prices and find the perfect accommodation for your Whitsundays adventure
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a 
+            <a
               href="https://www.booking.com/searchresults.html?ss=Airlie+Beach"
               target="_blank"
               rel="noopener noreferrer"
@@ -731,7 +731,7 @@ export default function WhereToStayPage() {
             >
               Search Airlie Beach Hotels
             </a>
-            <a 
+            <a
               href="https://www.booking.com/searchresults.html?ss=Whitsunday+Islands"
               target="_blank"
               rel="noopener noreferrer"

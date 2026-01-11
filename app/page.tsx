@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Navbar from './components/Navbar';
-import FeatureCard from './components/FeatureCard';
 import Footer from './components/Footer';
 
 export default function Home() {
@@ -42,43 +41,151 @@ export default function Home() {
             Everything you need to plan the perfect tropical getaway
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <FeatureCard
-              title="Whitehaven Beach"
-              description="Experience one of the world's most beautiful beaches with pristine white silica sand"
-              image="/images/whitehaven.jpg"
-              link="/whitehaven-beach"
-              isImageUrl={true}
-            />
-            <FeatureCard
-              title="The Islands"
-              description="Discover 74 tropical islands, each with unique charm and experiences"
-              image="🏝️"
-              link="/islands"
-            />
-            <FeatureCard
-              title="Things to Do"
-              description="Sailing, diving, scenic flights, and endless island adventures"
-              image="⛵"
-              link="/things-to-do"
-            />
-            <FeatureCard
-              title="What's On"
-              description="Local events, festivals, and seasonal highlights in the Whitsundays"
-              image="🎉"
-              link="/whats-on"
-            />
-            <FeatureCard
-              title="Plan Your Trip"
-              description="Complete 3-day itinerary with tours, accommodation, and budget breakdown"
-              image="📅"
-              link="/itinerary-3-day"
-            />
-            <FeatureCard
-              title="Where to Stay"
-              description="From budget-friendly Airlie Beach to luxury island resorts"
-              image="🏨"
-              link="/where-to-stay"
-            />
+            
+            {/* Whitehaven Beach Card */}
+            <Link href="/whitehaven-beach" className="group">
+              <div className="relative h-80 bg-cover bg-center rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: "url('/images/Whitehaven.jpg')",
+                  }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 via-blue-900/50 to-gray-900/80"></div>
+                <div className="relative p-8 h-full flex flex-col justify-end text-white">
+                  <div className="bg-coral/90 text-white px-3 py-1 rounded-lg font-heading font-bold inline-block mb-3 w-fit">
+                    MUST-SEE
+                  </div>
+                  <h3 className="font-heading text-3xl font-bold mb-3 group-hover:text-coral transition-colors">
+                    Whitehaven Beach
+                  </h3>
+                  <p className="font-body text-lg opacity-90">
+                    Experience one of the world's most beautiful beaches with pristine white silica sand
+                  </p>
+                </div>
+              </div>
+            </Link>
+
+            {/* The Islands Card */}
+            <Link href="/islands" className="group">
+              <div className="relative h-80 bg-cover bg-center rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1540202404-d0c7fe46a087?w=1200')",
+                  }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-teal-900/40 via-ocean/50 to-gray-900/80"></div>
+                <div className="relative p-8 h-full flex flex-col justify-end text-white">
+                  <div className="bg-teal-500/90 text-white px-3 py-1 rounded-lg font-heading font-bold inline-block mb-3 w-fit">
+                    74 ISLANDS
+                  </div>
+                  <h3 className="font-heading text-3xl font-bold mb-3 group-hover:text-teal-300 transition-colors">
+                    The Islands
+                  </h3>
+                  <p className="font-body text-lg opacity-90">
+                    Discover 74 tropical islands, each with unique charm and experiences
+                  </p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Things to Do Card */}
+            <Link href="/things-to-do" className="group">
+              <div className="relative h-80 bg-cover bg-center rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200')",
+                  }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-ocean/50 to-gray-900/80"></div>
+                <div className="relative p-8 h-full flex flex-col justify-end text-white">
+                  <div className="bg-blue-500/90 text-white px-3 py-1 rounded-lg font-heading font-bold inline-block mb-3 w-fit">
+                    ADVENTURES
+                  </div>
+                  <h3 className="font-heading text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">
+                    Things to Do
+                  </h3>
+                  <p className="font-body text-lg opacity-90">
+                    Sailing, diving, scenic flights, and endless island adventures
+                  </p>
+                </div>
+              </div>
+            </Link>
+
+            {/* What's On Card */}
+            <Link href="/whats-on" className="group">
+              <div className="relative h-80 bg-cover bg-center rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200')",
+                  }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-900/40 via-pink-900/50 to-gray-900/80"></div>
+                <div className="relative p-8 h-full flex flex-col justify-end text-white">
+                  <div className="bg-pink-500/90 text-white px-3 py-1 rounded-lg font-heading font-bold inline-block mb-3 w-fit">
+                    EVENTS
+                  </div>
+                  <h3 className="font-heading text-3xl font-bold mb-3 group-hover:text-pink-300 transition-colors">
+                    What's On
+                  </h3>
+                  <p className="font-body text-lg opacity-90">
+                    Local events, festivals, and seasonal highlights in the Whitsundays
+                  </p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Plan Your Trip Card */}
+            <Link href="/itinerary-3-day" className="group">
+              <div className="relative h-80 bg-cover bg-center rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200')",
+                  }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-indigo-900/40 via-blue-900/50 to-gray-900/80"></div>
+                <div className="relative p-8 h-full flex flex-col justify-end text-white">
+                  <div className="bg-indigo-500/90 text-white px-3 py-1 rounded-lg font-heading font-bold inline-block mb-3 w-fit">
+                    ITINERARY
+                  </div>
+                  <h3 className="font-heading text-3xl font-bold mb-3 group-hover:text-indigo-300 transition-colors">
+                    Plan Your Trip
+                  </h3>
+                  <p className="font-body text-lg opacity-90">
+                    Complete 3-day itinerary with tours, accommodation, and budget breakdown
+                  </p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Where to Stay Card */}
+            <Link href="/where-to-stay" className="group">
+              <div className="relative h-80 bg-cover bg-center rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: "url('/images/accom-hero.jpg')",
+                  }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-orange-900/40 via-amber-900/50 to-gray-900/80"></div>
+                <div className="relative p-8 h-full flex flex-col justify-end text-white">
+                  <div className="bg-orange-500/90 text-white px-3 py-1 rounded-lg font-heading font-bold inline-block mb-3 w-fit">
+                    ACCOMMODATION
+                  </div>
+                  <h3 className="font-heading text-3xl font-bold mb-3 group-hover:text-orange-300 transition-colors">
+                    Where to Stay
+                  </h3>
+                  <p className="font-body text-lg opacity-90">
+                    From budget-friendly Airlie Beach to luxury island resorts
+                  </p>
+                </div>
+              </div>
+            </Link>
+
           </div>
         </div>
       </div>

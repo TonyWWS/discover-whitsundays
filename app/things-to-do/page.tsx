@@ -95,7 +95,7 @@ export default function ThingsToDoPage() {
                   </div>
                 </div>
                 <Link 
-                  href="/whitehaven-tours"
+                  href="/tours/whitehaven-beach-tours"
                   className="block w-full bg-gradient-to-r from-[#FF6B6B] to-[#FF8E8E] text-white py-3 rounded-xl font-['Plus_Jakarta_Sans'] font-semibold hover:shadow-lg transition-all text-center"
                 >
                   View Day Sailing Tours
@@ -130,7 +130,7 @@ export default function ThingsToDoPage() {
                   </div>
                 </div>
                 <Link 
-                  href="/overnight-sailing"
+                  href="/things-to-do/overnight-sailing"
                   className="block w-full bg-gradient-to-r from-[#4ECDC4] to-[#6ED9D1] text-white py-3 rounded-xl font-['Plus_Jakarta_Sans'] font-semibold hover:shadow-lg transition-all text-center"
                 >
                   View Overnight Sailing

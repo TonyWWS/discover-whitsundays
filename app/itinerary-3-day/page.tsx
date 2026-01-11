@@ -11,7 +11,7 @@ export default function ThreeDayItineraryPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920')",
+            backgroundImage: "url('/images/itinerary-hero.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-black/40"></div>

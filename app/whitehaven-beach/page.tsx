@@ -12,7 +12,7 @@ export default function WhitehavenBeachPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/discover-whitsunday-hero1.jpg')",
+            backgroundImage: "url('/images/whitehaven-beach.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-navy/50 via-ocean/40 to-transparent"></div>
