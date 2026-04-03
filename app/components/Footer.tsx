@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <h3 className="font-heading text-white text-lg font-bold mb-4">Discover Whitsundays</h3>
             <p className="font-body text-sm leading-relaxed">
-              Your comprehensive guide to exploring the beautiful Whitsunday Islands and the Great Barrier Reef.
+              Your curated guide to exploring the beautiful Whitsunday Islands and the Great Barrier Reef.
             </p>
           </div>
 
