@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-navy text-gray-300 py-12">
+    <footer className="bg-[#1A2E35] text-gray-300 py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
@@ -19,22 +19,22 @@ export default function Footer() {
             <h3 className="font-heading text-white text-lg font-bold mb-4">Information</h3>
             <ul className="space-y-2 font-body text-sm">
               <li>
-                <Link href="/about-tony" className="hover:text-coral transition-colors">
+                <Link href="/about-tony" className="hover:text-[#E07B39] transition-colors">
                   About Tony
                 </Link>
               </li>
               <li>
-                <Link href="/affiliate-disclosure" className="hover:text-coral transition-colors">
+                <Link href="/affiliate-disclosure" className="hover:text-[#E07B39] transition-colors">
                   Affiliate Disclosure
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" className="hover:text-coral transition-colors">
+                <Link href="/privacy-policy" className="hover:text-[#E07B39] transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-coral transition-colors">
+                <Link href="/contact" className="hover:text-[#E07B39] transition-colors">
                   Contact
                 </Link>
               </li>
@@ -46,22 +46,22 @@ export default function Footer() {
             <h3 className="font-heading text-white text-lg font-bold mb-4">Popular Destinations</h3>
             <ul className="space-y-2 font-body text-sm">
               <li>
-                <Link href="/whitehaven-beach" className="hover:text-coral transition-colors">
+                <Link href="/whitehaven-beach" className="hover:text-[#E07B39] transition-colors">
                   Whitehaven Beach
                 </Link>
               </li>
               <li>
-                <Link href="/islands" className="hover:text-coral transition-colors">
+                <Link href="/islands" className="hover:text-[#E07B39] transition-colors">
                   The Islands
                 </Link>
               </li>
               <li>
-                <Link href="/where-to-stay" className="hover:text-coral transition-colors">
+                <Link href="/where-to-stay" className="hover:text-[#E07B39] transition-colors">
                   Where to Stay
                 </Link>
               </li>
               <li>
-                <Link href="/things-to-do" className="hover:text-coral transition-colors">
+                <Link href="/things-to-do" className="hover:text-[#E07B39] transition-colors">
                   Things to Do
                 </Link>
               </li>
@@ -91,7 +91,7 @@ export default function Footer() {
               © {new Date().getFullYear()} Discover Whitsundays. All rights reserved.
             </p>
             <p className="text-gray-400">
-              Built with <span className="text-coral">❤</span> for the Whitsundays
+              Built with <span className="text-[#E07B39]">❤</span> for the Whitsundays
             </p>
           </div>
         </div>

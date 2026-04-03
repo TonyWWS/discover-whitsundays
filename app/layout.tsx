@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, DM_Sans } from 'next/font/google';
+import { Fraunces, DM_Sans, Pacifico } from 'next/font/google';
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -16,6 +16,13 @@ const dmSans = DM_Sans({
   display: 'swap',
 });
 
+const pacifico = Pacifico({
+  subsets: ['latin'],
+  variable: '--font-logo',
+  weight: ['400'],
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: "Discover Whitsundays | A local's guide",
   description: "Honest, curated travel guidance for the Whitsunday Islands from an Airlie Beach local.",
@@ -27,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${dmSans.variable} ${pacifico.variable}`}>
       <body className="font-body antialiased">
         {children}
       </body>
