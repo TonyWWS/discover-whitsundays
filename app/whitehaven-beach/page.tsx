@@ -361,7 +361,7 @@ export default function WhitehavenBeachPage() {
             </div>
           </section>
 
-          {/* Important Rules */}
+          {/* Important Rules — UPDATED */}
           <section className="mb-16">
             <div className="bg-[#F5F0E8] border-l-4 border-[#E07B39] p-6 rounded-lg">
               <h3 className="font-heading text-xl font-bold text-[#1A2E35] mb-4">⚠️ Important Rules & Etiquette</h3>
@@ -384,7 +384,7 @@ export default function WhitehavenBeachPage() {
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2 font-bold">5.</span>
-                  <span><strong>No camping</strong> — day visits only at Whitehaven</span>
+                  <span><strong>No camping on the beach itself</strong> — a designated camping area exists in the vine forest behind the southern end, accessible by boat with a valid Queensland Parks permit</span>
                 </li>
               </ul>
             </div>
@@ -438,7 +438,7 @@ export default function WhitehavenBeachPage() {
             </div>
           </section>
 
-          {/* FAQ */}
+          {/* FAQ — UPDATED */}
           <section>
             <h2 className="font-heading text-3xl font-bold text-[#1A2E35] mb-8">
               Frequently Asked Questions
@@ -449,9 +449,10 @@ export default function WhitehavenBeachPage() {
                   How long should I spend at Whitehaven Beach?
                 </h3>
                 <p className="font-body text-gray-700">
-                  Most day tours allocate 2-3 hours at the beach, which is enough time to swim, walk,
-                  take photos, and do the Hill Inlet lookout walk. If you want a more relaxed pace,
-                  an overnight sailing trip visits at quieter times and gives you the beach nearly to yourself.
+                  Most day tours give you around 2–3 hours at the beach — enough time to do the Hill Inlet
+                  lookout walk, have a swim, and actually sit with it for a while. If you want the beach at
+                  its quietest, bareboat and private charter visitors can anchor overnight at Tongue Bay or
+                  the southern end — you'll have the place almost to yourself before the day tours arrive.
                 </p>
               </div>
 
@@ -460,9 +461,10 @@ export default function WhitehavenBeachPage() {
                   Can I visit Whitehaven Beach independently?
                 </h3>
                 <p className="font-body text-gray-700">
-                  Only if you have your own boat or charter a private vessel. There's no public transport
-                  or road access. Most visitors join organised tours, which handle all logistics and include
-                  additional activities like snorkelling.
+                  Only if you have your own boat or can charter one. There's no road access and no public
+                  ferry — the beach sits on an uninhabited national park island. Most visitors join an
+                  organised day tour, which handles all the logistics and usually includes snorkelling at
+                  a nearby reef as well.
                 </p>
               </div>
 
@@ -471,9 +473,8 @@ export default function WhitehavenBeachPage() {
                   Are there facilities at Whitehaven Beach?
                 </h3>
                 <p className="font-body text-gray-700">
-                  No. Whitehaven Beach is protected national park with no permanent structures. There are
-                  composting toilets at the southern end, but no shops, kiosks, or shade structures. Tour
-                  operators bring everything you need on the boat.
+                  No permanent ones. It's protected national park — no shops, no kiosks, no shade structures.
+                  There are composting toilets at the southern end. Everything else comes with your tour operator.
                 </p>
               </div>
 
@@ -482,9 +483,9 @@ export default function WhitehavenBeachPage() {
                   Is Whitehaven Beach suitable for children?
                 </h3>
                 <p className="font-body text-gray-700">
-                  Yes — the beach is family-friendly with shallow, calm water perfect for young children.
-                  The Hill Inlet walk may be challenging for very young kids, but the beach itself is ideal
-                  for families. Most tour operators welcome children aged 4+.
+                  Yes — the water is shallow, calm, and warm, which makes it well suited to young kids.
+                  The Hill Inlet lookout walk is short but steep with some large uneven steps, so it's not
+                  suitable for toddlers or anyone with limited mobility. The beach itself is fine for all ages.
                 </p>
               </div>
 
@@ -493,9 +494,10 @@ export default function WhitehavenBeachPage() {
                   What's the water temperature like?
                 </h3>
                 <p className="font-body text-gray-700">
-                  Warm year-round — 23°C in winter, up to 29°C in summer. No wetsuit needed. A rash vest
-                  is worth bringing for sun protection, and a stinger suit is recommended during summer months
-                  (November to May).
+                  Around 22°C in the cooler months (July–August), rising to about 28°C in summer. Comfortable
+                  year-round — no wetsuit required. A rash vest is worth bringing for sun protection. During
+                  stinger season (late October through May), tour operators provide stinger suits for any
+                  time in the water.
                 </p>
               </div>
             </div>
