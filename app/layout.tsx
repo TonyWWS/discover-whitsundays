@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, DM_Sans, Pacifico } from 'next/font/google';
 import "./globals.css";
+import TurtleChat from "./components/TurtleChat";
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -37,6 +38,7 @@ export default function RootLayout({
     <html lang="en" className={`${fraunces.variable} ${dmSans.variable} ${pacifico.variable}`}>
       <body className="font-body antialiased">
         {children}
+        <TurtleChat />
       </body>
     </html>
   );

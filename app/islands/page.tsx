@@ -1,478 +1,425 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'The Whitsunday Islands | Discover Whitsundays',
   description: '74 tropical islands in the Great Barrier Reef. Find out which island suits you — from Hamilton\'s resort amenities to uninhabited national park wilderness.',
-}
+  openGraph: {
+    title: 'The Whitsunday Islands | Discover Whitsundays',
+    description: '74 tropical islands in the Great Barrier Reef. Find out which island suits you — from Hamilton\'s resort amenities to uninhabited national park wilderness.',
+    url: 'https://discoverwhitsundays.com/islands',
+    siteName: 'Discover Whitsundays',
+    images: [{ url: '/images/islands-hero1.jpg', width: 1200, height: 630 }],
+    locale: 'en_AU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Whitsunday Islands | Discover Whitsundays',
+    description: '74 tropical islands in the Great Barrier Reef. Find out which island suits you.',
+    images: ['/images/islands-hero1.jpg'],
+  },
+};
+
+const islands = [
+  {
+    name: 'Hamilton Island',
+    badge: 'Most Developed',
+    badgeColor: '#0B6E72',
+    image: '/images/hamilton-island.jpg',
+    imageAlt: 'Aerial view of Hamilton Island marina and resort, Whitsundays',
+    intro: "The largest inhabited island in the Whitsundays and the only one with its own commercial airport. Hamilton is essentially a self-contained resort island — hotels, restaurants, marina, shops, golf course, and wildlife park. Popular with families and anyone wanting resort amenities combined with island beauty.",
+    features: [
+      'Own commercial airport (direct flights from Sydney, Melbourne, Brisbane)',
+      'Multiple accommodation options from budget to qualia luxury resort',
+      'Main marina hub for sailing charters',
+      'Hamilton Island Golf Club on Dent Island',
+      'Wildlife Hamilton Island — koalas and kangaroos',
+      'Catseye Beach for swimming',
+    ],
+    whoFor: [
+      'Families with children',
+      'First-time Whitsundays visitors',
+      'Couples and honeymooners (qualia resort)',
+      'Those wanting resort amenities with island life',
+    ],
+    tip: "Hamilton runs on golf buggies and is effectively cashless — everything goes on your room charge or credit card. Book restaurants ahead in peak season (June–August). The sunset from One Tree Hill is worth the walk every time.",
+    links: [
+      { href: '/where-to-stay', label: 'View Accommodation', primary: true },
+      { href: '/things-to-do', label: 'Activities & Tours', primary: false },
+    ],
+  },
+  {
+    name: 'Daydream Island',
+    badge: 'Family Favourite',
+    badgeColor: '#E07B39',
+    image: '/images/daydream-island.jpg',
+    imageAlt: 'Daydream Island resort and Living Reef, Whitsundays',
+    intro: "A small island just 1km long and 5km from Airlie Beach — the closest resort island to the mainland. Daydream is known for its Living Reef, an outdoor aquarium where you can snorkel with tropical fish, rays, and reef sharks. More affordable than Hamilton and genuinely great for families.",
+    features: [
+      'Living Reef outdoor aquarium with 80+ species',
+      '20-minute ferry from Airlie Beach',
+      '3 pools including a dedicated kids\' pool',
+      'Spa and wellness centre',
+      'Multiple dining options',
+      'Kids\' club',
+    ],
+    whoFor: [
+      'Families with young children',
+      'Budget-conscious travellers',
+      'Day trippers from Airlie Beach',
+      'Snorkelling enthusiasts',
+    ],
+    tip: "Even if you're not staying, you can take the ferry as a day tripper and use the resort facilities for a day-use fee. The Living Reef fish feeding at 10am is worth timing your visit around. Book the ferry ahead during school holidays.",
+    links: [
+      { href: '/where-to-stay', label: 'View Accommodation', primary: true },
+      { href: '/things-to-do', label: 'Day Trip Options', primary: false },
+    ],
+  },
+  {
+    name: 'Whitsunday Island',
+    badge: 'Most Famous',
+    badgeColor: '#0B6E72',
+    image: '/images/whitsunday-island.jpg',
+    imageAlt: 'Hill Inlet lookout and Whitehaven Beach on Whitsunday Island',
+    intro: "The largest island in the group and home to Whitehaven Beach. The entire island is uninhabited national park — no resorts, no shops, no facilities. Just pristine wilderness. You visit by day tour, sailing charter, or camping permit. This is what most people come to the Whitsundays to see.",
+    features: [
+      'Whitehaven Beach — 7km of pure silica sand',
+      'Hill Inlet lookout — the swirling sand view is best before 11am at low tide',
+      'Walking trails through national park',
+      'Multiple camping spots (permit required)',
+      'Snorkelling spots around the island',
+    ],
+    whoFor: [
+      'Beach lovers and photographers',
+      'Day trippers from Airlie Beach',
+      'Sailing charter guests',
+      'Campers and nature enthusiasts',
+    ],
+    tip: "The northern end of Whitehaven Beach is usually quieter than the southern. The sand is 98% pure silica — so fine it doesn't retain heat and squeaks when you walk on it. Reef-safe sunscreen is a Marine Park requirement, not a suggestion.",
+    links: [
+      { href: '/tours/whitehaven-beach-tours', label: 'Book a Whitehaven Tour', primary: true },
+      { href: '/whitehaven-beach', label: 'Complete Beach Guide', primary: false },
+    ],
+  },
+  {
+    name: 'Long Island',
+    badge: 'Quiet Escape',
+    badgeColor: '#E07B39',
+    image: '/images/long-island.jpg',
+    imageAlt: 'Secluded beach and rainforest on Long Island, Whitsundays',
+    intro: "Long Island sits 9km from the mainland. At 9km long and just 400m wide, over 80% is national park. It's quieter than Hamilton and Daydream, with 17km of walking trails, fringing reefs, and two distinct accommodation options depending on what you're after.",
+    features: [
+      '17km of walking trails through national park',
+      'Excellent snorkelling 150m off the beach at Happy Bay',
+      'Secluded bays and dense rainforest',
+      '20-minute transfer from Shute Harbour or Airlie Beach',
+      'Palm Bay Resort — adults 16+, Balinese-inspired villas',
+      'Elysian Retreat — eco-luxury boutique',
+    ],
+    whoFor: [
+      'Couples and adults seeking quiet',
+      'Bush walkers and snorkellers',
+      'Eco-conscious travellers',
+      'Anyone who wants to genuinely switch off',
+    ],
+    tip: "I haven't made it to Long Island yet — it's on my list. What I hear from locals is that Happy Bay has some of the best accessible snorkelling in the Whitsundays. Palm Bay suits adults wanting a relaxed retreat. Elysian is eco-luxury done properly — worth it if the budget allows. July is the sweet spot: cooler, sunny, and quiet.",
+    links: [
+      { href: '/where-to-stay', label: 'View Accommodation', primary: true },
+    ],
+  },
+];
+
+const otherIslands = [
+  {
+    name: 'Hayman Island',
+    description: "The Whitsundays' most exclusive destination. Hayman operates at a different level to the other islands — private, premium, and worth its own dedicated guide. Bookings are direct only.",
+    access: 'Full guide coming soon in the luxury travel section.',
+  },
+  {
+    name: 'Hook Island',
+    description: "The second-largest island and entirely national park. Famous for excellent snorkelling at Manta Ray Bay, Maureen's Cove, and Stonehaven Bay. Most day tours stop here. Camping available at several bays.",
+    access: 'Access: Day tours or bareboat charter',
+  },
+  {
+    name: 'South Molle Island',
+    description: "Large island mostly covered in national park. Previously had a resort (now closed). Popular with bareboaters for anchorage. Good walking trails to Mt. Jeffreys summit with panoramic views. Sandy Bay is great for swimming.",
+    access: 'Access: Bareboat charter or day tours',
+  },
+  {
+    name: 'Langford Island',
+    description: "A tiny sand cay perfect for snorkelling. At low tide you can walk around the entire island in five minutes. The surrounding reef is spectacular with abundant fish. No facilities — just pristine sand and turquoise water.",
+    access: 'Access: Day tours or bareboat charter',
+  },
+];
 
 export default function IslandsPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ backgroundColor: '#F4FAFA' }}>
       <Navbar />
 
-      {/* Hero Section */}
-      <div className="relative h-[500px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/islands-hero1.jpg')" }}
-        />
-        <div className="absolute inset-0 bg-[#1A2E35]/60"></div>
-        <div className="relative container mx-auto px-4 h-full flex items-center justify-center">
-          <div className="max-w-3xl text-white text-center">
-            <h1 className="font-heading text-7xl font-bold mb-4 drop-shadow-2xl">
-              The Whitsunday Islands
-            </h1>
-            <p className="font-body text-2xl text-white/90 drop-shadow-lg">
-              Mostly untouched national park. But there's an island to suit your vibe — find it here.
-            </p>
+      <main>
+
+        {/* Hero */}
+        <div className="relative h-[380px] md:h-[500px] overflow-hidden">
+          <Image
+            src="/images/islands-hero1.jpg"
+            alt="Aerial view of the Whitsunday Islands showing turquoise water and tropical islands"
+            fill
+            style={{ objectFit: 'cover' }}
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1A2E35]/60 via-[#1A2E35]/50 to-transparent" />
+          <div className="relative z-10 container mx-auto px-4 md:px-8 h-full flex items-center justify-center">
+            <div className="max-w-3xl text-white text-center">
+              <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-2xl">
+                The Whitsunday Islands
+              </h1>
+              <p className="font-body text-lg md:text-2xl text-white/90 drop-shadow-lg">
+                Mostly untouched national park. But there&apos;s an island to suit your vibe &mdash; find it here.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Introduction */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-[#E8F4F5] border-l-4 border-[#0B6E72] p-8 rounded-lg mb-12">
-            <h2 className="font-heading text-2xl font-bold text-[#1A2E35] mb-4">
-              🏝️ Only 8 Islands Are Inhabited
-            </h2>
-            <p className="font-body text-[#1A2E35] leading-relaxed">
-              While there are 74 islands in the Whitsundays, only 8 have resorts or permanent settlements.
-              The rest are protected national parks with pristine beaches, walking trails, and camping grounds.
-              As an Airlie Beach local, I've explored many of these islands — here are the ones worth visiting.
-            </p>
-          </div>
-
-          {/* Hamilton Island */}
-          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-[#0B6E72]">
+        {/* Intro */}
+        <div className="border-b" style={{ borderColor: '#D1E8E8', backgroundColor: '#fff' }}>
+          <div className="container mx-auto px-4 md:px-8 py-10 max-w-3xl">
             <div
-              className="h-80 bg-cover bg-center"
-              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1540202404-d0c7fe46a087?w=1200')" }}
+              className="border-l-4 p-6 md:p-8 rounded-lg"
+              style={{ backgroundColor: '#E8F4F5', borderColor: '#0B6E72' }}
             >
-              <div className="h-full bg-[#1A2E35]/50 flex items-end p-8">
-                <div>
-                  <div className="bg-[#0B6E72] text-white px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
-                    MOST DEVELOPED
-                  </div>
-                  <h3 className="font-heading text-5xl font-bold text-white">Hamilton Island</h3>
-                </div>
-              </div>
-            </div>
-            <div className="p-8">
-              <p className="font-body text-gray-700 leading-relaxed mb-6 text-lg">
-                The largest inhabited island in the Whitsundays and the only one with its own commercial airport.
-                Hamilton is essentially a self-contained resort island with hotels, restaurants, marina, shops,
-                golf course, and wildlife park. It's popular with families and those wanting resort amenities
-                combined with island beauty.
+              <h2 className="font-heading text-xl md:text-2xl font-bold mb-4" style={{ color: '#1A2E35' }}>
+                Only 8 islands are inhabited
+              </h2>
+              <p className="font-body leading-relaxed" style={{ color: '#1A2E35' }}>
+                While there are 74 islands in the Whitsundays, only 8 have resorts or permanent settlements.
+                The rest are protected national parks with pristine beaches, walking trails, and camping grounds.
+                Here are the ones worth knowing about.
               </p>
-
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <h4 className="font-heading text-lg font-bold text-[#1A2E35] mb-3">🎯 Key Features:</h4>
-                  <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Own commercial airport (direct flights from Sydney, Melbourne, Brisbane)</li>
-                    <li>• Multiple accommodation options (budget to luxury)</li>
-                    <li>• Main marina hub for sailing charters</li>
-                    <li>• Hamilton Island Golf Club (on Dent Island)</li>
-                    <li>• Wildlife Hamilton Island (koalas, kangaroos)</li>
-                    <li>• 6+ restaurants and bars</li>
-                    <li>• Catseye Beach for swimming</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-heading text-lg font-bold text-[#1A2E35] mb-3">👥 Perfect For:</h4>
-                  <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Families with kids</li>
-                    <li>• First-time Whitsundays visitors</li>
-                    <li>• Those wanting resort amenities + island life</li>
-                    <li>• Convenient base for day trips</li>
-                    <li>• Couples and honeymooners (qualia resort)</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="bg-[#F5F0E8] border-l-4 border-[#E07B39] p-6 rounded-lg mb-6">
-                <h4 className="font-heading font-bold text-[#1A2E35] mb-2">💡 Local Tip:</h4>
-                <p className="font-body text-gray-700 text-sm">
-                  Hamilton Island operates on "island time" with golf buggies as the main transport. The island
-                  is cashless — everything goes on your room charge or credit card. Book restaurants in advance
-                  during peak season (June-August). The sunset from One Tree Hill is spectacular.
-                </p>
-              </div>
-
-              <div className="flex gap-4">
-                <Link
-                  href="/where-to-stay"
-                  className="flex-1 bg-[#0B6E72] text-white py-3 rounded-xl font-heading font-bold text-center hover:bg-[#1A2E35] transition-colors"
-                >
-                  View Accommodation
-                </Link>
-                <Link
-                  href="/things-to-do"
-                  className="flex-1 border-2 border-[#0B6E72] text-[#0B6E72] py-3 rounded-xl font-heading font-bold text-center hover:bg-[#E8F4F5] transition-colors"
-                >
-                  Activities & Tours
-                </Link>
-              </div>
             </div>
           </div>
+        </div>
 
-          {/* Daydream Island */}
-          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-[#0B6E72]">
-            <div
-              className="h-80 bg-cover bg-center"
-              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=1200')" }}
-            >
-              <div className="h-full bg-[#1A2E35]/50 flex items-end p-8">
-                <div>
-                  <div className="bg-[#E07B39] text-white px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
-                    FAMILY FAVOURITE
+        {/* Island Cards */}
+        <div className="container mx-auto px-4 md:px-8 py-12 md:py-16 max-w-4xl">
+          <div className="space-y-12 md:space-y-16">
+            {islands.map((island) => (
+              <article
+                key={island.name}
+                className="bg-white rounded-2xl overflow-hidden shadow-sm border"
+                style={{ borderColor: '#D1E8E8' }}
+              >
+                {/* Card Image */}
+                <div className="relative h-64 md:h-80">
+                  <Image
+                    src={island.image}
+                    alt={island.imageAlt}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1A2E35]/20 to-[#1A2E35]/80" />
+                  <div className="absolute bottom-0 left-0 p-6 md:p-8">
+                    <div
+                      className="inline-block px-3 py-1 rounded-lg font-heading font-bold text-xs tracking-widest uppercase mb-3 text-white"
+                      style={{ backgroundColor: island.badgeColor }}
+                    >
+                      {island.badge}
+                    </div>
+                    <h2 className="font-heading text-3xl md:text-5xl font-bold text-white">
+                      {island.name}
+                    </h2>
                   </div>
-                  <h3 className="font-heading text-5xl font-bold text-white">Daydream Island</h3>
                 </div>
-              </div>
-            </div>
-            <div className="p-8">
-              <p className="font-body text-gray-700 leading-relaxed mb-6 text-lg">
-                A small island (1km long) just 5km from Airlie Beach, making it the closest resort island
-                to the mainland. Daydream is known for its Living Reef — an outdoor aquarium where you can
-                snorkel with tropical fish, rays, and even reef sharks. It's incredibly family-friendly
-                and more affordable than Hamilton.
-              </p>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <h4 className="font-heading text-lg font-bold text-[#1A2E35] mb-3">🎯 Key Features:</h4>
-                  <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Living Reef (outdoor aquarium with 80+ species)</li>
-                    <li>• 20-minute ferry from Airlie Beach ($72 return)</li>
-                    <li>• 3 pools including kids' pool</li>
-                    <li>• Spa and wellness center</li>
-                    <li>• Multiple dining options</li>
-                    <li>• Water sports and activities</li>
-                    <li>• Kids' club</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-heading text-lg font-bold text-[#1A2E35] mb-3">👥 Perfect For:</h4>
-                  <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Families with young children</li>
-                    <li>• Budget-conscious travellers</li>
-                    <li>• Day trippers from Airlie Beach</li>
-                    <li>• Those who want island experience without flying</li>
-                    <li>• Snorkelling enthusiasts</li>
-                  </ul>
-                </div>
-              </div>
+                {/* Card Body */}
+                <div className="p-6 md:p-8 space-y-6">
+                  <p className="font-body text-base md:text-lg leading-relaxed" style={{ color: '#1A2E35' }}>
+                    {island.intro}
+                  </p>
 
-              <div className="bg-[#F5F0E8] border-l-4 border-[#E07B39] p-6 rounded-lg mb-6">
-                <h4 className="font-heading font-bold text-[#1A2E35] mb-2">💡 Local Tip:</h4>
-                <p className="font-body text-gray-700 text-sm">
-                  Even if you're not staying on Daydream, you can take a day trip via ferry and use the resort
-                  facilities for a day-use fee. The Living Reef fish feeding at 10am is a must-see. Book the
-                  ferry in advance during school holidays — it fills up quickly.
-                </p>
-              </div>
-
-              <div className="flex gap-4">
-                <Link
-                  href="/where-to-stay"
-                  className="flex-1 bg-[#0B6E72] text-white py-3 rounded-xl font-heading font-bold text-center hover:bg-[#1A2E35] transition-colors"
-                >
-                  View Accommodation
-                </Link>
-                <Link
-                  href="/things-to-do"
-                  className="flex-1 border-2 border-[#0B6E72] text-[#0B6E72] py-3 rounded-xl font-heading font-bold text-center hover:bg-[#E8F4F5] transition-colors"
-                >
-                  Day Trip Options
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Whitsunday Island */}
-          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-[#0B6E72]">
-            <div
-              className="h-80 bg-cover bg-center"
-              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200')" }}
-            >
-              <div className="h-full bg-[#1A2E35]/50 flex items-end p-8">
-                <div>
-                  <div className="bg-[#0B6E72] text-white px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
-                    MOST FAMOUS
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h3 className="font-heading text-base font-bold mb-3" style={{ color: '#1A2E35' }}>
+                        Key features
+                      </h3>
+                      <ul className="space-y-2 font-body text-sm" style={{ color: '#1A2E35' }}>
+                        {island.features.map((f) => (
+                          <li key={f} className="flex items-start gap-2">
+                            <span style={{ color: '#0B6E72' }} aria-hidden="true">&#8594;</span>
+                            {f}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h3 className="font-heading text-base font-bold mb-3" style={{ color: '#1A2E35' }}>
+                        Who this suits
+                      </h3>
+                      <ul className="space-y-2 font-body text-sm" style={{ color: '#1A2E35' }}>
+                        {island.whoFor.map((w) => (
+                          <li key={w} className="flex items-start gap-2">
+                            <span style={{ color: '#0B6E72' }} aria-hidden="true">&#8594;</span>
+                            {w}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <h3 className="font-heading text-5xl font-bold text-white">Whitsunday Island</h3>
-                </div>
-              </div>
-            </div>
-            <div className="p-8">
-              <p className="font-body text-gray-700 leading-relaxed mb-6 text-lg">
-                The largest island in the group and home to Whitehaven Beach — consistently rated one of the
-                world's best beaches. The entire island is uninhabited national park. There are no resorts,
-                shops, or facilities — just pristine wilderness. You can only visit via day tour, sailing charter,
-                or camping permit.
-              </p>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <h4 className="font-heading text-lg font-bold text-[#1A2E35] mb-3">🎯 Key Features:</h4>
-                  <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Whitehaven Beach (7km of pure silica sand)</li>
-                    <li>• Hill Inlet lookout (swirling sands, best before 11am)</li>
-                    <li>• Walking trails through national park</li>
-                    <li>• Multiple camping spots (permit required)</li>
-                    <li>• Completely undeveloped — pristine nature</li>
-                    <li>• Snorkelling spots around the island</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-heading text-lg font-bold text-[#1A2E35] mb-3">👥 Perfect For:</h4>
-                  <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Beach lovers and photographers</li>
-                    <li>• Day trippers from Airlie Beach</li>
-                    <li>• Sailing charter guests</li>
-                    <li>• Adventurous campers</li>
-                    <li>• Nature enthusiasts</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="bg-[#F5F0E8] border-l-4 border-[#E07B39] p-6 rounded-lg mb-6">
-                <h4 className="font-heading font-bold text-[#1A2E35] mb-2">💡 Local Tip:</h4>
-                <p className="font-body text-gray-700 text-sm">
-                  Visit Hill Inlet at low tide for the best view of the swirling sand patterns. The northern
-                  end of Whitehaven Beach is usually less crowded. The sand is 98% pure silica — so fine it
-                  doesn't retain heat and squeaks when you walk on it. Don't forget reef-safe sunscreen.
-                </p>
-              </div>
-
-              <div className="flex gap-4">
-                <Link
-                  href="/things-to-do"
-                  className="flex-1 bg-[#0B6E72] text-white py-3 rounded-xl font-heading font-bold text-center hover:bg-[#1A2E35] transition-colors"
-                >
-                  Book Whitehaven Tour
-                </Link>
-                <Link
-                  href="/whitehaven-beach"
-                  className="flex-1 border-2 border-[#0B6E72] text-[#0B6E72] py-3 rounded-xl font-heading font-bold text-center hover:bg-[#E8F4F5] transition-colors"
-                >
-                  Complete Beach Guide
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Long Island */}
-          <div className="mb-12 bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-[#0B6E72]">
-            <div
-              className="h-80 bg-cover bg-center"
-              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200')" }}
-            >
-              <div className="h-full bg-[#1A2E35]/50 flex items-end p-8">
-                <div>
-                  <div className="bg-[#E07B39] text-white px-4 py-2 rounded-lg font-heading font-bold inline-block mb-2">
-                    QUIET ESCAPE
+                  {/* Local tip */}
+                  <div
+                    className="rounded-lg px-5 py-4 border-l-2"
+                    style={{ backgroundColor: '#F5F0E8', borderColor: '#E07B39' }}
+                  >
+                    <div
+                      className="text-xs font-heading font-bold tracking-widest uppercase mb-1.5"
+                      style={{ color: '#E07B39' }}
+                    >
+                      Local tip
+                    </div>
+                    <p className="font-body text-sm leading-relaxed" style={{ color: '#1A2E35' }}>
+                      {island.tip}
+                    </p>
                   </div>
-                  <h3 className="font-heading text-5xl font-bold text-white">Long Island</h3>
-                </div>
-              </div>
-            </div>
-            <div className="p-8">
-              <p className="font-body text-gray-700 leading-relaxed mb-6 text-lg">
-                Long Island sits 9km from the mainland — the closest Whitsunday island to Airlie Beach.
-                At 9km long and just 400m wide, over 80% is national park. It's quieter than Hamilton
-                and Daydream, with 17km of walking trails, fringing reefs, and two very different
-                accommodation options depending on what you're after.
-              </p>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <h4 className="font-heading text-lg font-bold text-[#1A2E35] mb-3">🎯 Key Features:</h4>
-                  <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• 17km of walking trails through national park</li>
-                    <li>• Excellent snorkelling 150m off the beach at Happy Bay</li>
-                    <li>• Secluded bays and dense rainforest</li>
-                    <li>• 20-minute transfer from Shute Harbour or Airlie Beach</li>
-                    <li>• Palm Bay Resort — adults 16+, Balinese-inspired villas</li>
-                    <li>• Elysian Retreat — eco-luxury boutique (Booking.com)</li>
-                  </ul>
+                  {/* Links */}
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    {island.links.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="flex-1 py-3 rounded-xl font-heading font-bold text-center text-sm tracking-wide transition-colors min-h-[44px] flex items-center justify-center"
+                        style={link.primary
+                          ? { backgroundColor: '#0B6E72', color: '#fff' }
+                          : { border: '2px solid #0B6E72', color: '#0B6E72', backgroundColor: 'transparent' }
+                        }
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-heading text-lg font-bold text-[#1A2E35] mb-3">👥 Perfect For:</h4>
-                  <ul className="space-y-2 font-body text-gray-700 text-sm">
-                    <li>• Couples and adults seeking quiet</li>
-                    <li>• Bush walkers and snorkellers</li>
-                    <li>• Those wanting nature without sacrificing comfort</li>
-                    <li>• Eco-conscious travellers</li>
-                    <li>• Anyone who wants to actually switch off</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="bg-[#F5F0E8] border-l-4 border-[#E07B39] p-6 rounded-lg mb-6">
-                <h4 className="font-heading font-bold text-[#1A2E35] mb-2">💡 Local Tip:</h4>
-                <p className="font-body text-gray-700 text-sm">
-                  I haven't made it to Long Island yet — it's on my list. What I hear from locals is that
-                  Happy Bay has some of the best accessible snorkelling in the Whitsundays. Palm Bay suits
-                  adults who want a relaxed retreat. Elysian Retreat sits at a higher level — eco-luxury
-                  done properly, and worth it if the budget allows. July is the sweet spot — cooler, sunny,
-                  and quiet.
-                </p>
-              </div>
-
-              <div className="flex gap-4">
-                <Link
-                  href="/where-to-stay"
-                  className="flex-1 bg-[#0B6E72] text-white py-3 rounded-xl font-heading font-bold text-center hover:bg-[#1A2E35] transition-colors"
-                >
-                  View Accommodation
-                </Link>
-              </div>
-            </div>
+              </article>
+            ))}
           </div>
 
           {/* Other Notable Islands */}
-          <div className="mb-16">
-            <h2 className="font-heading text-3xl font-bold text-[#1A2E35] mb-8">
-              Other Notable Islands
+          <section className="mt-16">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8" style={{ color: '#1A2E35' }}>
+              Other notable islands
             </h2>
-
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white border-2 border-[#E8F4F5] p-6 rounded-xl hover:shadow-lg transition-shadow">
-                <h3 className="font-heading text-xl font-bold text-[#1A2E35] mb-3">🏝️ Hayman Island</h3>
-                <p className="font-body text-gray-700 text-sm mb-4">
-                  The Whitsundays' most exclusive destination. Hayman operates at a different level to the
-                  other islands — private, premium, and worth its own dedicated guide. Bookings are direct
-                  only.
-                </p>
-                <p className="text-sm text-[#6B7C80] italic">
-                  Full coverage coming soon in our luxury travel guide.
-                </p>
-              </div>
-
-              <div className="bg-white border-2 border-[#E8F4F5] p-6 rounded-xl hover:shadow-lg transition-shadow">
-                <h3 className="font-heading text-xl font-bold text-[#1A2E35] mb-3">🏝️ Hook Island</h3>
-                <p className="font-body text-gray-700 text-sm mb-4">
-                  The second-largest island and entirely national park. Famous for excellent snorkelling sites
-                  like Manta Ray Bay, Maureen's Cove, and Stonehaven Bay. Most day tours stop here for
-                  snorkelling. Camping available at several bays.
-                </p>
-                <p className="text-sm text-[#6B7C80] italic">Access: Day tours or bareboat charter</p>
-              </div>
-
-              <div className="bg-white border-2 border-[#E8F4F5] p-6 rounded-xl hover:shadow-lg transition-shadow">
-                <h3 className="font-heading text-xl font-bold text-[#1A2E35] mb-3">🏝️ South Molle Island</h3>
-                <p className="font-body text-gray-700 text-sm mb-4">
-                  Large island mostly covered in national park. Previously had a resort (now closed). Popular
-                  with bareboaters for anchorage. Good walking trails to Mt. Jeffreys summit (194m) with
-                  panoramic views. Sandy Bay is great for swimming.
-                </p>
-                <p className="text-sm text-[#6B7C80] italic">Access: Bareboat charter or day tours</p>
-              </div>
-
-              <div className="bg-white border-2 border-[#E8F4F5] p-6 rounded-xl hover:shadow-lg transition-shadow">
-                <h3 className="font-heading text-xl font-bold text-[#1A2E35] mb-3">🏝️ Langford Island</h3>
-                <p className="font-body text-gray-700 text-sm mb-4">
-                  A tiny sand cay perfect for snorkelling. At low tide, you can walk around the entire island
-                  in 5 minutes. The surrounding reef is spectacular with abundant fish. Popular stop on sailing
-                  tours. No facilities — just pristine sand and turquoise water.
-                </p>
-                <p className="text-sm text-[#6B7C80] italic">Access: Day tours or bareboat charter</p>
-              </div>
+              {otherIslands.map((island) => (
+                <div
+                  key={island.name}
+                  className="bg-white p-6 rounded-xl border hover:shadow-md transition-shadow"
+                  style={{ borderColor: '#D1E8E8' }}
+                >
+                  <h3 className="font-heading text-lg font-bold mb-3" style={{ color: '#1A2E35' }}>
+                    {island.name}
+                  </h3>
+                  <p className="font-body text-sm leading-relaxed mb-3" style={{ color: '#1A2E35' }}>
+                    {island.description}
+                  </p>
+                  <p className="font-body text-sm" style={{ color: '#4A5C61' }}>
+                    {island.access}
+                  </p>
+                </div>
+              ))}
             </div>
-          </div>
+          </section>
 
-          {/* Planning Your Island Visit */}
-          <div className="bg-[#E8F4F5] p-8 rounded-xl mb-16">
-            <h2 className="font-heading text-2xl font-bold text-[#1A2E35] mb-6">
-              🗺️ Planning Your Island Visit
+          {/* Planning section */}
+          <section
+            className="mt-16 p-6 md:p-8 rounded-xl"
+            style={{ backgroundColor: '#E8F4F5' }}
+          >
+            <h2 className="font-heading text-xl md:text-2xl font-bold mb-6" style={{ color: '#1A2E35' }}>
+              Planning your island visit
             </h2>
-
-            <div className="grid md:grid-cols-3 gap-6 font-body text-gray-700">
+            <div className="grid md:grid-cols-3 gap-6 font-body text-sm" style={{ color: '#1A2E35' }}>
               <div>
-                <h3 className="font-heading font-bold text-[#1A2E35] mb-3">Stay on an Island:</h3>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ Hamilton Island (full resort)</li>
-                  <li>✓ Daydream Island (family resort)</li>
-                  <li>✓ Long Island (quiet retreat)</li>
-                  <li>✓ Hayman (luxury — direct booking only)</li>
+                <h3 className="font-heading font-bold mb-3" style={{ color: '#1A2E35' }}>Stay on an island</h3>
+                <ul className="space-y-2">
+                  {['Hamilton Island (full resort)', 'Daydream Island (family resort)', 'Long Island (quiet retreat)', 'Hayman Island (luxury, direct booking)'].map(item => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span style={{ color: '#0B6E72' }} aria-hidden="true">&#8594;</span>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
-                <Link
-                  href="/where-to-stay"
-                  className="inline-block mt-4 text-[#0B6E72] font-semibold hover:underline"
-                >
-                  View Accommodation →
+                <Link href="/where-to-stay" className="inline-block mt-4 font-semibold hover:underline min-h-[44px] flex items-center" style={{ color: '#0B6E72' }}>
+                  View accommodation &#8594;
                 </Link>
               </div>
-
               <div>
-                <h3 className="font-heading font-bold text-[#1A2E35] mb-3">Day Trip from Airlie:</h3>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ Whitsunday Island (tours only)</li>
-                  <li>✓ Daydream Island (ferry)</li>
-                  <li>✓ Hamilton Island (ferry)</li>
-                  <li>✓ Hook Island (snorkel tours)</li>
+                <h3 className="font-heading font-bold mb-3" style={{ color: '#1A2E35' }}>Day trip from Airlie</h3>
+                <ul className="space-y-2">
+                  {['Whitsunday Island (tours only)', 'Daydream Island (ferry)', 'Hamilton Island (ferry)', 'Hook Island (snorkel tours)'].map(item => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span style={{ color: '#0B6E72' }} aria-hidden="true">&#8594;</span>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
-                <Link
-                  href="/things-to-do"
-                  className="inline-block mt-4 text-[#0B6E72] font-semibold hover:underline"
-                >
-                  View Tours →
+                <Link href="/things-to-do" className="inline-block mt-4 font-semibold hover:underline min-h-[44px] flex items-center" style={{ color: '#0B6E72' }}>
+                  View tours &#8594;
                 </Link>
               </div>
-
               <div>
-                <h3 className="font-heading font-bold text-[#1A2E35] mb-3">Bareboat Charter:</h3>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ Access all uninhabited islands</li>
-                  <li>✓ Secluded anchorages</li>
-                  <li>✓ Camping spots</li>
-                  <li>✓ Ultimate flexibility</li>
+                <h3 className="font-heading font-bold mb-3" style={{ color: '#1A2E35' }}>Bareboat charter</h3>
+                <ul className="space-y-2">
+                  {['Access all uninhabited islands', 'Secluded anchorages', 'Camping spots', 'Ultimate flexibility'].map(item => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span style={{ color: '#0B6E72' }} aria-hidden="true">&#8594;</span>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
-                <Link
-                  href="/tours/bareboating-and-private-charters"
-                  className="inline-block mt-4 text-[#0B6E72] font-semibold hover:underline"
-                >
-                  Learn About Bareboating →
+                <Link href="/tours/bareboating-and-private-charters" className="inline-block mt-4 font-semibold hover:underline min-h-[44px] flex items-center" style={{ color: '#0B6E72' }}>
+                  Learn about bareboating &#8594;
                 </Link>
               </div>
             </div>
-          </div>
-
+          </section>
         </div>
-      </div>
 
-      {/* CTA */}
-      <div className="bg-[#0B6E72] py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-heading text-4xl font-bold text-white mb-6">
-            Ready to Explore the Islands?
-          </h2>
-          <p className="font-body text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            From luxury resorts to uninhabited national parks — find your island.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link
-              href="/where-to-stay"
-              className="bg-[#E07B39] text-white px-8 py-4 rounded-xl font-heading font-bold text-lg hover:bg-[#1A2E35] transition-all duration-300 shadow-xl"
-            >
-              Find Accommodation
-            </Link>
-            <Link
-              href="/things-to-do"
-              className="bg-white text-[#0B6E72] px-8 py-4 rounded-xl font-heading font-bold text-lg hover:bg-[#F5F0E8] transition-all duration-300 shadow-xl"
-            >
-              Book Island Tours
-            </Link>
+        {/* CTA */}
+        <div className="py-16 md:py-20" style={{ backgroundColor: '#0B6E72' }}>
+          <div className="container mx-auto px-4 md:px-8 text-center max-w-2xl">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to explore the islands?
+            </h2>
+            <p className="font-body text-lg md:text-xl mb-8" style={{ color: 'rgba(255,255,255,0.8)' }}>
+              From luxury resorts to uninhabited national parks &mdash; find your island.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/where-to-stay"
+                className="px-8 py-4 rounded-xl font-heading font-bold text-lg transition-all duration-300 shadow-xl min-h-[44px] flex items-center justify-center"
+                style={{ backgroundColor: '#E07B39', color: '#fff' }}
+              >
+                Find Accommodation
+              </Link>
+              <Link
+                href="/things-to-do"
+                className="px-8 py-4 rounded-xl font-heading font-bold text-lg transition-all duration-300 shadow-xl min-h-[44px] flex items-center justify-center"
+                style={{ backgroundColor: '#fff', color: '#0B6E72' }}
+              >
+                Book Island Tours
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+
+      </main>
 
       <Footer />
     </div>
   );
 }
+
