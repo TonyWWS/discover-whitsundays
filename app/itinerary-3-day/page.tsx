@@ -1,764 +1,681 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Link from 'next/link';
+import Image from 'next/image';
+
+export const metadata = {
+  title: '3-Day Whitsundays Itinerary | Discover Whitsundays',
+  description: 'Only have a long weekend? Here\'s exactly how I\'d spend three days in the Whitsundays — Whitehaven Beach, reef snorkelling, and Airlie Beach done properly.',
+  openGraph: {
+    title: '3-Day Whitsundays Itinerary | Discover Whitsundays',
+    description: 'Only have a long weekend? Here\'s exactly how I\'d spend three days in the Whitsundays.',
+    url: 'https://discoverwhitsundays.com/itinerary-3-day',
+    siteName: 'Discover Whitsundays',
+    images: [{ url: '/images/itinerary-hero.jpg', width: 1200, height: 630 }],
+    locale: 'en_AU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '3-Day Whitsundays Itinerary | Discover Whitsundays',
+    description: 'Only have a long weekend? Here\'s exactly how I\'d spend three days in the Whitsundays.',
+    images: ['/images/itinerary-hero.jpg'],
+  },
+};
+
+const budgets = [
+  {
+    label: 'Budget',
+    range: '$600–790 per person',
+    accent: '#0B6E72',
+    bg: '#E8F4F5',
+    note: 'Hostels, budget tours, self-catering, limited dining out',
+    items: [
+      { label: 'Accommodation (3 nights)', value: '$180–240' },
+      { label: 'Whitehaven Beach tour', value: '$130–180' },
+      { label: 'Reef snorkelling tour', value: '$150–200' },
+      { label: 'Meals (simple/self-catering)', value: '$90–120' },
+      { label: 'Airport transfers', value: '$50' },
+      { label: 'Total per person', value: '$600–790', bold: true },
+    ],
+  },
+  {
+    label: 'Mid-range',
+    range: '$1,110–1,410 per person',
+    accent: '#E07B39',
+    bg: '#F5F0E8',
+    note: 'Comfortable hotel, premium tours, dining out, some extras',
+    items: [
+      { label: 'Accommodation (3 nights)', value: '$450–600' },
+      { label: 'Whitehaven Beach tour', value: '$180–220' },
+      { label: 'Reef snorkelling tour', value: '$200–250' },
+      { label: 'Meals (restaurants)', value: '$180–240' },
+      { label: 'Extras and activities', value: '$100' },
+      { label: 'Total per person', value: '$1,110–1,410', bold: true },
+    ],
+  },
+];
+
+const faqs = [
+  {
+    q: 'Is 3 days enough for the Whitsundays?',
+    a: 'Yes. Three days lets you experience the main highlights without feeling rushed. You\'ll see Whitehaven Beach, snorkel the reef, and have time to enjoy Airlie Beach. If you have more time, 5–7 days allows for an overnight sailing trip or an island resort stay.',
+  },
+  {
+    q: 'Should I book tours before arriving?',
+    a: 'Yes, especially in peak season (June–August). Popular tours sell out days or weeks ahead. Book at least 2–4 weeks in advance. Shoulder and low season you can often book closer to the date, but you\'ll have more limited options.',
+  },
+  {
+    q: 'What if the weather is bad?',
+    a: 'Most reputable operators will reschedule you at no charge if weather is unsafe. Rain doesn\'t necessarily cancel tours — check with operators. This is why Whitehaven Beach is on Day 2, giving Day 3 as a fallback if needed.',
+  },
+  {
+    q: 'Can I do this itinerary if I can\'t swim?',
+    a: 'Yes. Whitehaven Beach is shallow and calm — you can enjoy it without swimming. For snorkelling, most tours provide flotation devices and guides who help beginners. The beach and lookout walk alone are worth the trip.',
+  },
+  {
+    q: 'Is this suitable for families with kids?',
+    a: 'Yes, with some caveats. Most tours are family-friendly. Some have minimum age requirements (typically 4–6 years) — check before booking. ZigZag Whitsundays and Whitehaven Xpress are the most family-oriented Whitehaven day trip operators.',
+  },
+];
 
 export default function ThreeDayItineraryPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ backgroundColor: '#F4FAFA' }}>
       <Navbar />
 
-      {/* Hero Section */}
-      <div className="relative h-[500px] flex items-center justify-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/images/itinerary-hero.jpg')",
-          }}
-        >
-          <div className="absolute inset-0 bg-black/40"></div>
+      <main>
+
+        {/* Hero */}
+        <div className="relative h-[380px] md:h-[500px] overflow-hidden">
+          <Image
+            src="/images/itinerary-hero.jpg"
+            alt="Sailing through the Whitsunday Islands on a clear day"
+            fill
+            style={{ objectFit: 'cover' }}
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1A2E35]/60 via-[#1A2E35]/40 to-transparent" />
+          <div className="relative z-10 container mx-auto px-4 md:px-8 h-full flex items-center">
+            <div className="max-w-2xl text-white">
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-2xl">
+                3-Day Whitsundays Itinerary
+              </h1>
+              <p className="font-body text-lg md:text-xl text-white/90 drop-shadow-lg">
+                Only have a long weekend? Here&apos;s what I&apos;d do.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-6xl font-bold text-white mb-4 drop-shadow-2xl">
-            3-Day Whitsundays Itinerary
-          </h1>
-          <p className="text-2xl text-white drop-shadow-lg">
-            The Perfect First-Time Visitor's Guide
-          </p>
-        </div>
-      </div>
-
-      {/* Introduction */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-xl text-gray-700 leading-relaxed mb-6">
-              Three days is the perfect amount of time to experience the highlights of the Whitsundays
-              without feeling rushed. This itinerary covers the must-see attractions, best tours, and
-              gives you time to relax and soak in the tropical paradise.
+        {/* Intro */}
+        <div className="border-b" style={{ borderColor: '#D1E8E8', backgroundColor: '#fff' }}>
+          <div className="container mx-auto px-4 md:px-8 py-10 max-w-3xl">
+            <p className="font-body text-base md:text-lg leading-relaxed" style={{ color: '#1A2E35' }}>
+              Three days is enough to see the things that actually matter here — if you use the time
+              well. Whitehaven Beach on Day 2 is non-negotiable. The reef on Day 3 rounds it out.
+              Day 1 is arrival and orientation. The order matters: scheduling Whitehaven early means
+              if weather forces a reschedule, Day 3 is your fallback.
             </p>
-
-            <div className="bg-blue-50 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">This Itinerary Includes:</h3>
-              <div className="grid md:grid-cols-2 gap-4 text-left">
-                <div className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <span className="text-gray-700">Whitehaven Beach & Hill Inlet</span>
-                </div>
-                <div className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <span className="text-gray-700">Great Barrier Reef snorkeling</span>
-                </div>
-                <div className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <span className="text-gray-700">Sailing experience</span>
-                </div>
-                <div className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <span className="text-gray-700">Airlie Beach exploration</span>
-                </div>
-                <div className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <span className="text-gray-700">Local dining & sunset views</span>
-                </div>
-                <div className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <span className="text-gray-700">Time to relax and enjoy</span>
-                </div>
-              </div>
-            </div>
           </div>
+        </div>
 
-          {/* Quick Info */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-green-50 p-6 rounded-lg text-center">
-              <div className="text-3xl mb-2">💰</div>
-              <div className="font-bold text-gray-900 mb-1">Budget</div>
-              <div className="text-sm text-gray-600">$600-900 per person</div>
-            </div>
-            <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <div className="text-3xl mb-2">⭐</div>
-              <div className="font-bold text-gray-900 mb-1">Best For</div>
-              <div className="text-sm text-gray-600">First-time visitors, couples</div>
-            </div>
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <div className="text-3xl mb-2">📅</div>
-              <div className="font-bold text-gray-900 mb-1">Pace</div>
-              <div className="text-sm text-gray-600">Balanced - active but relaxed</div>
+        {/* Quick info strip */}
+        <div style={{ backgroundColor: '#F5F0E8' }} className="py-8 md:py-10 border-b" style={{ borderColor: '#D1E8E8' }}>
+          <div className="container mx-auto px-4 md:px-8">
+            <div className="max-w-3xl mx-auto grid grid-cols-3 gap-4 md:gap-6">
+              {[
+                { label: 'Budget', value: '$600–900', sub: 'per person' },
+                { label: 'Best for', value: 'First-timers', sub: 'couples & families' },
+                { label: 'Pace', value: 'Balanced', sub: 'active but relaxed' },
+              ].map((fact) => (
+                <div key={fact.label} className="text-center">
+                  <div className="font-heading text-lg md:text-2xl font-bold" style={{ color: '#1A2E35' }}>
+                    {fact.value}
+                  </div>
+                  <div className="font-body text-xs" style={{ color: '#0B6E72' }}>{fact.label}</div>
+                  <div className="font-body text-xs" style={{ color: '#4A5C61' }}>{fact.sub}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Day 1 */}
-      <div className="bg-gradient-to-br from-blue-50 to-cyan-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="flex items-center mb-8">
-              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mr-6">
+        {/* Days */}
+        <div className="container mx-auto px-4 md:px-8 py-12 md:py-16 max-w-3xl space-y-16">
+
+          {/* Day 1 */}
+          <section>
+            <div className="flex items-center gap-4 mb-8">
+              <div
+                className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center font-heading text-xl md:text-2xl font-bold text-white shrink-0"
+                style={{ backgroundColor: '#0B6E72' }}
+                aria-hidden="true"
+              >
                 1
               </div>
               <div>
-                <h2 className="text-4xl font-bold text-gray-900">Arrival & Airlie Beach</h2>
-                <p className="text-gray-600 text-lg">Settle in and explore the town</p>
+                <h2 className="font-heading text-2xl md:text-3xl font-bold" style={{ color: '#1A2E35' }}>
+                  Arrival & Airlie Beach
+                </h2>
+                <p className="font-body text-sm" style={{ color: '#4A5C61' }}>Settle in and get your bearings</p>
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
+
               {/* Morning */}
-              <div className="bg-white p-8 rounded-xl shadow-md">
-                <div className="flex items-center mb-4">
-                  <div className="bg-orange-100 text-orange-600 px-4 py-2 rounded-full font-bold mr-4">
-                    Morning
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Arrive & Check In</h3>
+              <div className="bg-white rounded-xl border p-6" style={{ borderColor: '#D1E8E8' }}>
+                <div
+                  className="inline-block px-3 py-1 rounded-full font-heading font-bold text-xs mb-4"
+                  style={{ backgroundColor: '#E8F4F5', color: '#0B6E72' }}
+                >
+                  Morning
                 </div>
-                <div className="space-y-4 text-gray-700">
+                <h3 className="font-heading text-lg font-bold mb-3" style={{ color: '#1A2E35' }}>
+                  Arrive & check in
+                </h3>
+                <div className="font-body text-sm leading-relaxed space-y-3" style={{ color: '#1A2E35' }}>
                   <p>
-                    <strong>Fly into Whitsunday Coast Airport (Proserpine)</strong> or Hamilton Island,
-                    then transfer to Airlie Beach (about 25 minutes from Proserpine, or 30-minute ferry
-                    from Hamilton).
+                    Fly into Whitsunday Coast Airport (Proserpine) or Hamilton Island, then transfer
+                    to Airlie Beach — about 25 minutes from Proserpine, or a 30-minute ferry from
+                    Hamilton.
                   </p>
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <strong>Accommodation Recommendation:</strong>
-                    <p className="mt-2">
-                      Stay in Airlie Beach for all 3 nights. Choose accommodation near the main street
-                      or waterfront for convenience. Mid-range hotels ($150-250/night) offer the best
-                      value with pools and modern amenities.
+                  <div
+                    className="p-4 rounded-lg border-l-2"
+                    style={{ backgroundColor: '#F4FAFA', borderColor: '#0B6E72' }}
+                  >
+                    <p className="font-bold mb-1" style={{ color: '#1A2E35' }}>Accommodation</p>
+                    <p style={{ color: '#4A5C61' }}>
+                      Stay in Airlie Beach for all three nights. Mid-range hotels ($150–250/night)
+                      near the main street or waterfront offer the best balance of value and
+                      convenience. Everything is walkable from here.
                     </p>
-                    <button className="mt-3 bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                      Find Accommodation
-                    </button>
+                    <Link
+                      href="/where-to-stay"
+                      className="inline-flex items-center mt-3 px-4 py-2 rounded-lg font-heading font-bold text-xs min-h-[36px] transition-opacity hover:opacity-80"
+                      style={{ backgroundColor: '#0B6E72', color: '#fff' }}
+                    >
+                      Find accommodation
+                    </Link>
                   </div>
                   <p>
-                    <strong>After checking in:</strong> Take a walk through town to get your bearings.
-                    Pick up any supplies you need (reef-safe sunscreen, hat, water bottle).
+                    After checking in, walk through town to get your bearings. Pick up reef-safe
+                    sunscreen if you haven&apos;t already — you&apos;ll need it from tomorrow.
                   </p>
                 </div>
               </div>
 
               {/* Afternoon */}
-              <div className="bg-white p-8 rounded-xl shadow-md">
-                <div className="flex items-center mb-4">
-                  <div className="bg-yellow-100 text-yellow-600 px-4 py-2 rounded-full font-bold mr-4">
-                    Afternoon
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Airlie Beach Lagoon</h3>
+              <div className="bg-white rounded-xl border p-6" style={{ borderColor: '#D1E8E8' }}>
+                <div
+                  className="inline-block px-3 py-1 rounded-full font-heading font-bold text-xs mb-4"
+                  style={{ backgroundColor: '#F5F0E8', color: '#E07B39' }}
+                >
+                  Afternoon
                 </div>
-                <div className="space-y-4 text-gray-700">
+                <h3 className="font-heading text-lg font-bold mb-3" style={{ color: '#1A2E35' }}>
+                  Airlie Beach Lagoon
+                </h3>
+                <div className="font-body text-sm leading-relaxed space-y-3" style={{ color: '#1A2E35' }}>
                   <p>
-                    Head to the <strong>Airlie Beach Lagoon</strong> - a free, saltwater swimming pool
-                    on the waterfront. Perfect for a refreshing swim after traveling. Surrounded by BBQ
-                    areas and parkland with ocean views.
+                    Head to the Airlie Beach Lagoon — a free saltwater swimming pool on the
+                    waterfront. Good for a swim after travelling. Lifeguarded, open 6am–7pm,
+                    surrounded by cafes and restaurants.
                   </p>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="border-l-4 border-blue-500 pl-4">
-                      <strong>What to Know:</strong>
-                      <ul className="mt-2 space-y-1 text-sm">
-                        <li>• Free entry and lifeguard supervised</li>
-                        <li>• Open 6am-7pm (extended in summer)</li>
-                        <li>• Showers and change rooms available</li>
-                        <li>• Surrounded by cafes and restaurants</li>
-                      </ul>
-                    </div>
-                    <div className="border-l-4 border-green-500 pl-4">
-                      <strong>Alternative:</strong>
-                      <ul className="mt-2 space-y-1 text-sm">
-                        <li>• Stroll along the Bicentennial Walkway</li>
-                        <li>• Visit the marina and watch boats</li>
-                        <li>• Browse tour operators for tomorrow</li>
-                      </ul>
-                    </div>
-                  </div>
+                  <p>
+                    Alternatively: walk the Bicentennial Walkway, wander the marina, or book your
+                    tours in person with the operators on the main strip if you haven&apos;t done
+                    it online already.
+                  </p>
                 </div>
               </div>
 
               {/* Evening */}
-              <div className="bg-white p-8 rounded-xl shadow-md">
-                <div className="flex items-center mb-4">
-                  <div className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full font-bold mr-4">
-                    Evening
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Sunset & Dinner</h3>
+              <div className="bg-white rounded-xl border p-6" style={{ borderColor: '#D1E8E8' }}>
+                <div
+                  className="inline-block px-3 py-1 rounded-full font-heading font-bold text-xs mb-4"
+                  style={{ backgroundColor: '#E8F4F5', color: '#0B6E72' }}
+                >
+                  Evening
                 </div>
-                <div className="space-y-4 text-gray-700">
+                <h3 className="font-heading text-lg font-bold mb-3" style={{ color: '#1A2E35' }}>
+                  Sunset & dinner
+                </h3>
+                <div className="font-body text-sm leading-relaxed space-y-3" style={{ color: '#1A2E35' }}>
                   <p>
-                    <strong>Watch sunset from the marina</strong> or waterfront - the Whitsundays are
-                    famous for spectacular sunsets over the islands.
+                    Watch the sunset from the marina — the Whitsundays sunsets over the islands are
+                    genuinely good. Then an early dinner and an early night. You have a 7:30am start tomorrow.
                   </p>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <strong>Dinner Recommendations:</strong>
-                    <ul className="mt-2 space-y-2">
-                      <li>• <strong>Fish D'vine:</strong> Waterfront dining, fresh seafood, rum distillery</li>
-                      <li>• <strong>Coca Chu:</strong> Asian fusion, popular with locals</li>
-                      <li>• <strong>Déjà Vu:</strong> Modern Australian, marina views</li>
-                      <li>• <strong>Budget option:</strong> Airlie Beach Hotel bistro or main street takeaway</li>
-                    </ul>
+                  <div
+                    className="p-4 rounded-lg"
+                    style={{ backgroundColor: '#F4FAFA' }}
+                  >
+                    <p className="font-bold text-xs mb-2" style={{ color: '#1A2E35' }}>Dinner options</p>
+                    <div className="space-y-1">
+                      {[
+                        { name: 'Fish D\'vine', note: 'Waterfront, fresh seafood, rum bar' },
+                        { name: 'Coca Chu', note: 'Asian fusion, popular with locals' },
+                        { name: 'Déjà Vu', note: 'Modern Australian, marina views' },
+                        { name: 'Airlie Beach Hotel bistro', note: 'Budget option, reliable' },
+                      ].map(({ name, note }) => (
+                        <p key={name} style={{ color: '#4A5C61' }}>
+                          <span className="font-bold" style={{ color: '#1A2E35' }}>{name}</span> — {note}
+                        </p>
+                      ))}
+                    </div>
                   </div>
-                  <p>
-                    <strong>After dinner:</strong> Take it easy - you have an early start tomorrow for
-                    Whitehaven Beach! Get a good night's sleep.
-                  </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Day 2 */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="flex items-center mb-8">
-              <div className="bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mr-6">
+            </div>
+          </section>
+
+          {/* Day 2 */}
+          <section>
+            <div className="flex items-center gap-4 mb-6">
+              <div
+                className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center font-heading text-xl md:text-2xl font-bold text-white shrink-0"
+                style={{ backgroundColor: '#E07B39' }}
+                aria-hidden="true"
+              >
                 2
               </div>
               <div>
-                <h2 className="text-4xl font-bold text-gray-900">Whitehaven Beach Full Day Tour</h2>
-                <p className="text-gray-600 text-lg">The highlight of your trip!</p>
+                <h2 className="font-heading text-2xl md:text-3xl font-bold" style={{ color: '#1A2E35' }}>
+                  Whitehaven Beach
+                </h2>
+                <p className="font-body text-sm" style={{ color: '#4A5C61' }}>The main event</p>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-green-500 to-teal-500 text-white p-8 rounded-xl mb-8">
-              <h3 className="text-2xl font-bold mb-4">🏖️ Why This is Day 2:</h3>
-              <p className="mb-4">
-                Whitehaven Beach is THE must-see attraction, so we schedule it early in your trip.
-                If weather is poor, most tours will reschedule you for Day 3 at no charge.
+            {/* Why Day 2 callout */}
+            <div
+              className="rounded-xl p-5 mb-6 border-l-4"
+              style={{ backgroundColor: '#F5F0E8', borderColor: '#E07B39' }}
+            >
+              <p className="font-body text-sm leading-relaxed" style={{ color: '#1A2E35' }}>
+                <span className="font-bold">Why Whitehaven is on Day 2:</span> If weather forces a
+                tour reschedule, you have Day 3 as a fallback. Most operators will move you at no
+                charge. Scheduling it Day 3 means you&apos;re relying on luck with no buffer.
               </p>
-              <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-green-50 transition-colors">
-                Book Whitehaven Beach Tour
-              </button>
             </div>
 
-            <div className="space-y-6">
-              {/* Early Morning */}
-              <div className="bg-white p-8 rounded-xl shadow-md border-l-4 border-green-500">
-                <div className="flex items-center mb-4">
-                  <div className="bg-orange-100 text-orange-600 px-4 py-2 rounded-full font-bold mr-4">
-                    6:30-7:30am
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Pickup & Departure</h3>
+            <div className="space-y-4">
+
+              <div className="bg-white rounded-xl border border-l-4 p-6" style={{ borderColor: '#D1E8E8', borderLeftColor: '#E07B39' }}>
+                <div
+                  className="inline-block px-3 py-1 rounded-full font-heading font-bold text-xs mb-4"
+                  style={{ backgroundColor: '#F5F0E8', color: '#E07B39' }}
+                >
+                  6:30–7:30am
                 </div>
-                <div className="space-y-3 text-gray-700">
+                <h3 className="font-heading text-lg font-bold mb-3" style={{ color: '#1A2E35' }}>
+                  Pickup & departure
+                </h3>
+                <div className="font-body text-sm leading-relaxed space-y-3" style={{ color: '#1A2E35' }}>
                   <p>
-                    Most tours depart between 7:30-8:30am with pickup from your accommodation.
-                    Grab breakfast beforehand or bring something quick.
+                    Most tours depart 7:30–8:30am with pickup from your accommodation. Have breakfast
+                    beforehand or bring something quick.
                   </p>
-                  <div className="bg-yellow-50 p-4 rounded-lg">
-                    <strong>💡 What to Bring:</strong>
-                    <ul className="mt-2 space-y-1 text-sm">
-                      <li>• Swimwear, towel, change of clothes</li>
-                      <li>• Reef-safe sunscreen and hat</li>
-                      <li>• Camera or phone (waterproof case recommended)</li>
-                      <li>• Light jacket for boat ride</li>
-                      <li>• Water bottle (refills usually provided)</li>
-                    </ul>
+                  <div className="p-4 rounded-lg" style={{ backgroundColor: '#F4FAFA' }}>
+                    <p className="font-bold text-xs mb-2" style={{ color: '#1A2E35' }}>What to bring</p>
+                    {['Swimwear, towel, change of clothes', 'Reef-safe sunscreen and hat', 'Camera or phone in a waterproof case', 'Light jacket for the boat ride', 'Water bottle (refills usually provided)'].map((item) => (
+                      <div key={item} className="flex items-start gap-2 mt-1">
+                        <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: '#0B6E72' }} aria-hidden="true" />
+                        <span style={{ color: '#4A5C61' }}>{item}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
 
-              {/* Morning */}
-              <div className="bg-white p-8 rounded-xl shadow-md border-l-4 border-green-500">
-                <div className="flex items-center mb-4">
-                  <div className="bg-yellow-100 text-yellow-600 px-4 py-2 rounded-full font-bold mr-4">
-                    8:30-11:00am
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Sail to Whitehaven Beach</h3>
+              <div className="bg-white rounded-xl border border-l-4 p-6" style={{ borderColor: '#D1E8E8', borderLeftColor: '#E07B39' }}>
+                <div
+                  className="inline-block px-3 py-1 rounded-full font-heading font-bold text-xs mb-4"
+                  style={{ backgroundColor: '#F5F0E8', color: '#E07B39' }}
+                >
+                  8:30–11:00am
                 </div>
-                <div className="space-y-3 text-gray-700">
-                  <p>
-                    Enjoy the scenic boat ride through the islands. Most tours provide morning tea
-                    and information about the region's history and marine life.
-                  </p>
-                  <p>
-                    <strong>First stop:</strong> Usually Hill Inlet Lookout (weather permitting).
-                    This 15-20 minute uphill walk rewards you with the famous swirling sands view -
-                    one of the most photographed spots in Australia.
-                  </p>
-                </div>
+                <h3 className="font-heading text-lg font-bold mb-3" style={{ color: '#1A2E35' }}>
+                  Sail to Whitehaven Beach
+                </h3>
+                <p className="font-body text-sm leading-relaxed" style={{ color: '#1A2E35' }}>
+                  Enjoy the boat ride through the islands — most tours provide morning tea and
+                  commentary about the region. First stop is usually Hill Inlet Lookout (weather
+                  and tide permitting). The 20–30 minute uphill walk rewards you with the famous
+                  swirling sands view. Do it. Don&apos;t skip it to stay on the boat.
+                </p>
               </div>
 
-              {/* Midday */}
-              <div className="bg-white p-8 rounded-xl shadow-md border-l-4 border-green-500">
-                <div className="flex items-center mb-4">
-                  <div className="bg-yellow-100 text-yellow-600 px-4 py-2 rounded-full font-bold mr-4">
-                    11:00am-2:00pm
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Whitehaven Beach Time</h3>
+              <div className="bg-white rounded-xl border border-l-4 p-6" style={{ borderColor: '#D1E8E8', borderLeftColor: '#E07B39' }}>
+                <div
+                  className="inline-block px-3 py-1 rounded-full font-heading font-bold text-xs mb-4"
+                  style={{ backgroundColor: '#F5F0E8', color: '#E07B39' }}
+                >
+                  11:00am–2:00pm
                 </div>
-                <div className="space-y-3 text-gray-700">
-                  <p>
-                    Approximately 2-3 hours on Whitehaven Beach itself. This is your time to:
-                  </p>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="bg-blue-50 p-4 rounded-lg">
-                      <ul className="space-y-2">
-                        <li>• <strong>Swim</strong> in the crystal-clear waters</li>
-                        <li>• <strong>Walk</strong> along the 7km beach</li>
-                        <li>• <strong>Photography</strong> - the sand is incredible</li>
-                        <li>• <strong>Relax</strong> and soak it in</li>
-                      </ul>
-                    </div>
-                    <div className="bg-green-50 p-4 rounded-lg">
-                      <strong>Lunch on the beach:</strong>
-                      <p className="mt-2 text-sm">
-                        Most tours provide a buffet lunch. Find a shady spot, enjoy your meal,
-                        and take in the views. No facilities here - it's pristine nature!
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <h3 className="font-heading text-lg font-bold mb-3" style={{ color: '#1A2E35' }}>
+                  Whitehaven Beach time
+                </h3>
+                <p className="font-body text-sm leading-relaxed" style={{ color: '#1A2E35' }}>
+                  Around 2–3 hours on the beach. Swim, walk the sand, find a quiet spot away from
+                  the tour group. Most tours provide a buffet lunch — eat it on the beach if you
+                  can. There are no facilities here — no kiosks, no shade structures — which is
+                  exactly the point.
+                </p>
               </div>
 
-              {/* Afternoon */}
-              <div className="bg-white p-8 rounded-xl shadow-md border-l-4 border-green-500">
-                <div className="flex items-center mb-4">
-                  <div className="bg-yellow-100 text-yellow-600 px-4 py-2 rounded-full font-bold mr-4">
-                    2:00-4:00pm
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Snorkeling Stop</h3>
+              <div className="bg-white rounded-xl border border-l-4 p-6" style={{ borderColor: '#D1E8E8', borderLeftColor: '#E07B39' }}>
+                <div
+                  className="inline-block px-3 py-1 rounded-full font-heading font-bold text-xs mb-4"
+                  style={{ backgroundColor: '#F5F0E8', color: '#E07B39' }}
+                >
+                  2:00–4:00pm
                 </div>
-                <div className="space-y-3 text-gray-700">
-                  <p>
-                    After Whitehaven, most tours include a snorkeling stop. Popular spots include
-                    Langford Island or a fringing reef around Hook Island.
-                  </p>
-                  <div className="bg-cyan-50 p-4 rounded-lg">
-                    <strong>Snorkeling Experience:</strong>
-                    <ul className="mt-2 space-y-2 text-sm">
-                      <li>• Equipment provided (mask, snorkel, fins, stinger suit)</li>
-                      <li>• See colorful coral, tropical fish, and sometimes turtles</li>
-                      <li>• Guides point out highlights and help beginners</li>
-                      <li>• Usually 45-60 minutes in the water</li>
-                    </ul>
-                  </div>
-                </div>
+                <h3 className="font-heading text-lg font-bold mb-3" style={{ color: '#1A2E35' }}>
+                  Snorkelling stop
+                </h3>
+                <p className="font-body text-sm leading-relaxed" style={{ color: '#1A2E35' }}>
+                  After Whitehaven, most tours include a snorkelling stop — Langford Island or a
+                  fringing reef around Hook Island. Equipment provided. Usually 45–60 minutes in
+                  the water. Guides point out highlights and help beginners.
+                </p>
               </div>
 
-              {/* Return */}
-              <div className="bg-white p-8 rounded-xl shadow-md border-l-4 border-green-500">
-                <div className="flex items-center mb-4">
-                  <div className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full font-bold mr-4">
-                    4:00-5:30pm
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Return to Airlie Beach</h3>
+              <div className="bg-white rounded-xl border p-6" style={{ borderColor: '#D1E8E8' }}>
+                <div
+                  className="inline-block px-3 py-1 rounded-full font-heading font-bold text-xs mb-4"
+                  style={{ backgroundColor: '#E8F4F5', color: '#0B6E72' }}
+                >
+                  Evening
                 </div>
-                <div className="space-y-3 text-gray-700">
-                  <p>
-                    Relax on the return journey, sharing photos and experiences with other travelers.
-                    Tours typically arrive back at Airlie Beach between 5:00-5:30pm.
-                  </p>
-                </div>
+                <h3 className="font-heading text-lg font-bold mb-3" style={{ color: '#1A2E35' }}>
+                  Back in Airlie, early night
+                </h3>
+                <p className="font-body text-sm leading-relaxed" style={{ color: '#1A2E35' }}>
+                  Tours return around 5:00–5:30pm. You&apos;ll be tired. Keep the evening low-key —
+                  shower, casual dinner on the main street, early night. You have the reef tomorrow.
+                </p>
               </div>
 
-              {/* Evening */}
-              <div className="bg-white p-8 rounded-xl shadow-md">
-                <div className="flex items-center mb-4">
-                  <div className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full font-bold mr-4">
-                    Evening
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Relax & Dine</h3>
-                </div>
-                <div className="space-y-3 text-gray-700">
-                  <p>
-                    You'll be tired after a full day on the water! Keep the evening low-key:
-                  </p>
-                  <ul className="space-y-2">
-                    <li>• Shower and rest at your accommodation</li>
-                    <li>• Casual dinner on the main street</li>
-                    <li>• Early night - you have snorkeling the reef tomorrow!</li>
-                  </ul>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </section>
 
-      {/* Day 3 */}
-      <div className="bg-gradient-to-br from-purple-50 to-pink-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="flex items-center mb-8">
-              <div className="bg-purple-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mr-6">
+          {/* Day 3 */}
+          <section>
+            <div className="flex items-center gap-4 mb-8">
+              <div
+                className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center font-heading text-xl md:text-2xl font-bold text-white shrink-0"
+                style={{ backgroundColor: '#0B6E72' }}
+                aria-hidden="true"
+              >
                 3
               </div>
               <div>
-                <h2 className="text-4xl font-bold text-gray-900">Great Barrier Reef Snorkeling</h2>
-                <p className="text-gray-600 text-lg">Experience the reef & depart</p>
+                <h2 className="font-heading text-2xl md:text-3xl font-bold" style={{ color: '#1A2E35' }}>
+                  Great Barrier Reef snorkelling
+                </h2>
+                <p className="font-body text-sm" style={{ color: '#4A5C61' }}>Experience the reef & depart</p>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-500 to-pink-500 text-white p-8 rounded-xl mb-8">
-              <h3 className="text-2xl font-bold mb-4">🤿 Outer Reef vs Inner Reefs:</h3>
-              <p className="mb-4">
-                Day 2 covered inner reefs around the islands. Today we recommend an outer Great Barrier
-                Reef tour for more impressive coral and marine life. Choose a tour that visits Hardy Reef
-                or other outer reef locations.
-              </p>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-purple-50 transition-colors">
-                Book Reef Tour
-              </button>
-            </div>
+            <div className="space-y-4">
 
-            <div className="space-y-6">
-              {/* Morning */}
-              <div className="bg-white p-8 rounded-xl shadow-md border-l-4 border-purple-500">
-                <div className="flex items-center mb-4">
-                  <div className="bg-orange-100 text-orange-600 px-4 py-2 rounded-full font-bold mr-4">
-                    Morning
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Reef Snorkeling Tour</h3>
+              <div className="bg-white rounded-xl border border-l-4 p-6" style={{ borderColor: '#D1E8E8', borderLeftColor: '#0B6E72' }}>
+                <div
+                  className="inline-block px-3 py-1 rounded-full font-heading font-bold text-xs mb-4"
+                  style={{ backgroundColor: '#E8F4F5', color: '#0B6E72' }}
+                >
+                  Morning
                 </div>
-                <div className="space-y-4 text-gray-700">
+                <h3 className="font-heading text-lg font-bold mb-3" style={{ color: '#1A2E35' }}>
+                  Outer reef tour
+                </h3>
+                <div className="font-body text-sm leading-relaxed space-y-3" style={{ color: '#1A2E35' }}>
                   <p>
-                    Similar early start (7:30-8:00am departure). Outer reef tours are typically full-day
-                    experiences returning around 4:00-5:00pm.
+                    Day 2 covered inner reefs around the islands. Today, an outer Great Barrier Reef
+                    tour visits Hardy Reef or similar — different marine life, more impressive coral.
+                    Similar early departure (7:30–8:00am), full-day return around 4:00–5:00pm.
                   </p>
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <strong>What to Expect:</strong>
-                    <ul className="mt-2 space-y-2">
-                      <li>• 2-3 snorkeling sessions at different reef sites</li>
-                      <li>• Lunch provided on board</li>
-                      <li>• Marine biologist presentations</li>
-                      <li>• See diverse coral, tropical fish, possible turtle sightings</li>
-                      <li>• Some tours offer diving for certified divers (extra cost)</li>
-                    </ul>
-                  </div>
-                  <div className="bg-yellow-50 p-4 rounded-lg mt-4">
-                    <strong>⚠️ Important:</strong>
-                    <p className="mt-2 text-sm">
-                      Book this tour for the morning, or choose a half-day option if you have an
-                      afternoon/evening flight. Check-out times are typically 10:00am, so you may
-                      need to store luggage at your accommodation or a tour office.
+                  <p>
+                    Expect 2–3 snorkelling sessions at different reef sites, lunch on board, and
+                    marine naturalist commentary. Some tours offer diving for certified divers
+                    (extra cost). If you have an afternoon flight, choose a half-day option.
+                  </p>
+                  <div
+                    className="p-4 rounded-lg border-l-2"
+                    style={{ backgroundColor: '#F4FAFA', borderColor: '#E07B39' }}
+                  >
+                    <p className="font-body text-xs" style={{ color: '#1A2E35' }}>
+                      <span className="font-bold">Check-out is typically 10am.</span> You may need to
+                      store luggage at your accommodation or a tour office. Most are happy to do this —
+                      confirm when you check in.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Afternoon */}
-              <div className="bg-white p-8 rounded-xl shadow-md border-l-4 border-purple-500">
-                <div className="flex items-center mb-4">
-                  <div className="bg-yellow-100 text-yellow-600 px-4 py-2 rounded-full font-bold mr-4">
-                    Afternoon
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Departure</h3>
+              <div className="bg-white rounded-xl border border-l-4 p-6" style={{ borderColor: '#D1E8E8', borderLeftColor: '#0B6E72' }}>
+                <div
+                  className="inline-block px-3 py-1 rounded-full font-heading font-bold text-xs mb-4"
+                  style={{ backgroundColor: '#E8F4F5', color: '#0B6E72' }}
+                >
+                  Afternoon
                 </div>
-                <div className="space-y-4 text-gray-700">
+                <h3 className="font-heading text-lg font-bold mb-3" style={{ color: '#1A2E35' }}>
+                  Departure options
+                </h3>
+                <div className="font-body text-sm leading-relaxed space-y-3" style={{ color: '#1A2E35' }}>
                   <p>
-                    <strong>Option 1 - Evening/Night Flight:</strong> If you've done a full-day reef
-                    tour, you'll return around 4:00-5:00pm. Grab dinner in town and transfer to the
-                    airport for your flight home.
+                    <span className="font-bold">Evening flight:</span> Full-day reef tour, return
+                    around 5pm, dinner in town, transfer to airport.
                   </p>
                   <p>
-                    <strong>Option 2 - Afternoon Flight:</strong> Skip the reef tour or do a half-day
-                    version. Spend the morning relaxing, perhaps a final swim at the lagoon, lunch in
-                    town, then head to the airport.
+                    <span className="font-bold">Afternoon flight:</span> Half-day reef tour or skip
+                    it. Spend the morning at the lagoon or do a 60-minute scenic flight over Heart Reef
+                    before heading to the airport.
                   </p>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <strong>Alternative Day 3 Activities:</strong>
-                    <p className="mt-2 mb-2">If you prefer a more relaxed final day:</p>
-                    <ul className="space-y-1 text-sm">
-                      <li>• Morning scenic flight over Heart Reef and the islands</li>
-                      <li>• Visit Cedar Creek Falls (30 mins from Airlie)</li>
-                      <li>• Kayak rental and explore the coastline</li>
-                      <li>• Shopping for souvenirs on the main street</li>
-                      <li>• Spa treatment before departure</li>
-                    </ul>
+                  <div
+                    className="p-4 rounded-lg"
+                    style={{ backgroundColor: '#F4FAFA' }}
+                  >
+                    <p className="font-bold text-xs mb-2" style={{ color: '#1A2E35' }}>Alternative Day 3 if you prefer slower pace</p>
+                    {['Morning scenic flight over Heart Reef and the islands', 'Cedar Creek Falls (30 minutes from Airlie)', 'Kayak rental and explore the coastline', 'Walk the Bicentennial Walkway one more time'].map((item) => (
+                      <div key={item} className="flex items-start gap-2 mt-1">
+                        <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: '#0B6E72' }} aria-hidden="true" />
+                        <span style={{ color: '#4A5C61' }}>{item}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Budget Breakdown */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
-              Budget Breakdown
+            </div>
+          </section>
+
+          {/* Budget breakdown */}
+          <section>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8" style={{ color: '#1A2E35' }}>
+              Budget breakdown
             </h2>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              {/* Budget Version */}
-              <div className="bg-green-50 p-8 rounded-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">💰 Budget ($600-750)</h3>
-                <div className="space-y-3 text-gray-700">
-                  <div className="flex justify-between pb-2 border-b">
-                    <span>Accommodation (3 nights)</span>
-                    <span className="font-semibold">$180-240</span>
-                  </div>
-                  <div className="flex justify-between pb-2 border-b">
-                    <span>Whitehaven Beach tour</span>
-                    <span className="font-semibold">$130-180</span>
-                  </div>
-                  <div className="flex justify-between pb-2 border-b">
-                    <span>Reef snorkeling tour</span>
-                    <span className="font-semibold">$150-200</span>
-                  </div>
-                  <div className="flex justify-between pb-2 border-b">
-                    <span>Meals (simple/self-catering)</span>
-                    <span className="font-semibold">$90-120</span>
-                  </div>
-                  <div className="flex justify-between pb-2 border-b">
-                    <span>Airport transfers</span>
-                    <span className="font-semibold">$50</span>
-                  </div>
-                  <div className="flex justify-between pt-3 text-lg font-bold">
-                    <span>Total per person</span>
-                    <span>$600-790</span>
+            <div className="grid md:grid-cols-2 gap-5 mb-5">
+              {budgets.map((budget) => (
+                <div
+                  key={budget.label}
+                  className="p-6 rounded-2xl border-t-4"
+                  style={{ backgroundColor: budget.bg, borderColor: budget.accent }}
+                >
+                  <h3 className="font-heading text-lg font-bold mb-1" style={{ color: '#1A2E35' }}>
+                    {budget.label}
+                  </h3>
+                  <p className="font-body text-xs mb-5" style={{ color: '#4A5C61' }}>{budget.note}</p>
+                  <div className="space-y-2">
+                    {budget.items.map((item) => (
+                      <div
+                        key={item.label}
+                        className={`flex justify-between font-body text-sm ${item.bold ? 'font-bold border-t pt-2 mt-2' : ''}`}
+                        style={{ borderColor: '#D1E8E8', color: '#1A2E35' }}
+                      >
+                        <span>{item.label}</span>
+                        <span>{item.value}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
-                <p className="text-sm text-gray-600 mt-4">
-                  Hostels, budget tours, self-catering, limited dining out
-                </p>
-              </div>
-
-              {/* Mid-Range Version */}
-              <div className="bg-blue-50 p-8 rounded-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">🏨 Mid-Range ($850-1100)</h3>
-                <div className="space-y-3 text-gray-700">
-                  <div className="flex justify-between pb-2 border-b">
-                    <span>Accommodation (3 nights)</span>
-                    <span className="font-semibold">$450-600</span>
-                  </div>
-                  <div className="flex justify-between pb-2 border-b">
-                    <span>Whitehaven Beach tour</span>
-                    <span className="font-semibold">$180-220</span>
-                  </div>
-                  <div className="flex justify-between pb-2 border-b">
-                    <span>Reef snorkeling tour</span>
-                    <span className="font-semibold">$200-250</span>
-                  </div>
-                  <div className="flex justify-between pb-2 border-b">
-                    <span>Meals (restaurants)</span>
-                    <span className="font-semibold">$180-240</span>
-                  </div>
-                  <div className="flex justify-between pb-2 border-b">
-                    <span>Extras & activities</span>
-                    <span className="font-semibold">$100</span>
-                  </div>
-                  <div className="flex justify-between pt-3 text-lg font-bold">
-                    <span>Total per person</span>
-                    <span>$1110-1410</span>
-                  </div>
-                </div>
-                <p className="text-sm text-gray-600 mt-4">
-                  Comfortable hotel, premium tours, dining out, some extras
-                </p>
-              </div>
+              ))}
             </div>
 
-            <div className="bg-purple-50 p-6 rounded-lg">
-              <h4 className="font-bold text-gray-900 mb-2">💡 Money-Saving Tips:</h4>
-              <ul className="grid md:grid-cols-2 gap-3 text-gray-700 text-sm">
-                <li>• Book tours online in advance for discounts</li>
-                <li>• Stay in apartments with kitchen to save on meals</li>
-                <li>• Shoulder season (Apr-May, Sep-Nov) = cheaper prices</li>
-                <li>• Combo packages often cheaper than booking separately</li>
-                <li>• Free lagoon replaces need for resort pool access</li>
-                <li>• BYO to restaurants (many allow it with corkage fee)</li>
-              </ul>
+            <div
+              className="p-5 rounded-xl border-l-4"
+              style={{ backgroundColor: '#fff', borderColor: '#0B6E72' }}
+            >
+              <p className="font-heading font-bold text-sm mb-3" style={{ color: '#1A2E35' }}>
+                Money-saving tips
+              </p>
+              <div className="grid md:grid-cols-2 gap-2">
+                {[
+                  'Book tours online in advance for best availability',
+                  'Stay in apartments with kitchen to save on meals',
+                  'Shoulder season (Apr–May, Sep–Nov) means cheaper prices across the board',
+                  'The free lagoon means you don\'t need to pay for resort pool access',
+                  'Overnight sailing includes accommodation + activities + meals — often better value than this itinerary for 2+ nights',
+                ].map((tip) => (
+                  <div key={tip} className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: '#0B6E72' }} aria-hidden="true" />
+                    <span className="font-body text-sm" style={{ color: '#1A2E35' }}>{tip}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </section>
 
-      {/* Customization Options */}
-      <div className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
-              Customize This Itinerary
+          {/* Customisation */}
+          <section>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6" style={{ color: '#1A2E35' }}>
+              Customise this itinerary
             </h2>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-xl shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">🏖️ More Beach Time?</h3>
-                <p className="text-gray-700 mb-4">
-                  Skip the Day 3 reef tour. Spend the morning at Airlie Beach Lagoon or take a
-                  half-day scenic flight instead.
-                </p>
-                <p className="text-sm text-gray-600">Good for: Relaxed travelers, afternoon flights</p>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">⛵ Replace with Sailing?</h3>
-                <p className="text-gray-700 mb-4">
-                  Swap Days 2-3 for a 2-day/1-night sailing trip. Includes Whitehaven, snorkeling,
-                  accommodation, and meals.
-                </p>
-                <p className="text-sm text-gray-600">Good for: Adventure seekers, social travelers</p>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">🚁 Add Scenic Flight?</h3>
-                <p className="text-gray-700 mb-4">
-                  Add a morning scenic flight over Heart Reef and the islands. Spectacular views
-                  from above. 30-60 minutes.
-                </p>
-                <p className="text-sm text-gray-600">Good for: Photography, special occasions</p>
-              </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              {[
+                {
+                  title: 'More beach time',
+                  body: 'Skip the Day 3 reef tour. Spend the morning at the lagoon or take a half-day scenic flight instead.',
+                  note: 'Good for: relaxed travellers, afternoon flights',
+                },
+                {
+                  title: 'Replace with overnight sailing',
+                  body: 'Swap Days 2–3 for a 2-day/1-night sailing trip. Includes Whitehaven, snorkelling, accommodation, and meals.',
+                  note: 'Good for: adventure seekers, social travellers',
+                },
+                {
+                  title: 'Add a scenic flight',
+                  body: 'Add a morning scenic flight over Heart Reef and the islands on Day 1 or Day 3. 60–70 minutes.',
+                  note: 'Good for: photography, special occasions',
+                },
+              ].map(({ title, body, note }) => (
+                <div key={title} className="bg-white p-5 rounded-xl border" style={{ borderColor: '#D1E8E8' }}>
+                  <h3 className="font-heading font-bold text-base mb-2" style={{ color: '#1A2E35' }}>{title}</h3>
+                  <p className="font-body text-sm leading-relaxed mb-3" style={{ color: '#1A2E35' }}>{body}</p>
+                  <p className="font-body text-xs" style={{ color: '#4A5C61' }}>{note}</p>
+                </div>
+              ))}
             </div>
-          </div>
-        </div>
-      </div>
+          </section>
 
-      {/* Tips & Important Info */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
-              Tips for Success
+          {/* Tips */}
+          <section>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6" style={{ color: '#1A2E35' }}>
+              Tips for the trip
             </h2>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <div className="bg-green-50 p-6 rounded-lg">
-                  <h3 className="font-bold text-lg text-gray-900 mb-3">✓ Do This</h3>
-                  <ul className="space-y-2 text-gray-700 text-sm">
-                    <li>• Book tours 2-4 weeks ahead (peak season)</li>
-                    <li>• Use reef-safe sunscreen (chemical sunscreens harm coral)</li>
-                    <li>• Bring seasickness tablets if prone to motion sickness</li>
-                    <li>• Take a reusable water bottle - reduce plastic waste</li>
-                    <li>• Download offline maps before heading out</li>
-                    <li>• Check weather forecasts and tide times</li>
-                    <li>• Take more photos than you think you need!</li>
-                  </ul>
-                </div>
-
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <h3 className="font-bold text-lg text-gray-900 mb-3">📅 Best Time</h3>
-                  <ul className="space-y-2 text-gray-700 text-sm">
-                    <li>• <strong>Jun-Aug:</strong> Peak season, best weather, book early</li>
-                    <li>• <strong>Apr-May & Sep-Nov:</strong> Great weather, fewer crowds</li>
-                    <li>• <strong>Dec-Mar:</strong> Hot, humid, stinger season, cheaper</li>
-                    <li>• Hill Inlet best 2 hours either side of high tide</li>
-                  </ul>
+            <div className="grid md:grid-cols-2 gap-5">
+              <div className="p-5 rounded-xl border-l-4" style={{ backgroundColor: '#E8F4F5', borderColor: '#0B6E72' }}>
+                <h3 className="font-heading font-bold text-sm mb-3" style={{ color: '#1A2E35' }}>Do this</h3>
+                <div className="space-y-2">
+                  {[
+                    'Book tours 2–4 weeks ahead (peak season)',
+                    'Use reef-safe sunscreen — reef regulations, not optional',
+                    'Take seasickness tablets the night before if prone',
+                    'Bring a reusable water bottle',
+                    'Check weather forecasts and tide times before Whitehaven',
+                  ].map((tip) => (
+                    <div key={tip} className="flex items-start gap-2">
+                      <span style={{ color: '#0B6E72' }} aria-hidden="true">&#10003;</span>
+                      <span className="font-body text-sm" style={{ color: '#1A2E35' }}>{tip}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <div className="bg-red-50 p-6 rounded-lg">
-                  <h3 className="font-bold text-lg text-gray-900 mb-3">✗ Avoid This</h3>
-                  <ul className="space-y-2 text-gray-700 text-sm">
-                    <li>• Don't overpack activities - leave time to relax</li>
-                    <li>• Don't touch coral or marine life when snorkeling</li>
-                    <li>• Don't take sand, shells, or coral from beaches (illegal!)</li>
-                    <li>• Don't forget to reapply sunscreen every 2 hours</li>
-                    <li>• Don't book two big tours on consecutive days if prone to fatigue</li>
-                    <li>• Don't expect mobile phone coverage on islands</li>
-                  </ul>
-                </div>
-
-                <div className="bg-yellow-50 p-6 rounded-lg">
-                  <h3 className="font-bold text-lg text-gray-900 mb-3">⚠️ Important Notes</h3>
-                  <ul className="space-y-2 text-gray-700 text-sm">
-                    <li>• Stinger suits required Nov-May (provided on tours)</li>
-                    <li>• Tours can be rescheduled due to weather</li>
-                    <li>• Check-out is typically 10am - plan Day 3 accordingly</li>
-                    <li>• Most tours include lunch but bring extra snacks</li>
-                    <li>• Credit cards accepted everywhere, but have some cash</li>
-                  </ul>
+              <div className="p-5 rounded-xl border-l-4" style={{ backgroundColor: '#F5F0E8', borderColor: '#E07B39' }}>
+                <h3 className="font-heading font-bold text-sm mb-3" style={{ color: '#1A2E35' }}>Avoid this</h3>
+                <div className="space-y-2">
+                  {[
+                    'Don\'t overpack activities — leave time to sit with it',
+                    'Don\'t touch coral or marine life when snorkelling',
+                    'Don\'t take sand, shells, or coral from beaches (illegal)',
+                    'Don\'t book two big tours on back-to-back days if you fatigue easily',
+                    'Don\'t expect mobile coverage on the islands',
+                  ].map((tip) => (
+                    <div key={tip} className="flex items-start gap-2">
+                      <span style={{ color: '#E07B39' }} aria-hidden="true">&#10007;</span>
+                      <span className="font-body text-sm" style={{ color: '#1A2E35' }}>{tip}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </section>
 
-      {/* FAQ */}
-      <div className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
-              Frequently Asked Questions
+          {/* FAQ */}
+          <section>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6" style={{ color: '#1A2E35' }}>
+              Common questions
             </h2>
+            <div className="space-y-4">
+              {faqs.map((faq) => (
+                <div key={faq.q} className="bg-white p-6 rounded-xl border" style={{ borderColor: '#D1E8E8' }}>
+                  <h3 className="font-heading text-base font-bold mb-3" style={{ color: '#1A2E35' }}>
+                    {faq.q}
+                  </h3>
+                  <p className="font-body text-sm leading-relaxed" style={{ color: '#1A2E35' }}>
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
 
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Is 3 days enough for the Whitsundays?
-                </h3>
-                <p className="text-gray-700">
-                  Yes! Three days lets you experience the main highlights without feeling rushed. You'll
-                  see Whitehaven Beach, snorkel the reef, and have time to enjoy Airlie Beach. If you have
-                  more time, 5-7 days allows for a sailing trip or island resort stay.
-                </p>
-              </div>
+        </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Should I book tours before arriving?
-                </h3>
-                <p className="text-gray-700">
-                  Yes, especially in peak season (June-August). Popular tours sell out days or weeks ahead.
-                  Book at least 2-4 weeks in advance. You can book last-minute in shoulder/low season, but
-                  you'll have more limited options.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  What if the weather is bad?
-                </h3>
-                <p className="text-gray-700">
-                  Most reputable operators will reschedule you at no charge if weather is unsafe. Rain
-                  doesn't necessarily cancel tours - check with operators. This is why we schedule Whitehaven
-                  Beach on Day 2, giving you Day 3 as a backup.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Can I do this itinerary if I can't swim?
-                </h3>
-                <p className="text-gray-700">
-                  Yes! Whitehaven Beach is shallow and calm - you can enjoy it without swimming. For
-                  snorkeling, many tours provide flotation devices and assistance. Alternatively, glass-bottom
-                  boat tours let you see the reef without entering the water.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Is this suitable for families with kids?
-                </h3>
-                <p className="text-gray-700">
-                  Absolutely! This itinerary works well for families. Most tours are family-friendly, though
-                  some have minimum age requirements (typically 4-6 years). Choose tours specifically marketed
-                  as family-friendly for the best experience with young children.
-                </p>
-              </div>
+        {/* CTA */}
+        <div className="py-16 md:py-20" style={{ backgroundColor: '#0B6E72' }}>
+          <div className="container mx-auto px-4 md:px-8 text-center max-w-2xl">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to book it?
+            </h2>
+            <p className="font-body text-lg mb-8" style={{ color: 'rgba(255,255,255,0.8)' }}>
+              Start with the thing that matters most.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/tours/whitehaven-beach-tours"
+                className="px-8 py-4 rounded-xl font-heading font-bold text-lg transition-all duration-300 shadow-xl min-h-[44px] flex items-center justify-center"
+                style={{ backgroundColor: '#E07B39', color: '#fff' }}
+              >
+                Book Whitehaven Tour
+              </Link>
+              <Link
+                href="/where-to-stay"
+                className="px-8 py-4 rounded-xl font-heading font-bold text-lg transition-all duration-300 shadow-xl min-h-[44px] flex items-center justify-center"
+                style={{ backgroundColor: '#fff', color: '#0B6E72' }}
+              >
+                Find Accommodation
+              </Link>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Final CTA */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Experience This Itinerary?
-          </h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Start booking your Whitsundays adventure today
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors shadow-xl">
-              Book Whitehaven Tour
-            </button>
-            <button className="bg-blue-800 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition-colors">
-              Find Accommodation
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors">
-              View All Itineraries
-            </button>
-          </div>
-        </div>
-      </div>
+      </main>
 
       <Footer />
     </div>
