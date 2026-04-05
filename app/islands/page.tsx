@@ -28,7 +28,7 @@ const islands = [
     name: 'Hamilton Island',
     badge: 'Most Developed',
     badgeColor: '#0B6E72',
-    image: '/images/hamilton-island.jpg',
+    image: '/images/hamilton-island-marina.jpg',
     imageAlt: 'Aerial view of Hamilton Island marina and resort, Whitsundays',
     intro: "The largest inhabited island in the Whitsundays and the only one with its own commercial airport. Hamilton is essentially a self-contained resort island — hotels, restaurants, marina, shops, golf course, and wildlife park. Popular with families and anyone wanting resort amenities combined with island beauty.",
     features: [
