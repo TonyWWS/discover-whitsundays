@@ -1,260 +1,314 @@
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-export default function PrivacyPolicyPage() {
-  return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+export const metadata = {
+  title: 'Privacy Policy | Discover Whitsundays',
+  description: 'How Discover Whitsundays collects, uses, and protects your information.',
+  openGraph: {
+    title: 'Privacy Policy | Discover Whitsundays',
+    description: 'How Discover Whitsundays collects, uses, and protects your information.',
+    url: 'https://discoverwhitsundays.com/privacy-policy',
+    siteName: 'Discover Whitsundays',
+    locale: 'en_AU',
+    type: 'website',
+  },
+};
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Privacy Policy
-          </h1>
-
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-gray-700 mb-6">
-              <strong>Last Updated:</strong> {new Date().toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' })}
-            </p>
-
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
-              <p className="text-gray-800">
-                Discover Whitsundays ("we," "us," or "our") is committed to protecting your privacy.
-                This Privacy Policy explains how we collect, use, and safeguard your information when
-                you visit our website.
+const sections = [
+  {
+    heading: 'Information I collect',
+    content: (
+      <>
+        <p className="font-body text-sm md:text-base leading-relaxed mb-4" style={{ color: '#1A2E35' }}>
+          <strong>Information you provide directly</strong> — if you contact me via the contact
+          form, your name, email address, and the contents of your message are collected. I don&apos;t
+          run a newsletter at this stage so no subscription data is collected.
+        </p>
+        <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+          <strong>Automatically collected information</strong> — when you visit the site, standard
+          analytics data may be collected including IP address, browser type, device type, pages
+          visited, time on page, and referring website. This is used to understand how visitors
+          use the site and improve the content.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: 'How I use your information',
+    content: (
+      <ul className="space-y-2">
+        {[
+          'To respond to contact form enquiries',
+          'To understand which content is most useful to visitors and improve the site accordingly',
+          'To maintain and improve site performance and security',
+          'To detect and prevent fraudulent or malicious activity',
+        ].map((item) => (
+          <li key={item} className="flex items-start gap-3">
+            <span
+              className="w-1.5 h-1.5 rounded-full mt-2 shrink-0"
+              style={{ backgroundColor: '#0B6E72' }}
+              aria-hidden="true"
+            />
+            <span className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+              {item}
+            </span>
+          </li>
+        ))}
+      </ul>
+    ),
+  },
+  {
+    heading: 'Cookies and tracking',
+    content: (
+      <>
+        <p className="font-body text-sm md:text-base leading-relaxed mb-5" style={{ color: '#1A2E35' }}>
+          This site uses cookies — small text files stored in your browser. Three types are relevant:
+        </p>
+        <div className="space-y-3">
+          {[
+            {
+              title: 'Essential cookies',
+              desc: 'Required for the site to function. Cannot be disabled.',
+            },
+            {
+              title: 'Analytics cookies',
+              desc: 'Collect anonymised data about how visitors use the site — pages viewed, time spent, referring source. Used to improve content.',
+            },
+            {
+              title: 'Affiliate cookies',
+              desc: 'Set by affiliate partners (Explore Whitsundays, Sailing Whitsundays, Viator) when you click through from this site. Track referrals for commission purposes. The cookie is placed by the partner site, not by Discover Whitsundays.',
+            },
+          ].map((cookie) => (
+            <div
+              key={cookie.title}
+              className="p-4 rounded-xl border"
+              style={{ backgroundColor: '#F4FAFA', borderColor: '#D1E8E8' }}
+            >
+              <p className="font-heading font-bold text-sm mb-1" style={{ color: '#1A2E35' }}>
+                {cookie.title}
+              </p>
+              <p className="font-body text-sm leading-relaxed" style={{ color: '#4A5C61' }}>
+                {cookie.desc}
               </p>
             </div>
+          ))}
+        </div>
+        <p className="font-body text-sm leading-relaxed mt-4" style={{ color: '#1A2E35' }}>
+          You can control and delete cookies through your browser settings. Disabling certain
+          cookies may affect how the site functions.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: 'Third-party services',
+    content: (
+      <>
+        <p className="font-body text-sm md:text-base leading-relaxed mb-4" style={{ color: '#1A2E35' }}>
+          <strong>Analytics</strong> — this site may use Google Analytics or a similar service
+          to understand visitor behaviour. These services may use their own cookies and have their
+          own privacy policies.
+        </p>
+        <p className="font-body text-sm md:text-base leading-relaxed mb-4" style={{ color: '#1A2E35' }}>
+          <strong>Affiliate partners</strong> — when you click through to Explore Whitsundays,
+          Sailing Whitsundays, Viator, or individual tour operators, you leave this site and
+          enter theirs. Their privacy policies apply from that point. I&apos;m not responsible
+          for their data practices.
+        </p>
+        <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+          <strong>Contact form</strong> — the contact form is handled via Formspree. Messages
+          are transmitted securely and stored by Formspree. Their privacy policy applies to
+          that data.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: 'How I protect your information',
+    content: (
+      <>
+        <p className="font-body text-sm md:text-base leading-relaxed mb-4" style={{ color: '#1A2E35' }}>
+          This site is served over HTTPS. I don&apos;t collect or store financial information —
+          all payments go directly through affiliate partner platforms on their own secure
+          infrastructure.
+        </p>
+        <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+          No method of transmission over the internet is 100% secure. I take reasonable
+          precautions but cannot guarantee absolute security.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: 'Data retention',
+    content: (
+      <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+        Contact form messages are retained only as long as needed to respond to your enquiry.
+        Analytics data is retained in aggregate, anonymised form. If you want any information
+        I hold about you deleted, contact me and I&apos;ll action it promptly.
+      </p>
+    ),
+  },
+  {
+    heading: 'Your privacy rights',
+    content: (
+      <>
+        <p className="font-body text-sm md:text-base leading-relaxed mb-4" style={{ color: '#1A2E35' }}>
+          As an Australian-based site, this privacy policy complies with the Australian Privacy
+          Principles (APPs) contained in the Privacy Act 1988. You have the right to:
+        </p>
+        <ul className="space-y-2">
+          {[
+            'Request access to personal information I hold about you',
+            'Request correction of any inaccurate information',
+            'Request deletion of your personal information',
+            'Object to processing of your personal information',
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <span
+                className="w-1.5 h-1.5 rounded-full mt-2 shrink-0"
+                style={{ backgroundColor: '#0B6E72' }}
+                aria-hidden="true"
+              />
+              <span className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+                {item}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <p className="font-body text-sm leading-relaxed mt-4" style={{ color: '#1A2E35' }}>
+          To exercise any of these rights, use the contact page and I&apos;ll respond within
+          30 days.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Children's privacy",
+    content: (
+      <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+        This site is not directed at anyone under 18. I don&apos;t knowingly collect personal
+        information from children. If you believe a child has submitted information through
+        this site, contact me and I&apos;ll delete it.
+      </p>
+    ),
+  },
+  {
+    heading: 'Links to other websites',
+    content: (
+      <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+        This site links to tour operators, booking platforms, and other external sites. I&apos;m
+        not responsible for their privacy practices. I recommend reviewing the privacy policy
+        of any site you visit.
+      </p>
+    ),
+  },
+  {
+    heading: 'Changes to this policy',
+    content: (
+      <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+        This policy may be updated from time to time to reflect changes in practice or legal
+        requirements. The date at the top of the page reflects the last revision. Significant
+        changes will be noted here.
+      </p>
+    ),
+  },
+];
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Information We Collect</h2>
+export default function PrivacyPolicyPage() {
+  return (
+    <div className="min-h-screen" style={{ backgroundColor: '#F4FAFA' }}>
+      <Navbar />
 
-              <h3 className="text-xl font-bold text-gray-900 mb-3 mt-6">Information You Provide</h3>
-              <p className="text-gray-700 mb-4">
-                We may collect information that you voluntarily provide to us when you:
-              </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li>Contact us via email or contact form</li>
-                <li>Subscribe to our newsletter (if applicable)</li>
-                <li>Leave comments or reviews</li>
-                <li>Participate in surveys or promotions</li>
-              </ul>
-              <p className="text-gray-700 mt-4">
-                This information may include your name, email address, and any other information you
-                choose to provide.
-              </p>
+      <main>
 
-              <h3 className="text-xl font-bold text-gray-900 mb-3 mt-6">Automatically Collected Information</h3>
-              <p className="text-gray-700 mb-4">
-                When you visit our website, we may automatically collect certain information about your
-                device and browsing behavior, including:
-              </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li>IP address</li>
-                <li>Browser type and version</li>
-                <li>Device type (desktop, mobile, tablet)</li>
-                <li>Operating system</li>
-                <li>Pages visited and time spent on pages</li>
-                <li>Referring website</li>
-                <li>Date and time of visit</li>
-              </ul>
-            </section>
+        {/* Header */}
+        <div
+          className="py-12 md:py-16 border-b"
+          style={{ backgroundColor: '#fff', borderColor: '#D1E8E8' }}
+        >
+          <div className="container mx-auto px-4 md:px-8 max-w-3xl">
+            <h1
+              className="font-heading text-3xl md:text-4xl font-bold mb-3"
+              style={{ color: '#1A2E35' }}
+            >
+              Privacy Policy
+            </h1>
+            <p className="font-body text-sm" style={{ color: '#4A5C61' }}>
+              Last updated: April 2026
+            </p>
+          </div>
+        </div>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Use Your Information</h2>
-              <p className="text-gray-700 mb-4">
-                We use the information we collect for the following purposes:
-              </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li><strong>To provide and maintain our website</strong> - Ensuring the site functions properly and is accessible</li>
-                <li><strong>To improve our content</strong> - Understanding which content is most useful to visitors</li>
-                <li><strong>To respond to inquiries</strong> - Answering your questions and providing customer support</li>
-                <li><strong>To send updates</strong> - Sending newsletters or important updates (only if you've opted in)</li>
-                <li><strong>To analyze website usage</strong> - Understanding how visitors use our site to improve user experience</li>
-                <li><strong>To prevent fraud</strong> - Detecting and preventing fraudulent or malicious activity</li>
-              </ul>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Cookies and Tracking Technologies</h2>
-              <p className="text-gray-700 mb-4">
-                We use cookies and similar tracking technologies to enhance your browsing experience and
-                analyze website traffic.
-              </p>
-
-              <h3 className="text-xl font-bold text-gray-900 mb-3 mt-6">What Are Cookies?</h3>
-              <p className="text-gray-700 mb-4">
-                Cookies are small text files stored on your device when you visit a website. They help
-                websites remember your preferences and improve functionality.
-              </p>
-
-              <h3 className="text-xl font-bold text-gray-900 mb-3 mt-6">Types of Cookies We Use</h3>
-              <div className="space-y-4">
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <strong className="text-gray-900">Essential Cookies</strong>
-                  <p className="text-gray-700 text-sm mt-2">
-                    Required for the website to function properly. Cannot be disabled.
-                  </p>
-                </div>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <strong className="text-gray-900">Analytics Cookies</strong>
-                  <p className="text-gray-700 text-sm mt-2">
-                    Help us understand how visitors interact with our website by collecting and
-                    reporting information anonymously.
-                  </p>
-                </div>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <strong className="text-gray-900">Affiliate Cookies</strong>
-                  <p className="text-gray-700 text-sm mt-2">
-                    Track clicks on affiliate links to ensure we receive proper credit for referrals.
-                    These cookies are set by our affiliate partners.
-                  </p>
-                </div>
-              </div>
-
-              <p className="text-gray-700 mt-4">
-                You can control and delete cookies through your browser settings. However, disabling
-                cookies may affect the functionality of this website.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Third-Party Services</h2>
-              <p className="text-gray-700 mb-4">
-                We may use third-party services that collect, monitor, and analyze information to
-                improve our website and services.
-              </p>
-
-              <h3 className="text-xl font-bold text-gray-900 mb-3 mt-6">Analytics Services</h3>
-              <p className="text-gray-700 mb-4">
-                We may use services like Google Analytics to understand how visitors use our website.
-                These services may use cookies and similar technologies to collect information about your
-                browsing behavior.
-              </p>
-
-              <h3 className="text-xl font-bold text-gray-900 mb-3 mt-6">Affiliate Partners</h3>
-              <p className="text-gray-700 mb-4">
-                When you click on affiliate links to booking platforms (such as Booking.com, Viator,
-                GetYourGuide), you will be redirected to their websites. These third parties have their
-                own privacy policies, and we are not responsible for their practices.
-              </p>
-              <p className="text-gray-700">
-                We recommend reviewing the privacy policies of any third-party websites you visit.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Protect Your Information</h2>
-              <p className="text-gray-700 mb-4">
-                We implement reasonable security measures to protect your personal information from
-                unauthorized access, alteration, disclosure, or destruction. However, no method of
-                transmission over the internet or electronic storage is 100% secure.
-              </p>
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-lg">
-                <p className="text-gray-700">
-                  <strong>Important:</strong> We do not collect or store sensitive financial information
-                  such as credit card details. All payment transactions are processed securely by our
-                  affiliate partners on their own platforms.
-                </p>
-              </div>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Data Retention</h2>
-              <p className="text-gray-700">
-                We retain your personal information only as long as necessary to fulfill the purposes
-                outlined in this Privacy Policy, unless a longer retention period is required or permitted
-                by law. When information is no longer needed, we will securely delete or anonymize it.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Privacy Rights</h2>
-              <p className="text-gray-700 mb-4">
-                Depending on your location, you may have certain rights regarding your personal information:
-              </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
-                <li><strong>Correction:</strong> Request that we correct any inaccurate or incomplete information</li>
-                <li><strong>Deletion:</strong> Request that we delete your personal information</li>
-                <li><strong>Opt-out:</strong> Unsubscribe from marketing emails at any time</li>
-                <li><strong>Object:</strong> Object to our processing of your personal information</li>
-                <li><strong>Data portability:</strong> Request that we transfer your data to another service</li>
-              </ul>
-              <p className="text-gray-700 mt-4">
-                To exercise any of these rights, please contact us at the email address provided below.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Australian Privacy Principles</h2>
-              <p className="text-gray-700">
-                As an Australian-based website, we comply with the Australian Privacy Principles (APPs)
-                contained in the Privacy Act 1988. This includes requirements around collection, use,
-                disclosure, and security of personal information.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Children's Privacy</h2>
-              <p className="text-gray-700">
-                Our website is not directed to individuals under the age of 18. We do not knowingly
-                collect personal information from children. If you are a parent or guardian and believe
-                your child has provided us with personal information, please contact us so we can delete
-                that information.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Links to Other Websites</h2>
-              <p className="text-gray-700">
-                Our website contains links to third-party websites, including tour operators, accommodation
-                providers, and booking platforms. We are not responsible for the privacy practices of these
-                external sites. We encourage you to read the privacy policies of any website you visit.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Changes to This Privacy Policy</h2>
-              <p className="text-gray-700">
-                We may update this Privacy Policy from time to time to reflect changes in our practices or
-                for legal, operational, or regulatory reasons. We will notify you of any material changes
-                by updating the "Last Updated" date at the top of this page.
-              </p>
-              <p className="text-gray-700 mt-4">
-                We encourage you to review this Privacy Policy periodically to stay informed about how we
-                are protecting your information.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
-              <p className="text-gray-700 mb-4">
-                If you have any questions, concerns, or requests regarding this Privacy Policy or our
-                data practices, please contact us:
-              </p>
-              <div className="bg-gray-100 p-6 rounded-lg">
-                <p className="text-gray-700 mb-2">
-                  <strong>Email:</strong> info@discoverwhitsundays.com
-                </p>
-                <p className="text-gray-700">
-                  <strong>Location:</strong> Airlie Beach, Queensland, Australia
-                </p>
-              </div>
-              <p className="text-gray-700 mt-4">
-                We will respond to your inquiry as soon as reasonably possible, typically within 30 days.
-              </p>
-            </section>
-
-            <div className="bg-green-50 border-l-4 border-green-500 p-6 mt-8">
-              <p className="text-gray-800">
-                <strong>Your Privacy Matters:</strong> We are committed to being transparent about how we
-                collect and use your information. This Privacy Policy is designed to help you understand
-                your rights and our responsibilities. Thank you for trusting Discover Whitsundays.
+        {/* Intro */}
+        <div className="pt-12 pb-4">
+          <div className="container mx-auto px-4 md:px-8 max-w-3xl">
+            <div
+              className="p-6 rounded-xl border-l-4"
+              style={{ backgroundColor: '#E8F4F5', borderColor: '#0B6E72' }}
+            >
+              <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+                Discover Whitsundays is committed to protecting your privacy. This policy explains
+                what information is collected when you use this site, how it&apos;s used, and what
+                your rights are. This is a one-person operation based in Airlie Beach, Queensland —
+                I take a straightforward approach to data and don&apos;t collect anything beyond what&apos;s
+                needed to run the site.
               </p>
             </div>
           </div>
         </div>
-      </div>
+
+        {/* Sections */}
+        <div className="py-8 pb-16">
+          <div className="container mx-auto px-4 md:px-8 max-w-3xl space-y-8">
+            {sections.map((section) => (
+              <section
+                key={section.heading}
+                className="bg-white rounded-2xl border p-6 md:p-8"
+                style={{ borderColor: '#D1E8E8' }}
+              >
+                <h2
+                  className="font-heading text-lg md:text-xl font-bold mb-4"
+                  style={{ color: '#1A2E35' }}
+                >
+                  {section.heading}
+                </h2>
+                {section.content}
+              </section>
+            ))}
+
+            {/* Contact */}
+            <div
+              className="p-6 rounded-xl border-l-4"
+              style={{ backgroundColor: '#F5F0E8', borderColor: '#E07B39' }}
+            >
+              <h2
+                className="font-heading font-bold text-base mb-2"
+                style={{ color: '#1A2E35' }}
+              >
+                Questions about this policy?
+              </h2>
+              <p
+                className="font-body text-sm leading-relaxed mb-3"
+                style={{ color: '#1A2E35' }}
+              >
+                If you have questions about how your data is handled or want to exercise your
+                privacy rights, get in touch. I&apos;ll respond within 30 days.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-heading font-bold text-sm transition-opacity hover:opacity-80 min-h-[44px]"
+                style={{ backgroundColor: '#0B6E72', color: '#fff' }}
+              >
+                Get in touch &#8594;
+              </Link>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
 
       <Footer />
     </div>

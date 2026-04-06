@@ -1,193 +1,254 @@
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
+export const metadata = {
+  title: 'Affiliate Disclosure | Discover Whitsundays',
+  description: 'How Discover Whitsundays earns commissions, which partners are involved, and what that means for you.',
+  openGraph: {
+    title: 'Affiliate Disclosure | Discover Whitsundays',
+    description: 'How Discover Whitsundays earns commissions and what that means for you.',
+    url: 'https://discoverwhitsundays.com/affiliate-disclosure',
+    siteName: 'Discover Whitsundays',
+    locale: 'en_AU',
+    type: 'website',
+  },
+};
+
 export default function AffiliateDisclosurePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ backgroundColor: '#F4FAFA' }}>
       <Navbar />
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Affiliate Disclosure
-          </h1>
+      <main>
 
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-gray-700 mb-6">
-              <strong>Last Updated:</strong> {new Date().toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' })}
+        {/* Header */}
+        <div
+          className="py-12 md:py-16 border-b"
+          style={{ backgroundColor: '#fff', borderColor: '#D1E8E8' }}
+        >
+          <div className="container mx-auto px-4 md:px-8 max-w-3xl">
+            <h1
+              className="font-heading text-3xl md:text-4xl font-bold mb-3"
+              style={{ color: '#1A2E35' }}
+            >
+              Affiliate Disclosure
+            </h1>
+            <p className="font-body text-sm" style={{ color: '#4A5C61' }}>
+              Last updated: April 2026
             </p>
-
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
-              <p className="text-gray-800">
-                <strong>Important:</strong> Discover Whitsundays contains affiliate links. When you book
-                accommodations, tours, or activities through links on this site, we may earn a commission
-                at no additional cost to you. This helps us maintain and improve this free resource.
-              </p>
-            </div>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Affiliate Links?</h2>
-              <p className="text-gray-700 mb-4">
-                Affiliate links are special tracking links that allow us to earn a small commission when
-                you make a purchase or booking after clicking through from our site. These commissions
-                come from the companies we partner with, not from you. You pay exactly the same price
-                whether you use our affiliate links or go directly to the provider's website.
-              </p>
-              <p className="text-gray-700">
-                For example, if you click on a link to book a Whitehaven Beach tour through our recommended
-                tour operator and complete your booking, we may receive a small percentage of that sale as
-                a commission from the tour operator.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Affiliate Partners</h2>
-              <p className="text-gray-700 mb-4">
-                We participate in affiliate programs with the following companies and booking platforms:
-              </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li><strong>Booking.com</strong> - Hotel and accommodation bookings</li>
-                <li><strong>Viator</strong> - Tours and activities</li>
-                <li><strong>GetYourGuide</strong> - Tours and experiences</li>
-                <li><strong>Agoda</strong> - Accommodation bookings</li>
-                <li><strong>Klook</strong> - Activities and attractions</li>
-                <li>Other tourism and travel service providers as partnerships develop</li>
-              </ul>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Promise to You</h2>
-
-              <div className="bg-green-50 p-6 rounded-lg mb-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Genuine Recommendations</h3>
-                <p className="text-gray-700">
-                  We only recommend tours, accommodations, and activities that we genuinely believe offer
-                  value to visitors to the Whitsundays. Our recommendations are based on:
-                </p>
-                <ul className="list-disc pl-6 text-gray-700 space-y-1 mt-2">
-                  <li>Personal experience and local knowledge</li>
-                  <li>Reputation and customer reviews</li>
-                  <li>Quality of service and value for money</li>
-                  <li>Suitability for our readers</li>
-                </ul>
-              </div>
-
-              <div className="bg-green-50 p-6 rounded-lg mb-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">No Extra Cost to You</h3>
-                <p className="text-gray-700">
-                  Using our affiliate links does not increase the price you pay. In many cases, we negotiate
-                  special deals or discounts that are only available through our links, potentially saving
-                  you money.
-                </p>
-              </div>
-
-              <div className="bg-green-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Editorial Independence</h3>
-                <p className="text-gray-700">
-                  Our editorial content is not influenced by affiliate relationships. We maintain complete
-                  independence in our recommendations and will always disclose when content contains affiliate
-                  links. If a product or service doesn't meet our standards, we won't recommend it regardless
-                  of potential commission.
-                </p>
-              </div>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">How Affiliate Commissions Work</h2>
-              <p className="text-gray-700 mb-4">
-                When you click on an affiliate link:
-              </p>
-              <ol className="list-decimal pl-6 text-gray-700 space-y-2">
-                <li>You're redirected to the partner's website (e.g., Booking.com, Viator)</li>
-                <li>A tracking cookie is placed in your browser (this is standard practice)</li>
-                <li>If you make a purchase within the cookie duration (typically 24-30 days), we may earn a commission</li>
-                <li>The commission percentage varies by partner and product type (typically 3-10%)</li>
-                <li>Commissions help us maintain this free resource and create more helpful content</li>
-              </ol>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Non-Affiliate Content</h2>
-              <p className="text-gray-700">
-                Not all links on this website are affiliate links. We also link to:
-              </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li>Official tourism websites and government resources</li>
-                <li>Local businesses and services we recommend</li>
-                <li>Free attractions and activities</li>
-                <li>Transportation and public service information</li>
-              </ul>
-              <p className="text-gray-700 mt-4">
-                These links are provided purely for your convenience and we receive no compensation for them.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Choices</h2>
-              <p className="text-gray-700 mb-4">
-                You are never obligated to use our affiliate links. You can always:
-              </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li>Search for providers directly</li>
-                <li>Visit websites directly by typing the URL</li>
-                <li>Compare prices across multiple platforms</li>
-                <li>Book through other channels if you prefer</li>
-              </ul>
-              <p className="text-gray-700 mt-4">
-                However, if you find our content helpful and choose to book through our links, we sincerely
-                appreciate your support. It helps us continue providing free, comprehensive travel information
-                about the Whitsundays.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Compliance & Regulations</h2>
-              <p className="text-gray-700 mb-4">
-                Discover Whitsundays complies with:
-              </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li><strong>Australian Competition and Consumer Commission (ACCC)</strong> guidelines on disclosure</li>
-                <li><strong>US Federal Trade Commission (FTC)</strong> guidelines for international visitors</li>
-                <li><strong>Affiliate program terms and conditions</strong> of our partners</li>
-              </ul>
-              <p className="text-gray-700 mt-4">
-                We are committed to transparency and will always clearly identify affiliate content.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Questions or Concerns?</h2>
-              <p className="text-gray-700 mb-4">
-                If you have any questions about our affiliate relationships or how we earn commissions,
-                please don't hesitate to contact us. We're committed to transparency and happy to answer
-                any questions you may have.
-              </p>
-              <div className="bg-gray-100 p-6 rounded-lg">
-                <p className="text-gray-700">
-                  <strong>Contact:</strong> [Your email address - add this when you have one]
-                </p>
-              </div>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Updates to This Disclosure</h2>
-              <p className="text-gray-700">
-                We may update this affiliate disclosure from time to time to reflect changes in our affiliate
-                partnerships or legal requirements. The "Last Updated" date at the top of this page indicates
-                when this disclosure was last revised.
-              </p>
-            </section>
-
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mt-8">
-              <p className="text-gray-800">
-                <strong>Thank you for supporting Discover Whitsundays!</strong> Your bookings through our
-                affiliate links help us continue creating free, comprehensive travel guides to help you plan
-                the perfect Whitsundays adventure.
-              </p>
-            </div>
           </div>
         </div>
-      </div>
+
+        {/* Content */}
+        <div className="py-12 md:py-16">
+          <div className="container mx-auto px-4 md:px-8 max-w-3xl space-y-10">
+
+            {/* Summary box */}
+            <div
+              className="p-6 rounded-xl border-l-4"
+              style={{ backgroundColor: '#E8F4F5', borderColor: '#0B6E72' }}
+            >
+              <p className="font-body text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+                Some links on Discover Whitsundays are affiliate links. If you book a tour or
+                experience through one of those links, I may earn a small commission — at no
+                extra cost to you. You pay exactly the same price either way. The commission
+                helps keep this guide free.
+              </p>
+            </div>
+
+            {/* What are affiliate links */}
+            <section className="space-y-4">
+              <h2
+                className="font-heading text-xl md:text-2xl font-bold"
+                style={{ color: '#1A2E35' }}
+              >
+                What are affiliate links?
+              </h2>
+              <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+                An affiliate link is a tracking link that tells a booking platform or operator
+                that a visitor came from this site. If you complete a booking after clicking
+                through, I receive a small percentage of the sale from the operator — not from
+                you. The price you pay is identical to booking directly.
+              </p>
+              <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+                For example, if you click through to Explore Whitsundays from the overnight
+                sailing page and book a trip, I may earn a referral commission from Explore
+                Whitsundays on that booking.
+              </p>
+            </section>
+
+            {/* Current partners */}
+            <section className="space-y-4">
+              <h2
+                className="font-heading text-xl md:text-2xl font-bold"
+                style={{ color: '#1A2E35' }}
+              >
+                Current affiliate and referral partners
+              </h2>
+              <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+                I only list partners where a referral or affiliate arrangement is either active
+                or being formalised. As the site grows, this list will expand and I&apos;ll
+                keep it updated.
+              </p>
+              <div className="space-y-3">
+                {[
+                  {
+                    name: 'Explore Whitsundays',
+                    desc: 'Overnight sailing and day tours. Referral arrangement in place — the longest-operating tour agent in the Whitsundays.',
+                  },
+                  {
+                    name: 'Sailing Whitsundays',
+                    desc: 'Overnight sailing and tour deals. Referral arrangement in place.',
+                  },
+                  {
+                    name: 'Viator',
+                    desc: 'General tour and activity bookings. Standard affiliate program — used where specific operators don\'t have their own direct arrangement.',
+                  },
+                  {
+                    name: 'Individual operators',
+                    desc: 'Some operators linked on this site — such as FlyAus, Airlie Beach Helicopters, Ocean Rafting, and ZigZag Whitsundays — may offer referral or affiliate arrangements. These are disclosed on the relevant pages as they are formalised.',
+                  },
+                ].map((partner) => (
+                  <div
+                    key={partner.name}
+                    className="p-4 rounded-xl border"
+                    style={{ backgroundColor: '#fff', borderColor: '#D1E8E8' }}
+                  >
+                    <h3
+                      className="font-heading font-bold text-sm mb-1"
+                      style={{ color: '#1A2E35' }}
+                    >
+                      {partner.name}
+                    </h3>
+                    <p
+                      className="font-body text-sm leading-relaxed"
+                      style={{ color: '#4A5C61' }}
+                    >
+                      {partner.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* My commitment */}
+            <section className="space-y-4">
+              <h2
+                className="font-heading text-xl md:text-2xl font-bold"
+                style={{ color: '#1A2E35' }}
+              >
+                My commitment to you
+              </h2>
+              <div className="space-y-3">
+                {[
+                  'I only recommend operators and services I\'d genuinely point a friend toward. Affiliate potential doesn\'t change what gets listed.',
+                  'You pay the same price whether you book through my links or go directly. I never add fees or inflate prices.',
+                  'Not all links on this site are affiliate links. Many are straight referrals to operator websites, tourism bodies, and free resources with no financial arrangement attached.',
+                  'Where affiliate links appear, I note it on the page — usually in a disclosure line at the bottom of the relevant section.',
+                  'My editorial content is not written around affiliate arrangements. If an operator is listed, it\'s because I think they\'re worth recommending.',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <span
+                      className="font-bold mt-0.5 shrink-0"
+                      style={{ color: '#0B6E72' }}
+                      aria-hidden="true"
+                    >
+                      &#10003;
+                    </span>
+                    <p
+                      className="font-body text-sm leading-relaxed"
+                      style={{ color: '#1A2E35' }}
+                    >
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* How it works */}
+            <section className="space-y-4">
+              <h2
+                className="font-heading text-xl md:text-2xl font-bold"
+                style={{ color: '#1A2E35' }}
+              >
+                How it works technically
+              </h2>
+              <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+                When you click an affiliate link you&apos;re redirected to the partner&apos;s
+                website. A tracking cookie is placed in your browser — standard practice across
+                the industry. If you complete a booking within the cookie window (typically 24–30
+                days depending on the partner), I may receive a commission. Commission rates vary
+                by partner but are typically in the 5–10% range, paid by the operator from their
+                margin rather than added to your price.
+              </p>
+            </section>
+
+            {/* Your choices */}
+            <section className="space-y-4">
+              <h2
+                className="font-heading text-xl md:text-2xl font-bold"
+                style={{ color: '#1A2E35' }}
+              >
+                Your choices
+              </h2>
+              <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+                You&apos;re never obligated to use affiliate links. You can search for any
+                operator directly, compare prices across platforms, or book through whichever
+                channel you prefer. If you find this guide useful and choose to book through a
+                link here, I appreciate it — it&apos;s what keeps the site free and allows me
+                to keep adding content.
+              </p>
+            </section>
+
+            {/* Compliance */}
+            <section className="space-y-4">
+              <h2
+                className="font-heading text-xl md:text-2xl font-bold"
+                style={{ color: '#1A2E35' }}
+              >
+                Compliance
+              </h2>
+              <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+                This disclosure is maintained in accordance with Australian Competition and Consumer
+                Commission (ACCC) guidelines on affiliate and referral arrangements, and the US
+                Federal Trade Commission (FTC) guidelines for international visitors. If you have
+                questions about any specific arrangement, get in touch.
+              </p>
+            </section>
+
+            {/* Contact */}
+            <div
+              className="p-6 rounded-xl border-l-4"
+              style={{ backgroundColor: '#F5F0E8', borderColor: '#E07B39' }}
+            >
+              <h2
+                className="font-heading font-bold text-base mb-2"
+                style={{ color: '#1A2E35' }}
+              >
+                Questions about this disclosure?
+              </h2>
+              <p
+                className="font-body text-sm leading-relaxed mb-3"
+                style={{ color: '#1A2E35' }}
+              >
+                If anything here isn&apos;t clear or you want to know about a specific link or
+                arrangement, I&apos;m happy to explain.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-heading font-bold text-sm transition-opacity hover:opacity-80 min-h-[44px]"
+                style={{ backgroundColor: '#0B6E72', color: '#fff' }}
+              >
+                Get in touch &#8594;
+              </Link>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
 
       <Footer />
     </div>
