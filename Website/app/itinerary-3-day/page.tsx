@@ -121,7 +121,7 @@ export default function ThreeDayItineraryPage() {
         </div>
 
         {/* Quick info strip */}
-        <div style={{ backgroundColor: '#F5F0E8' }} className="py-8 md:py-10 border-b" style={{ borderColor: '#D1E8E8' }}>
+        <div style={{ backgroundColor: '#F5F0E8', borderColor: '#D1E8E8' }} className="py-8 md:py-10 border-b">
           <div className="container mx-auto px-4 md:px-8">
             <div className="max-w-3xl mx-auto grid grid-cols-3 gap-4 md:gap-6">
               {[
