@@ -37,7 +37,7 @@ const categories = [
   },
   {
     title: 'From Above',
-    description: "Scenic flights, helicopters, and seaplanes. The only way to see Heart Reef and get the Hill Inlet aerial shot that everyone's seen but most people don't know how to take.",
+    description: 'Scenic flights, helicopters, and seaplanes. The aerial perspective changes how you understand the Whitsundays — the scale of the reef, the swirl of Hill Inlet, the sheer number of islands. Worth knowing what you\'re paying for before you book.',
     image: '/images/things-to-do-flights.jpg',
     imageAlt: 'Aerial view of Hill Inlet and Whitehaven Beach swirling sands from a scenic flight',
     accentColor: '#E07B39',
@@ -47,23 +47,31 @@ const categories = [
   },
   {
     title: 'Further Out',
-    description: "Bareboating, private charters, and island camping. For those who want to get off the main tourist circuit and access the parts of the Whitsundays most visitors never see.",
+    description: 'Bareboating, private charters, and island camping. This is the Whitsundays at its least curated — you pick the anchorage, you set the pace. Takes more planning than a day trip, and it\'s worth it.',
     image: '/images/things-to-do-bareboat.jpg',
     imageAlt: 'Yacht anchored in a secluded bay in the Whitsunday Islands national park',
     accentColor: '#0B6E72',
-    links: [
-      { label: 'Bareboating & private charters', href: '/tours/bareboating-and-private-charters' },
-    ],
+    links: [],
+    comingSoon: 'Bareboating & charters guide — coming soon',
   },
   {
     title: 'On the Islands',
-    description: "Resort stays, day trips to Hamilton and Daydream, and the quieter islands most visitors never find. 74 islands — most of them national park, a handful worth staying on.",
+    description: '74 islands — most of them untouched national park, a handful worth staying on. Hamilton has the resort amenities, Daydream suits families, Whitsunday Island is the one most people have seen in photos without knowing its name.',
     image: '/images/things-to-do-islands.jpg',
     imageAlt: 'Tropical island with clear turquoise water in the Whitsundays national park',
     accentColor: '#E07B39',
     links: [
       { label: 'Island guide', href: '/islands' },
     ],
+  },
+  {
+    title: 'On the Mainland',
+    description: 'Most people come for the water — and they should. But the mainland has things worth your time: Conway National Park rainforest, Cedar Creek Falls, and the coastal lookouts most visitors drive past without stopping. Driftwood Tours is the operator to know here — small groups, accredited guide, and genuine local knowledge.',
+    image: '/images/things-to-do-mainland.jpg',
+    imageAlt: 'Cedar Creek Falls waterfall in Conway National Park near Airlie Beach',
+    accentColor: '#0B6E72',
+    links: [],
+    comingSoon: 'Mainland tours guide — coming soon',
   },
 ];
 
@@ -104,14 +112,14 @@ export default function ThingsToDoPage() {
               Seven years here and I&apos;ll be straight with you: the Whitsundays is primarily a
               water destination. If you&apos;re not into being on or in the ocean, it&apos;s worth
               knowing that upfront. If you are, there&apos;s a lot to choose from &mdash; and the
-              quality gap between operators is significant. I&apos;ve broken it into four areas. If
+              quality gap between operators is significant. I&apos;ve broken it into five areas. If
               you have a specific question, the turtle in the bottom right corner knows everything
               I know.
             </p>
           </div>
         </div>
 
-        {/* Four category cards */}
+        {/* Five category cards */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4 md:px-8 max-w-4xl">
             <div className="space-y-8">
@@ -186,6 +194,14 @@ export default function ThingsToDoPage() {
                             {link.label}
                           </Link>
                         ))}
+                        {'comingSoon' in cat && cat.comingSoon && (
+                          <span
+                            className="px-5 py-3 rounded-lg font-body text-sm min-h-[44px] flex items-center"
+                            style={{ color: '#4A5C61', backgroundColor: '#F4FAFA', border: '1px dashed #D1E8E8' }}
+                          >
+                            {cat.comingSoon}
+                          </span>
+                        )}
                       </div>
                     </div>
 

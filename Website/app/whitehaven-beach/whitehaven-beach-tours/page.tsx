@@ -16,6 +16,7 @@ const operators = [
     whoFor: 'Active travellers, snorkel enthusiasts, anyone who wants the thrill of a fast boat with genuine local guides. Also great if Hill Inlet access is a priority.',
     worthNoting: "The speedboat ride is part of the experience — you won't be chatting on the way out. If someone wants a leisurely sail with a drink in hand, this isn't the one. That's not a flaw, just an honest trade-off.",
     website: 'https://oceanrafting.com.au',
+    deepLink: null,
   },
   {
     name: 'ZigZag Whitsundays',
@@ -29,6 +30,7 @@ const operators = [
     whoFor: 'Families, beach lovers, anyone whose priority is actually being on Whitehaven rather than getting there. The marine science background also means the reef stop is genuinely educational.',
     worthNoting: 'Newer operator than most on this list — worth factoring in if longevity matters to you. That said, the reviews are excellent and the concept is genuinely distinct.',
     website: 'https://zigzagwhitsundays.com.au',
+    deepLink: null,
   },
   {
     name: 'Camira',
@@ -42,6 +44,7 @@ const operators = [
     whoFor: "Couples and adults who want the classic Whitsundays sailing experience with comfort. If someone pictures a cold beer on a sailing boat with 74 islands sliding past — this is the tour.",
     worthNoting: 'Beach time is around 1.5 hours — significantly less than ZigZag. Worth flagging to anyone whose main goal is beach time. The trade-off is the sailing experience itself, which is genuinely the point of this one.',
     website: 'https://www.cruisewhitsundays.com/experiences/camira-sailing-adventure/',
+    deepLink: '/things-to-do/camira-sailing-adventure',
   },
   {
     name: 'Whitehaven Xpress',
@@ -55,6 +58,7 @@ const operators = [
     whoFor: "Families and beach-focused travellers who want a relaxed, unhurried day. Also good for anyone who values booking with an operator who has been doing this longer than most tourists have been alive.",
     worthNoting: "No snorkelling as a feature — it's beach and lookout focused. Worth confirming current pricing and availability directly with them before recommending.",
     website: 'https://www.whitehavenexpress.com.au',
+    deepLink: null,
   },
   {
     name: 'Providence V',
@@ -68,8 +72,10 @@ const operators = [
     whoFor: "Sailing enthusiasts and people who care about the journey as much as the destination. Couples looking for something with real character. Not the right pick if someone's priority is beach time or adventure — the pace is deliberately unhurried.",
     worthNoting: "Lunch is an add-on rather than included — factor that into the price comparison. Dietary options are limited (vegetarian only, no vegan or gluten-free). Also worth knowing that on days with little wind, you motor more than you sail. An inherent risk with any sailing vessel.",
     website: 'https://whitsundaysailing.com.au',
+    deepLink: null,
   },
 ];
+
 export const metadata = {
   title: 'Whitehaven Beach Day Tours | Discover Whitsundays',
   description: 'Five curated Whitehaven Beach day trip operators — each genuinely different. Find the one that suits you, from fast adventure boats to tall ship schooners.',
@@ -89,6 +95,7 @@ export const metadata = {
     images: ['/images/whitehaven-tour-hero.jpg'],
   },
 };
+
 export default function WhitehavenBeachToursPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#F4FAFA' }}>
@@ -235,15 +242,26 @@ export default function WhitehavenBeachToursPage() {
                     {op.worthNoting}
                   </p>
                 </div>
-                <a
-                  href={op.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-3 rounded-lg font-heading font-bold text-sm tracking-wide transition-opacity hover:opacity-80"
-                  style={{ backgroundColor: op.accentColor, color: '#fff' }}
-                >
-                  Visit Website &#8594;
-                </a>
+                <div className="flex flex-wrap items-center gap-4">
+                  <a
+                    href={op.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-3 rounded-lg font-heading font-bold text-sm tracking-wide transition-opacity hover:opacity-80"
+                    style={{ backgroundColor: op.accentColor, color: '#fff' }}
+                  >
+                    Visit Website &#8594;
+                  </a>
+                  {op.deepLink && (
+                    <Link
+                      href={op.deepLink}
+                      className="font-body text-sm hover:opacity-70 transition-opacity"
+                      style={{ color: '#0B6E72' }}
+                    >
+                      Read our full Camira guide →
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
           ))}
@@ -331,7 +349,7 @@ export default function WhitehavenBeachToursPage() {
                 4&ndash;6 weeks ahead. Tours fill quickly and this is the best weather window.
               </p>
               <p>
-                <span className="text-white font-semibold">Stinger season (Oct&ndash;May):</span>{' '}
+                <span className="text-white font-semibold">Stinger season (late Oct&ndash;May):</span>{' '}
                 Stinger suits are provided by most operators &mdash; wear them.
               </p>
               <p>
