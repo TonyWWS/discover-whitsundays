@@ -1,0 +1,260 @@
+import Link from 'next/link';
+import Navbar from '../../../components/Navbar';
+import Footer from '../../../components/Footer';
+
+export const metadata = {
+title: 'Camira Sailing Adventure | Discover Whitsundays',
+description: 'A full day on the Whitsundays aboard the Camira — Hill Inlet, Whitehaven Beach, snorkelling, and
+all-inclusive food and drinks. A local review.',
+openGraph: {
+title: 'Camira Sailing Adventure | Discover Whitsundays',
+description: 'A full day on the Whitsundays aboard the Camira — Hill Inlet, Whitehaven Beach, snorkelling, and
+all-inclusive food and drinks.',
+url: 'https://discoverwhitsundays.com/things-to-do/camira-sailing-adventure',
+siteName: 'Discover Whitsundays',
+images: [{ url: '/images/camira-sailing.jpg', width: 1200, height: 630 }],
+locale: 'en_AU',
+type: 'website',
+},
+twitter: {
+card: 'summary_large_image',
+title: 'Camira Sailing Adventure | Discover Whitsundays',
+description: 'A full day on the Whitsundays aboard the Camira — Hill Inlet, Whitehaven Beach, snorkelling, and
+all-inclusive food and drinks.',
+images: ['/images/camira-sailing.jpg'],
+},
+};
+
+export default function CamiraPage() {
+return (
+<div className="min-h-screen" style={{ backgroundColor: '#F4FAFA' }}>
+  <Navbar />
+
+  {/* Hero */}
+  <div className="relative h-[380px] md:h-[500px] overflow-hidden" style={{ backgroundColor: '#1A2E35' }}>
+    <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/camira-sailing.jpg')"
+      }} />
+    <div className="absolute inset-0" style={{ backgroundColor: 'rgba(26, 46, 53, 0.65)' }} />
+    <div className="container mx-auto px-4 md:px-8 relative z-10 h-full flex items-center justify-center">
+      <div className="max-w-3xl text-center">
+        <div className="inline-block px-3 py-1 rounded text-xs font-heading font-bold tracking-widest uppercase mb-6"
+          style={{ backgroundColor: '#E07B39' , color: '#fff' }}>
+          Sailing — Full Day
+        </div>
+        <h1 className="font-heading text-5xl md:text-6xl font-bold mb-4 leading-tight" style={{ color: '#fff' }}>
+          Camira Sailing Adventure
+        </h1>
+        <p className="font-body text-lg leading-relaxed" style={{ color: '#8BBCBC' }}>
+          Hill Inlet, Whitehaven Beach, fringing reef — all in one day, all-inclusive.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Quick facts bar */}
+  <div style={{ backgroundColor: '#1A2E35' }}>
+    <div className="container mx-auto px-4 md:px-8 max-w-4xl">
+      <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+        {[
+        { label: 'Price', value: 'From ~$225–250pp' },
+        { label: 'Duration', value: 'Full day' },
+        { label: 'Departs', value: '~7:30am' },
+        { label: 'Returns', value: '~7:00pm' },
+        ].map(({ label, value }) => (
+        <div key={label} className="px-6 py-5 text-center">
+          <div className="text-xs font-heading font-bold tracking-widest uppercase mb-1" style={{
+            color: 'rgba(255,255,255,0.45)' }}>
+            {label}
+          </div>
+          <div className="font-heading font-bold text-white text-lg">{value}</div>
+        </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  {/* Main content */}
+  <div className="container mx-auto px-4 md:px-8 py-16 max-w-3xl">
+
+    {/* Local context */}
+    <section className="mb-12">
+      <p className="font-body text-lg leading-relaxed mb-4" style={{ color: '#1A2E35' }}>
+        I worked for Cruise Whitsundays, so this one I know from the inside. The Camira is their
+        flagship day tour — and in my view, the best single-day experience available out of Airlie
+        Beach for visitors who want to actually see the Whitsundays rather than just float in it.
+      </p>
+      <p className="font-body text-lg leading-relaxed" style={{ color: '#1A2E35' }}>
+        The reason I recommend it without hesitation is the itinerary. In one day you get Hill
+        Inlet at its best, a long stretch of Whitehaven Beach, a proper snorkel on a fringing reef,
+        and a sailing return past the southern islands. That&apos;s not a sampler — that&apos;s the
+        full picture. Most day tours do one or two of those things. Camira does all of them, and
+        does them well.
+      </p>
+    </section>
+
+    {/* The day */}
+    <section className="mb-12">
+      <h2 className="font-heading text-3xl font-bold mb-6" style={{ color: '#1A2E35' }}>
+        What the day looks like
+      </h2>
+      <div className="space-y-4 font-body text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+        <p>
+          You board in Airlie Beach early — departure is around 7:30am — and the first destination
+          is Hill Inlet Lookout. The hike to the top is short but steep, with some large, uneven
+          steps on the path. It takes most people around 15–20 minutes. When you get to the top,
+          you&apos;re looking down at the swirling silica sand meeting the turquoise water below —
+          one of the genuinely extraordinary natural sights in Australia. The light is at its best
+          in the morning, before it flattens out, so the early start earns its keep.
+        </p>
+        <p>
+          From there you come back down to the beach itself. Whitehaven is 7 kilometres of the
+          whitest sand you&apos;ll find anywhere — and because of that length, even on a busy day
+          it doesn&apos;t feel crowded. You get a proper stretch of time here, not a rushed stop.
+        </p>
+        <p>
+          The afternoon moves to a fringing reef for snorkelling. Gear and stinger suits (in season)
+          are provided. The reef here is accessible directly from the boat — no long swim out. If
+          you haven&apos;t snorkelled before, the crew are straightforward and helpful about it.
+        </p>
+        <p>
+          The return to Airlie is under sail where conditions allow, passing the southern islands
+          as the light starts to drop. You&apos;re back by around 7pm.
+        </p>
+        <p>
+          Morning tea, a BBQ lunch, afternoon tea, and drinks including beer and wine from 11am
+          are all included. You don&apos;t need to think about food or drink for the day.
+        </p>
+      </div>
+    </section>
+
+    {/* What to know */}
+    <section className="mb-12">
+      <h2 className="font-heading text-3xl font-bold mb-6" style={{ color: '#1A2E35' }}>
+        What to know before you book
+      </h2>
+      <div className="rounded-2xl overflow-hidden border" style={{ borderColor: '#D1E8E8' }}>
+        {[
+        {
+        label: 'Included',
+        value: 'Morning tea, BBQ lunch, afternoon tea, beer and wine from 11am, snorkel gear, stinger suits in season.',
+        },
+        {
+        label: 'Not included',
+        value: 'Nothing essential is missing. Some people bring extra cash for additional drinks, but it\'s not
+        necessary.',
+        },
+        {
+        label: 'The boat',
+        value: 'An 85-foot purple catamaran — one of the fastest commercial sailing catamarans in the world, capable of
+        30 knots. Up to 60 guests per departure.',
+        },
+        {
+        label: 'Best time to go',
+        value: 'May to September. The trade winds are consistent, the weather is reliable, and water clarity is at its
+        best. The tour runs year-round.',
+        },
+        {
+        label: 'Booking lead time',
+        value: 'At least 4–6 weeks ahead in peak season. The Camira fills early and the better departure dates go
+        first.',
+        },
+        ].map(({ label, value }, i, arr) => (
+        <div key={label} className={`flex gap-6 px-6 py-5 ${i < arr.length - 1 ? 'border-b' : '' }`} style={{
+          borderColor: '#D1E8E8' , backgroundColor: i % 2===0 ? '#fff' : '#F4FAFA' }}>
+          <div className="font-heading font-bold text-sm w-32 shrink-0 pt-0.5" style={{ color: '#0B6E72' }}>
+            {label}
+          </div>
+          <p className="font-body text-sm leading-relaxed" style={{ color: '#1A2E35' }}>
+            {value}
+          </p>
+        </div>
+        ))}
+      </div>
+    </section>
+
+    {/* Who it suits */}
+    <section className="mb-12">
+      <h2 className="font-heading text-3xl font-bold mb-6" style={{ color: '#1A2E35' }}>
+        Who this suits — and who it doesn&apos;t
+      </h2>
+      <div className="space-y-4 font-body text-base leading-relaxed" style={{ color: '#1A2E35' }}>
+        <p>
+          Camira is the right choice for couples, families with older children, or independent
+          travellers who want a full, well-run day that covers the real highlights without having
+          to plan each stop themselves. The itinerary is structured but not rushed — there&apos;s
+          time to actually be in each place, not just photograph it and move on.
+        </p>
+        <p>
+          It&apos;s not the right fit if you have limited mobility or can&apos;t manage a short
+          steep climb with uneven steps — the Hill Inlet lookout track requires a basic level of
+          fitness and there&apos;s no accessible alternative path. The lookout portion can be
+          skipped, but it&apos;s genuinely the centrepiece of the day.
+        </p>
+        <p>
+          It&apos;s also not ideal if what you&apos;re after is a slow, quiet, unstructured day
+          on the beach. Camira has pace and a schedule. That&apos;s a feature, not a flaw — but
+          it&apos;s worth knowing going in.
+        </p>
+      </div>
+    </section>
+
+    {/* Affiliate disclosure + CTA */}
+    <section>
+      <div className="rounded-2xl p-8 border" style={{ backgroundColor: '#fff' , borderColor: '#D1E8E8' }}>
+        <h2 className="font-heading text-2xl font-bold mb-4" style={{ color: '#1A2E35' }}>
+          Ready to book?
+        </h2>
+        <p className="font-body text-base leading-relaxed mb-6" style={{ color: '#1A2E35' }}>
+          The Camira is listed on Viator with current pricing and availability. It&apos;s where
+          I&apos;d send you — the booking process is straightforward and pricing is kept up to date.
+        </p>
+
+        href="#"
+        className="inline-block px-8 py-3 rounded-lg font-heading font-bold text-sm tracking-wide transition-opacity
+        hover:opacity-80"
+        style={{ backgroundColor: '#0B6E72', color: '#fff' }}
+        >
+        Check availability on Viator →
+        </a>
+        <p className="font-body text-xs mt-6 leading-relaxed" style={{ color: '#1A2E35' , opacity: 0.5 }}>
+          Some links on this page are affiliate links. If you book through them, I earn a small
+          commission at no extra cost to you. I only recommend experiences I genuinely believe
+          are worth your time and money.{' '}
+          <Link href="/affiliate-disclosure" className="underline hover:opacity-70" style={{ color: '#0B6E72' }}>
+          Full disclosure here.
+          </Link>
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  {/* Bottom CTA */}
+  <div style={{ backgroundColor: '#0B6E72' }} className="py-16">
+    <div className="container mx-auto px-4 text-center max-w-2xl">
+      <h2 className="font-heading text-3xl font-bold text-white mb-4">
+        Exploring your options?
+      </h2>
+      <p className="font-body mb-8" style={{ color: 'rgba(255,255,255,0.75)' }}>
+        See how Camira compares to other Whitehaven Beach day tours.
+      </p>
+      <div className="flex gap-4 justify-center flex-wrap">
+        <Link href="/tours/whitehaven-beach-tours"
+          className="px-8 py-3 rounded-lg font-heading font-bold text-sm tracking-wide transition-opacity hover:opacity-80"
+          style={{ backgroundColor: '#E07B39' , color: '#fff' }}>
+        Compare All Day Tours
+        </Link>
+        <Link href="/whitehaven-beach"
+          className="px-8 py-3 rounded-lg font-heading font-bold text-sm tracking-wide transition-opacity hover:opacity-80"
+          style={{ backgroundColor: 'rgba(255,255,255,0.12)' , color: '#fff' ,
+          border: '1px solid rgba(255,255,255,0.25)' , }}>
+        Whitehaven Beach Guide
+        </Link>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</div>
+);
+}
