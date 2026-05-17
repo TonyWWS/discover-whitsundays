@@ -488,7 +488,7 @@ export default function WhereToStayPage() {
 
             <div className="text-center">
               <Link
-                href="/tours/overnight-sailing"
+                href="/things-to-do/overnight-sailing"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-heading font-bold text-sm tracking-wide transition-opacity hover:opacity-80 min-h-[44px]"
                 style={{ backgroundColor: '#0B6E72', color: '#fff' }}
               >

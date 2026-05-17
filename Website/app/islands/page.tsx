@@ -100,7 +100,7 @@ const islands = [
     ],
     tip: "The northern end of Whitehaven Beach is usually quieter than the southern. The sand is 98% pure silica — so fine it doesn't retain heat and squeaks when you walk on it. Reef-safe sunscreen is a Marine Park requirement, not a suggestion.",
     links: [
-      { href: '/tours/whitehaven-beach-tours', label: 'Book a Whitehaven Tour', primary: true },
+      { href: '/whitehaven-beach/whitehaven-beach-tours', label: 'Book a Whitehaven Tour', primary: true },
       { href: '/whitehaven-beach', label: 'Complete Beach Guide', primary: false },
     ],
   },
@@ -380,7 +380,7 @@ export default function IslandsPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/tours/bareboating-and-private-charters" className="inline-block mt-4 font-semibold hover:underline min-h-[44px] flex items-center" style={{ color: '#0B6E72' }}>
+                <Link href="/things-to-do/bareboating-and-private-charters" className="inline-block mt-4 font-semibold hover:underline min-h-[44px] flex items-center" style={{ color: '#0B6E72' }}>
                   Learn about bareboating &#8594;
                 </Link>
               </div>

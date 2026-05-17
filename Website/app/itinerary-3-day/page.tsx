@@ -658,7 +658,7 @@ export default function ThreeDayItineraryPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/tours/whitehaven-beach-tours"
+                href="/whitehaven-beach/whitehaven-beach-tours"
                 className="px-8 py-4 rounded-xl font-heading font-bold text-lg transition-all duration-300 shadow-xl min-h-[44px] flex items-center justify-center"
                 style={{ backgroundColor: '#E07B39', color: '#fff' }}
               >
