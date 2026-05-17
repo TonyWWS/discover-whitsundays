@@ -109,12 +109,8 @@ export default function ThingsToDoPage() {
         <div className="border-b" style={{ borderColor: '#D1E8E8', backgroundColor: '#fff' }}>
           <div className="container mx-auto px-4 md:px-8 py-10 max-w-3xl">
             <p className="font-body text-base md:text-lg leading-relaxed" style={{ color: '#1A2E35' }}>
-              Seven years here and I&apos;ll be straight with you: the Whitsundays is primarily a
-              water destination. If you&apos;re not into being on or in the ocean, it&apos;s worth
-              knowing that upfront. If you are, there&apos;s a lot to choose from &mdash; and the
-              quality gap between operators is significant. I&apos;ve broken it into five areas. If
-              you have a specific question, the turtle in the bottom right corner knows everything
-              I know.
+              I've lived here for almost a decade, and I knew from the get-go, this place is all about the water. If you'd rather admire the big blue from a distance, pack a good book and find  a decent cocktail list. If  sea spray is your thing, there's a lot to choose from , and  knowing which operators are worth your time makes a real difference. I've broken it into five areas.
+
             </p>
           </div>
         </div>
@@ -185,10 +181,10 @@ export default function ThingsToDoPage() {
                             style={i === 0
                               ? { backgroundColor: cat.accentColor, color: '#fff' }
                               : {
-                                  border: `2px solid ${cat.accentColor}`,
-                                  color: cat.accentColor,
-                                  backgroundColor: 'transparent',
-                                }
+                                border: `2px solid ${cat.accentColor}`,
+                                color: cat.accentColor,
+                                backgroundColor: 'transparent',
+                              }
                             }
                           >
                             {link.label}

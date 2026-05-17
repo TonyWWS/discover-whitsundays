@@ -120,7 +120,7 @@ export default function Home() {
           <div className="container mx-auto px-4 md:px-8 py-10 max-w-3xl text-center">
             <p className="font-body text-base md:text-lg leading-relaxed" style={{ color: '#1A2E35' }}>
               I&apos;m Tony. Like many before me, I visited Airlie Beach for a holiday and never left &mdash;
-              that was seven years ago. I&apos;ve picked up a few things about the Whitsundays in that time,
+              that was almost a decade ago. I&apos;ve picked up a few things about the Whitsundays in that time,
               and it felt like time to share them. Because if you&apos;ve made it this far, you deserve to
               get the best out of it.
             </p>
