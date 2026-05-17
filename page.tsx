@@ -1,82 +1,29 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Image from 'next/image';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 export const metadata = {
-  title: 'Things to Do in the Whitsundays | Discover Whitsundays',
-  description: "What's worth your time in the Whitsundays — honest recommendations from an Airlie Beach local across sailing, scenic flights, bareboating, and island visits.",
+  title: 'Bareboating & Private Charters in the Whitsundays | Discover Whitsundays',
+  description: 'Hire your own yacht or book a skippered private charter in the Whitsundays. Full guide coming soon — covering operators, costs, and what to expect.',
   openGraph: {
-    title: 'Things to Do in the Whitsundays | Discover Whitsundays',
-    description: "What's worth your time in the Whitsundays — honest recommendations from an Airlie Beach local.",
-    url: 'https://discoverwhitsundays.com/things-to-do',
+    title: 'Bareboating & Private Charters in the Whitsundays | Discover Whitsundays',
+    description: 'Hire your own yacht or book a skippered private charter in the Whitsundays.',
+    url: 'https://discoverwhitsundays.com/things-to-do/bareboating-and-private-charters',
     siteName: 'Discover Whitsundays',
-    images: [{ url: '/images/things-to-do-hero.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/images/things-to-do-bareboat.jpg', width: 1200, height: 630 }],
     locale: 'en_AU',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Things to Do in the Whitsundays | Discover Whitsundays',
-    description: "What's worth your time in the Whitsundays.",
-    images: ['/images/things-to-do-hero.jpg'],
+    title: 'Bareboating & Private Charters in the Whitsundays | Discover Whitsundays',
+    description: 'Hire your own yacht or book a skippered private charter in the Whitsundays.',
+    images: ['/images/things-to-do-bareboat.jpg'],
   },
 };
 
-const categories = [
-  {
-    title: 'On the Water',
-    description: 'Sailing, snorkelling, diving, day trips, and overnight adventures. The core Whitsundays experience — and where the quality gap between operators matters most.',
-    image: '/images/things-to-do-water.jpg',
-    imageAlt: 'Sailing catamaran on the Whitsunday Passage with islands in the background',
-    accentColor: '#0B6E72',
-    links: [
-      { label: 'Whitehaven Beach day trips', href: '/whitehaven-beach/whitehaven-beach-tours' },
-      { label: 'Overnight sailing', href: '/things-to-do/overnight-sailing' },
-    ],
-  },
-  {
-    title: 'From Above',
-    description: "Scenic flights, helicopters, and seaplanes. The aerial perspective changes how you understand the Whitsundays — the scale of the reef, the swirl of Hill Inlet, the sheer number of islands. Worth knowing what you're paying for before you book.",
-    image: '/images/things-to-do-flights.jpg',
-    imageAlt: 'Aerial view of Hill Inlet and Whitehaven Beach swirling sands from a scenic flight',
-    accentColor: '#E07B39',
-    links: [
-      { label: 'Scenic flights guide', href: '/things-to-do/scenic-flights' },
-    ],
-  },
-  {
-    title: 'Further Out',
-    description: "Bareboating, private charters, and island camping. This is the Whitsundays at its least curated — you pick the anchorage, you set the pace. Takes more planning than a day trip, and it's worth it.",
-    image: '/images/things-to-do-bareboat.jpg',
-    imageAlt: 'Yacht anchored in a secluded bay in the Whitsunday Islands national park',
-    accentColor: '#0B6E72',
-    links: [
-      { label: 'Bareboating & charters guide', href: '/things-to-do/bareboating-and-private-charters' },
-    ],
-  },
-  {
-    title: 'On the Islands',
-    description: "74 islands — most of them untouched national park, a handful worth staying on. Hamilton has the resort amenities, Daydream suits families, Whitsunday Island is the one most people have seen in photos without knowing its name.",
-    image: '/images/things-to-do-islands.jpg',
-    imageAlt: 'Tropical island with clear turquoise water in the Whitsundays national park',
-    accentColor: '#E07B39',
-    links: [
-      { label: 'Island guide', href: '/islands' },
-    ],
-  },
-  {
-    title: 'On the Mainland',
-    description: "Most people come for the water — and they should. But the mainland has things worth your time: Conway National Park rainforest, Cedar Creek Falls, and the coastal lookouts most visitors drive past without stopping. Driftwood Tours is the operator to know here — small groups, accredited guide, and genuine local knowledge.",
-    image: '/images/things-to-do-mainland.jpg',
-    imageAlt: 'Cedar Creek Falls waterfall in Conway National Park near Airlie Beach',
-    accentColor: '#0B6E72',
-    links: [],
-    comingSoon: 'Mainland tours guide — coming soon',
-  },
-];
-
-export default function ThingsToDoPage() {
+export default function BareboatPrivateChartersPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#F4FAFA' }}>
       <Navbar />
@@ -86,169 +33,209 @@ export default function ThingsToDoPage() {
         {/* Hero */}
         <div className="relative h-[380px] md:h-[500px] overflow-hidden">
           <Image
-            src="/images/things-to-do-hero.jpg"
-            alt="Overhead view of jetboating in turquoise waters"
+            src="/images/things-to-do-bareboat.jpg"
+            alt="Yacht anchored in a secluded bay in the Whitsunday Islands national park"
             fill
             style={{ objectFit: 'cover' }}
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1A2E35]/50 via-[#1A2E35]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1A2E35]/60 via-[#1A2E35]/40 to-transparent" />
           <div className="relative z-10 container mx-auto px-4 md:px-8 h-full flex items-center">
             <div className="max-w-2xl text-white">
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-2xl">
-                Things to Do
+                Bareboating & Private Charters
               </h1>
               <p className="font-body text-lg md:text-xl text-white/90 drop-shadow-lg">
-                The Whitsundays is a playground for all things aquatic &mdash; and a few things
-                that aren&apos;t. Here&apos;s what&apos;s worth your time.
+                The Whitsundays at your own pace — 74 islands, your choice of anchorage,
+                no schedule.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Editorial intro */}
+        {/* Coming soon notice */}
         <div className="border-b" style={{ borderColor: '#D1E8E8', backgroundColor: '#fff' }}>
           <div className="container mx-auto px-4 md:px-8 py-10 max-w-3xl">
+            <div
+              className="inline-block px-3 py-1 rounded-lg font-heading font-bold text-xs tracking-widest uppercase mb-6 text-white"
+              style={{ backgroundColor: '#E07B39' }}
+            >
+              Guide coming soon
+            </div>
             <p className="font-body text-base md:text-lg leading-relaxed" style={{ color: '#1A2E35' }}>
-              I&apos;ve lived here for almost a decade, and I knew from the get-go — this place is all about the water. If you&apos;d rather admire the big blue from a distance, pack a good book and find a decent cocktail list. If sea spray is your thing, there&apos;s a lot to choose from, and knowing which operators are worth your time makes a real difference. I&apos;ve broken it into five areas.
+              Bareboating is the Whitsundays at its most unfiltered — you pick the route,
+              you pick the anchorage, you set the pace. It takes more planning than a day
+              trip, and it&apos;s worth it. A full guide covering operators, costs, licence
+              requirements, and what to expect is in progress. In the meantime, the overview
+              below covers the essentials.
             </p>
           </div>
         </div>
 
-        {/* Five category cards */}
+        {/* What is bareboating */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4 md:px-8 max-w-4xl">
-            <div className="space-y-8">
-              {categories.map((cat, index) => (
-                <article
-                  key={cat.title}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm border"
-                  style={{ borderColor: '#D1E8E8' }}
+            <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8" style={{ color: '#1A2E35' }}>
+              Bareboat vs skippered charter
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div
+                className="bg-white rounded-2xl p-6 md:p-8 border-t-4 shadow-sm"
+                style={{ borderColor: '#0B6E72', borderLeftColor: '#D1E8E8', borderRightColor: '#D1E8E8', borderBottomColor: '#D1E8E8', borderLeftWidth: '1px', borderRightWidth: '1px', borderBottomWidth: '1px' }}
+              >
+                <div
+                  className="inline-block px-3 py-1 rounded-lg font-heading font-bold text-xs tracking-widest uppercase mb-4 text-white"
+                  style={{ backgroundColor: '#0B6E72' }}
                 >
-                  <div className="md:grid md:grid-cols-5">
-
-                    {/* Image */}
-                    <div
-                      className={`relative h-52 md:h-auto md:col-span-2 ${index % 2 === 1 ? 'md:order-2' : ''}`}
-                    >
-                      <Image
-                        src={cat.image}
-                        alt={cat.imageAlt}
-                        fill
-                        style={{ objectFit: 'cover' }}
-                        loading="lazy"
-                      />
-                      <div
-                        className="absolute bottom-0 left-0 right-0 h-1 hidden md:block"
-                        style={{ backgroundColor: cat.accentColor }}
-                        aria-hidden="true"
-                      />
+                  Bareboat
+                </div>
+                <h3 className="font-heading text-xl font-bold mb-3" style={{ color: '#1A2E35' }}>
+                  You skipper, you decide
+                </h3>
+                <p className="font-body text-sm leading-relaxed mb-4" style={{ color: '#4A5C61' }}>
+                  You hire the yacht and sail it yourself. No crew, no guide, no fixed itinerary.
+                  You need a recognised sailing qualification or to pass a competency assessment
+                  with the charter company. The Whitsundays is one of the best-charted bareboat
+                  destinations in the world — protected waters, reliable anchorages, and well-marked
+                  passages.
+                </p>
+                <div className="space-y-2">
+                  {[
+                    'Sailing qualification or competency assessment required',
+                    'Full flexibility — anchor where you like',
+                    'Typically 5–7 days minimum for a proper trip',
+                    'From approximately $800–1,500/day for the vessel',
+                  ].map((point) => (
+                    <div key={point} className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: '#0B6E72' }} aria-hidden="true" />
+                      <span className="font-body text-sm" style={{ color: '#1A2E35' }}>{point}</span>
                     </div>
+                  ))}
+                </div>
+              </div>
 
-                    {/* Content */}
-                    <div
-                      className={`p-6 md:p-8 md:col-span-3 flex flex-col justify-between ${index % 2 === 1 ? 'md:order-1' : ''}`}
-                    >
-                      <div>
-                        <div
-                          className="inline-block px-3 py-1 rounded-lg font-heading font-bold text-xs tracking-widest uppercase mb-4 text-white"
-                          style={{ backgroundColor: cat.accentColor }}
-                        >
-                          {cat.title}
-                        </div>
-
-                        <h2
-                          className="font-heading text-2xl md:text-3xl font-bold mb-3"
-                          style={{ color: '#1A2E35' }}
-                        >
-                          {cat.title}
-                        </h2>
-
-                        <p
-                          className="font-body text-sm md:text-base leading-relaxed mb-6"
-                          style={{ color: '#4A5C61' }}
-                        >
-                          {cat.description}
-                        </p>
-                      </div>
-
-                      <div className="flex flex-col sm:flex-row flex-wrap gap-3">
-                        {cat.links.map((link, i) => (
-                          <Link
-                            key={link.href}
-                            href={link.href}
-                            className="px-5 py-3 rounded-lg font-heading font-bold text-sm tracking-wide transition-opacity hover:opacity-80 min-h-[44px] flex items-center justify-center text-center"
-                            style={i === 0
-                              ? { backgroundColor: cat.accentColor, color: '#fff' }
-                              : {
-                                border: `2px solid ${cat.accentColor}`,
-                                color: cat.accentColor,
-                                backgroundColor: 'transparent',
-                              }
-                            }
-                          >
-                            {link.label}
-                          </Link>
-                        ))}
-                        {'comingSoon' in cat && cat.comingSoon && (
-                          <span
-                            className="px-5 py-3 rounded-lg font-body text-sm min-h-[44px] flex items-center"
-                            style={{ color: '#4A5C61', backgroundColor: '#F4FAFA', border: '1px dashed #D1E8E8' }}
-                          >
-                            {cat.comingSoon}
-                          </span>
-                        )}
-                      </div>
+              <div
+                className="bg-white rounded-2xl p-6 md:p-8 border-t-4 shadow-sm"
+                style={{ borderColor: '#E07B39', borderLeftColor: '#D1E8E8', borderRightColor: '#D1E8E8', borderBottomColor: '#D1E8E8', borderLeftWidth: '1px', borderRightWidth: '1px', borderBottomWidth: '1px' }}
+              >
+                <div
+                  className="inline-block px-3 py-1 rounded-lg font-heading font-bold text-xs tracking-widest uppercase mb-4 text-white"
+                  style={{ backgroundColor: '#E07B39' }}
+                >
+                  Skippered charter
+                </div>
+                <h3 className="font-heading text-xl font-bold mb-3" style={{ color: '#1A2E35' }}>
+                  Private boat, professional skipper
+                </h3>
+                <p className="font-body text-sm leading-relaxed mb-4" style={{ color: '#4A5C61' }}>
+                  You hire the boat and a skipper comes with it. No sailing experience needed —
+                  you just bring your group and enjoy the ride. The skipper handles navigation
+                  and anchoring while you decide where you want to go. The most accessible
+                  private charter option for non-sailors.
+                </p>
+                <div className="space-y-2">
+                  {[
+                    'No sailing experience required',
+                    'Skipper handles all navigation',
+                    'Available for half-day, full-day, or multi-day',
+                    'From approximately $1,200–2,500/day including skipper',
+                  ].map((point) => (
+                    <div key={point} className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: '#E07B39' }} aria-hidden="true" />
+                      <span className="font-body text-sm" style={{ color: '#1A2E35' }}>{point}</span>
                     </div>
-
-                  </div>
-                </article>
-              ))}
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Turtle nudge */}
-        <div
-          className="border-t border-b"
-          style={{ borderColor: '#D1E8E8', backgroundColor: '#fff' }}
-        >
-          <div className="container mx-auto px-4 md:px-8 py-10 max-w-3xl text-center">
-            <p className="font-body text-base leading-relaxed" style={{ color: '#1A2E35' }}>
-              Not sure what suits you? The turtle in the bottom right corner can answer specific
-              questions &mdash; tell it how long you&apos;re here, who you&apos;re travelling with,
-              and what you&apos;re into. It knows everything I know about this place.
-            </p>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="py-16 md:py-20" style={{ backgroundColor: '#0B6E72' }}>
-          <div className="container mx-auto px-4 md:px-8 text-center max-w-2xl">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
-              Need help planning the whole trip?
+        {/* Who it suits */}
+        <section className="py-12 md:py-16 border-t" style={{ borderColor: '#D1E8E8', backgroundColor: '#fff' }}>
+          <div className="container mx-auto px-4 md:px-8 max-w-4xl">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8" style={{ color: '#1A2E35' }}>
+              Is this right for you?
             </h2>
-            <p className="font-body text-lg mb-8" style={{ color: 'rgba(255,255,255,0.8)' }}>
-              Three days, done properly.
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="p-6 rounded-xl border-l-4" style={{ backgroundColor: '#E8F4F5', borderColor: '#0B6E72' }}>
+                <h3 className="font-heading font-bold text-base mb-3" style={{ color: '#1A2E35' }}>
+                  Good fit if you...
+                </h3>
+                <div className="space-y-2">
+                  {[
+                    'Want complete flexibility over your itinerary',
+                    'Have 5+ days in the Whitsundays',
+                    'Are travelling in a group of 4–8 people',
+                    'Have sailing experience (bareboat) or don\'t mind paying for a skipper',
+                    'Want to reach anchorages the tour boats never visit',
+                  ].map((point) => (
+                    <div key={point} className="flex items-start gap-2">
+                      <span style={{ color: '#0B6E72' }} aria-hidden="true">&#10003;</span>
+                      <span className="font-body text-sm" style={{ color: '#1A2E35' }}>{point}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="p-6 rounded-xl border-l-4" style={{ backgroundColor: '#F5F0E8', borderColor: '#E07B39' }}>
+                <h3 className="font-heading font-bold text-base mb-3" style={{ color: '#1A2E35' }}>
+                  Probably not if you...
+                </h3>
+                <div className="space-y-2">
+                  {[
+                    'Only have 2–3 days — overnight sailing is better value',
+                    'Are travelling solo or as a couple on a budget',
+                    'Want the social atmosphere of a group sailing trip',
+                    'Haven\'t sailed before and don\'t want a skippered charter',
+                    'Are primarily focused on Whitehaven Beach — a day tour is sufficient',
+                  ].map((point) => (
+                    <div key={point} className="flex items-start gap-2">
+                      <span style={{ color: '#E07B39' }} aria-hidden="true">&#10007;</span>
+                      <span className="font-body text-sm" style={{ color: '#1A2E35' }}>{point}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Full guide coming soon */}
+        <section className="py-12 md:py-16 border-t" style={{ borderColor: '#D1E8E8', backgroundColor: '#F4FAFA' }}>
+          <div className="container mx-auto px-4 md:px-8 max-w-3xl text-center">
+            <div
+              className="inline-block px-3 py-1 rounded-lg font-heading font-bold text-xs tracking-widest uppercase mb-6"
+              style={{ backgroundColor: '#E8F4F5', color: '#0B6E72' }}
+            >
+              In progress
+            </div>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4" style={{ color: '#1A2E35' }}>
+              Full guide coming soon
+            </h2>
+            <p className="font-body text-base leading-relaxed mb-8" style={{ color: '#4A5C61' }}>
+              The complete bareboating guide — covering specific operators, licence requirements,
+              provisioning, recommended anchorages, and honest cost breakdowns — is in progress.
+              In the meantime, the overnight sailing guide covers the most accessible way to
+              experience the islands from the water.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/itinerary-3-day"
-                className="px-8 py-4 rounded-xl font-heading font-bold text-lg transition-all duration-300 shadow-xl min-h-[44px] flex items-center justify-center"
-                style={{ backgroundColor: '#E07B39', color: '#fff' }}
+                href="/things-to-do/overnight-sailing"
+                className="px-8 py-4 rounded-xl font-heading font-bold text-base transition-all duration-300 shadow-sm min-h-[44px] flex items-center justify-center"
+                style={{ backgroundColor: '#0B6E72', color: '#fff' }}
               >
-                Read the Itinerary
+                Overnight sailing guide
               </Link>
               <Link
-                href="/where-to-stay"
-                className="px-8 py-4 rounded-xl font-heading font-bold text-lg transition-all duration-300 shadow-xl min-h-[44px] flex items-center justify-center"
-                style={{ backgroundColor: '#fff', color: '#0B6E72' }}
+                href="/things-to-do"
+                className="px-8 py-4 rounded-xl font-heading font-bold text-base transition-all duration-300 min-h-[44px] flex items-center justify-center"
+                style={{ border: '2px solid #0B6E72', color: '#0B6E72', backgroundColor: 'transparent' }}
               >
-                Find Accommodation
+                All things to do
               </Link>
             </div>
           </div>
-        </div>
+        </section>
 
       </main>
 
