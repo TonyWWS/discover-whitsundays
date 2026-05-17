@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: 'Overnight Sailing in the Whitsundays | Discover Whitsundays',
     description: 'Wake up at Whitehaven before the crowds. Honest guide to choosing the right vessel.',
-    url: 'https://discoverwhitsundays.com/tours/overnight-sailing',
+    url: 'https://discoverwhitsundays.com/things-to-do/overnight-sailing',
     siteName: 'Discover Whitsundays',
     images: [{ url: '/images/overnight-sailing-hero.jpg', width: 1200, height: 630 }],
     locale: 'en_AU',
@@ -29,20 +29,22 @@ const tiers = [
     subtitle: 'Ages 18–35 — social, high-energy, great value',
     accentColor: '#E07B39',
     bg: '#F5F0E8',
+    gradientFrom: '#1A2E35',
+    gradientTo: '#E07B39',
     priceRange: 'From $755 per person — 2 days, 2 nights',
     description: 'The most popular overnight sailing category in the Whitsundays, and the most reviewed. Large vessels, big groups, BYO alcohol, waterslides, scuba diving add-ons, and an atmosphere designed around meeting people. The crew handles everything — you just show up and have fun. Genuinely excellent value when you factor in all meals, snorkelling gear, and accommodation.',
     whoFor: 'Solo travellers on the east coast circuit, groups of friends, couples who want a social atmosphere. Not the right pick if you want quiet anchorages and small numbers.',
     worthNoting: 'Atlantic Clipper is the most reviewed boat in the Whitsundays by a significant margin — 54 passengers, 111 feet, 3 levels, waterslides, heated spa. If you\'re 18–35 and want the experience everyone on the east coast talks about, this is it. New Horizon (same operator, True Blue Sailing) is smaller and slightly more laid-back if 54 people sounds like too many.',
     vessels: ['Atlantic Clipper — 54 guests, True Blue Sailing', 'New Horizon — smaller, same company, more relaxed', 'OzSail vessels (Spank Me, Avatar trimaran, Mandrake)'],
     bookingNote: 'Book direct with True Blue Sailing or OzSail for best pricing. Both have real-time availability online.',
-    image: '/images/overnight-sailing-social.jpg',
-    imageAlt: 'Atlantic Clipper sailing through the Whitsunday Passage with guests on deck',
   },
   {
     title: 'Small group, mixed ages',
     subtitle: 'Adults of all ages — relaxed, sociable, genuine sailing',
     accentColor: '#0B6E72',
     bg: '#E8F4F5',
+    gradientFrom: '#0B6E72',
+    gradientTo: '#1A2E35',
     priceRange: 'From $780 per person — 2 days, 2 nights',
     description: 'The sweet spot for most visitors. Small enough to feel personal — usually 10 to 16 guests — big enough to be sociable. All meals included, genuine sailing rather than motorised cruising, snorkelling at reef sites the big boats don\'t reach, and a crew that actually knows your name by day two. This tier covers a wide range of vessels at different price points.',
     whoFor: 'Couples, groups of friends, solo travellers over 30, anyone who wants the overnight sailing experience without the party boat atmosphere. Also the best option for anyone short on time — Summertime does a 2D1N trip for those with limited days.',
@@ -55,14 +57,14 @@ const tiers = [
       'Prima — 12 guests, traditional monohull, family-friendly',
     ],
     bookingNote: 'Explore Whitsundays (explorewhitsundays.com) represents the broadest fleet in this category and has been operating since 1985. Good starting point for comparing available vessels and dates.',
-    image: '/images/overnight-sailing-small-group.jpg',
-    imageAlt: 'Small group sailing catamaran anchored in a secluded bay in the Whitsunday Islands',
   },
   {
     title: 'Luxury and couples',
     subtitle: 'Private cabins, ensuites, 8 guests maximum',
     accentColor: '#1A2E35',
     bg: '#F4FAFA',
+    gradientFrom: '#1A2E35',
+    gradientTo: '#0B6E72',
     priceRange: 'From $1,200 per person — 2 days, 2 nights',
     description: 'A fundamentally different experience. Maximum 8 guests, all private air-conditioned cabins with ensuites, a two-person crew who double as your hosts and chefs, and access to anchorages and coves the larger vessels can\'t reach. You\'re essentially chartering a luxury yacht with a skipper — without needing to organise a private charter yourself. The per-person cost is higher but the experience is in a different league.',
     whoFor: 'Couples celebrating something. Small groups of friends who want privacy. Anyone for whom the quality of sleep, food, and experience matters more than the social atmosphere. Also genuinely the best option for a honeymoon in the Whitsundays.',
@@ -72,8 +74,6 @@ const tiers = [
       'Whitsunday Getaway — 8 guests, private ensuites, luxury catamaran',
     ],
     bookingNote: 'Book as far ahead as possible — peak season (Jun–Aug) books out months in advance for vessels at this level. Explore Whitsundays represents both vessels.',
-    image: '/images/overnight-sailing-luxury.jpg',
-    imageAlt: 'Luxury sailing catamaran at sunset in a secluded Whitsunday Islands anchorage',
   },
 ];
 
@@ -215,20 +215,17 @@ export default function OvernightSailingPage() {
                   className="bg-white rounded-2xl overflow-hidden shadow-sm border"
                   style={{ borderColor: '#D1E8E8' }}
                 >
-                  {/* Image */}
-                  <div className="relative h-52 md:h-64">
-                    <Image
-                      src={tier.image}
-                      alt={tier.imageAlt}
-                      fill
-                      style={{ objectFit: 'cover' }}
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1A2E35]/10 to-[#1A2E35]/80" />
-                    <div className="absolute bottom-0 left-0 p-5 md:p-6">
+                  {/* Gradient header — replaces image until photography is sourced */}
+                  <div
+                    className="relative h-52 md:h-64 flex items-end"
+                    style={{
+                      background: `linear-gradient(135deg, ${tier.gradientFrom} 0%, ${tier.gradientTo} 100%)`,
+                    }}
+                  >
+                    <div className="p-5 md:p-6">
                       <div
                         className="inline-block px-3 py-1 rounded-lg font-heading font-bold text-xs tracking-widest uppercase mb-2 text-white"
-                        style={{ backgroundColor: tier.accentColor }}
+                        style={{ backgroundColor: 'rgba(255,255,255,0.2)' }}
                       >
                         {tier.title}
                       </div>
@@ -292,11 +289,11 @@ export default function OvernightSailingPage() {
                     {/* Worth noting */}
                     <div
                       className="rounded-lg px-5 py-4 border-l-2"
-                      style={{ backgroundColor: '#F5F0E8', borderColor: '#E07B39' }}
+                      style={{ backgroundColor: tier.bg, borderColor: tier.accentColor }}
                     >
                       <div
                         className="text-xs font-heading font-bold tracking-widest uppercase mb-1.5"
-                        style={{ color: '#E07B39' }}
+                        style={{ color: tier.accentColor }}
                       >
                         Worth noting
                       </div>
@@ -306,20 +303,9 @@ export default function OvernightSailingPage() {
                     </div>
 
                     {/* Booking note */}
-                    <div
-                      className="rounded-lg px-5 py-4"
-                      style={{ backgroundColor: '#F4FAFA', border: '1px solid #D1E8E8' }}
-                    >
-                      <div
-                        className="text-xs font-heading font-bold tracking-widest uppercase mb-1.5"
-                        style={{ color: '#0B6E72' }}
-                      >
-                        Where to book
-                      </div>
-                      <p className="font-body text-sm leading-relaxed" style={{ color: '#1A2E35' }}>
-                        {tier.bookingNote}
-                      </p>
-                    </div>
+                    <p className="font-body text-xs" style={{ color: '#4A5C61' }}>
+                      <span className="font-bold">Booking:</span> {tier.bookingNote}
+                    </p>
 
                   </div>
                 </article>
@@ -328,92 +314,25 @@ export default function OvernightSailingPage() {
           </div>
         </section>
 
-        {/* Booking agent section */}
-        <section className="py-12 md:py-16 border-t" style={{ borderColor: '#D1E8E8', backgroundColor: '#fff' }}>
-          <div className="container mx-auto px-4 md:px-8 max-w-4xl">
-            <h2
-              className="font-heading text-2xl md:text-3xl font-bold mb-4"
-              style={{ color: '#1A2E35' }}
-            >
-              Where to compare and book
-            </h2>
-            <p className="font-body text-sm mb-8" style={{ color: '#4A5C61' }}>
-              With 50+ vessels in the market, booking through a reputable local agent is
-              the most efficient way to compare availability, pricing, and fit.
-            </p>
-            <div className="grid md:grid-cols-2 gap-5">
-              <div className="bg-white p-6 rounded-xl border-l-4" style={{ borderColor: '#0B6E72', borderTopColor: '#D1E8E8', borderRightColor: '#D1E8E8', borderBottomColor: '#D1E8E8', borderTopWidth: '1px', borderRightWidth: '1px', borderBottomWidth: '1px' }}>
-                <h3 className="font-heading font-bold text-base mb-2" style={{ color: '#1A2E35' }}>
-                  Explore Whitsundays
-                </h3>
-                <p className="font-body text-sm leading-relaxed mb-4" style={{ color: '#1A2E35' }}>
-                  Operating since 1985 — the longest continually running tour operator
-                  in the Whitsundays. Represents the largest and most diverse fleet,
-                  from budget backpacker vessels through to luxury catamarans. Direct
-                  agent relationship, real-time availability, covers all price tiers.
-                </p>
-                <a
-                  href="https://explorewhitsundays.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-lg font-heading font-bold text-sm transition-opacity hover:opacity-80 min-h-[44px]"
-                  style={{ backgroundColor: '#0B6E72', color: '#fff' }}
-                >
-                  Browse Explore Whitsundays &#8594;
-                </a>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl border-l-4" style={{ borderColor: '#E07B39', borderTopColor: '#D1E8E8', borderRightColor: '#D1E8E8', borderBottomColor: '#D1E8E8', borderTopWidth: '1px', borderRightWidth: '1px', borderBottomWidth: '1px' }}>
-                <h3 className="font-heading font-bold text-base mb-2" style={{ color: '#1A2E35' }}>
-                  Sailing Whitsundays
-                </h3>
-                <p className="font-body text-sm leading-relaxed mb-4" style={{ color: '#1A2E35' }}>
-                  Airlie Beach-based travel agency with a wide range of overnight vessels,
-                  day and overnight tour deals, and a local team available seven days a week.
-                  Good for comparing last-minute deals and special pricing across multiple vessels.
-                </p>
-                <a
-                  href="https://sailing-whitsundays.com/tours/overnight-tour-deals"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-lg font-heading font-bold text-sm transition-opacity hover:opacity-80 min-h-[44px]"
-                  style={{ backgroundColor: '#E07B39', color: '#fff' }}
-                >
-                  Browse Sailing Whitsundays &#8594;
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Practical tips */}
+        {/* What to bring */}
         <section className="py-12 md:py-16 border-t" style={{ borderColor: '#D1E8E8', backgroundColor: '#F4FAFA' }}>
           <div className="container mx-auto px-4 md:px-8 max-w-4xl">
             <h2
               className="font-heading text-2xl md:text-3xl font-bold mb-8"
               style={{ color: '#1A2E35' }}
             >
-              Before you book
+              What to bring
             </h2>
-            <div className="grid md:grid-cols-3 gap-4 md:gap-5">
+            <div className="grid md:grid-cols-2 gap-5">
               {[
                 {
-                  title: 'When to book',
+                  title: 'Pack this',
                   accent: '#0B6E72',
                   tips: [
-                    'Peak season (Jun–Aug): 4–8 weeks ahead minimum for luxury vessels, 2–3 weeks for larger boats',
-                    'Shoulder (Apr–May, Sep–Nov): 1–2 weeks usually fine',
-                    'Wet season (Dec–Mar): often available short notice — best prices',
-                    'Luxury vessels (8 guests) book out months ahead in peak season',
-                  ],
-                },
-                {
-                  title: 'What to pack',
-                  accent: '#E07B39',
-                  tips: [
-                    'Soft bag only — no hard-case luggage or wheelie bags',
-                    'Swimwear, light clothing, hat, reef-safe sunscreen',
-                    'Warm layer for winter evenings on deck',
+                    'Soft bag only — no hard case luggage or wheelie bags',
+                    'Swimwear and light clothing for warm days',
+                    'Warm layer for winter evenings on the water',
+                    'Hat, sunglasses, reef-safe sunscreen (Marine Park requirement)',
                     'Seasickness medication — take the night before, not on the boat',
                     'Camera, BYO alcohol (cans only on most vessels)',
                   ],
