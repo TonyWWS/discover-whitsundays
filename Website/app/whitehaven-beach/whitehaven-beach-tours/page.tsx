@@ -44,7 +44,7 @@ const operators = [
     whoFor: "Couples and adults who want the classic Whitsundays sailing experience with comfort. If someone pictures a cold beer on a sailing boat with 74 islands sliding past — this is the tour.",
     worthNoting: 'Beach time is around 1.5 hours — significantly less than ZigZag. Worth flagging to anyone whose main goal is beach time. The trade-off is the sailing experience itself, which is genuinely the point of this one.',
     website: 'https://www.cruisewhitsundays.com/experiences/camira-sailing-adventure/',
-    deepLink: null,',
+    deepLink: null,
   },
   {
     name: 'Whitehaven Xpress',
