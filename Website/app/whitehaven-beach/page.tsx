@@ -68,7 +68,7 @@ const accessOptions = [
       { label: 'Includes', value: 'Lunch, snorkel gear, guided walk' },
       { label: 'Best for', value: 'Most visitors, first-timers' },
     ],
-    link: { href: '/whitehaven-beach/tours', label: 'View day tours', primary: true },
+    link: { href: '/whitehaven-beach/whitehaven-beach-tours', label: 'View day tours', primary: true },
   },
   {
     title: 'Scenic flights',
@@ -644,7 +644,7 @@ export default function WhitehavenBeachPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/whitehaven-beach/tours"
+                href="/whitehaven-beach/whitehaven-beach-tours"
                 className="px-8 py-4 rounded-xl font-heading font-bold text-lg transition-all duration-300 shadow-xl min-h-[44px] flex items-center justify-center"
                 style={{ backgroundColor: '#E07B39', color: '#fff' }}
               >

@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Navbar from '../../../components/Navbar';
-import Footer from '../../../components/Footer';
+import Navbar from '../../../../components/Navbar';
+import Footer from '../../../../components/Footer';
 
 export const metadata = {
 title: 'Camira Sailing Adventure | Discover Whitsundays',
@@ -10,7 +10,7 @@ openGraph: {
 title: 'Camira Sailing Adventure | Discover Whitsundays',
 description: 'A full day on the Whitsundays aboard the Camira — Hill Inlet, Whitehaven Beach, snorkelling, and
 all-inclusive food and drinks.',
-url: 'https://discoverwhitsundays.com/things-to-do/camira-sailing-adventure',
+url: 'https://discoverwhitsundays.com/whitehaven-beach/whitehaven-beach-tours/guides/camira-sailing-adventure',
 siteName: 'Discover Whitsundays',
 images: [{ url: '/images/camira-sailing.jpg', width: 1200, height: 630 }],
 locale: 'en_AU',
@@ -239,7 +239,7 @@ return (
         See how Camira compares to other Whitehaven Beach day tours.
       </p>
       <div className="flex gap-4 justify-center flex-wrap">
-        <Link href="/tours/whitehaven-beach-tours"
+        <Link href="/whitehaven-beach/whitehaven-beach-tours"
           className="px-8 py-3 rounded-lg font-heading font-bold text-sm tracking-wide transition-opacity hover:opacity-80"
           style={{ backgroundColor: '#E07B39' , color: '#fff' }}>
         Compare All Day Tours
