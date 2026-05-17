@@ -37,7 +37,7 @@ const categories = [
   },
   {
     title: 'From Above',
-    description: 'Scenic flights, helicopters, and seaplanes. The aerial perspective changes how you understand the Whitsundays — the scale of the reef, the swirl of Hill Inlet, the sheer number of islands. Worth knowing what you\'re paying for before you book.',
+    description: "Scenic flights, helicopters, and seaplanes. The aerial perspective changes how you understand the Whitsundays — the scale of the reef, the swirl of Hill Inlet, the sheer number of islands. Worth knowing what you're paying for before you book.",
     image: '/images/things-to-do-flights.jpg',
     imageAlt: 'Aerial view of Hill Inlet and Whitehaven Beach swirling sands from a scenic flight',
     accentColor: '#E07B39',
@@ -47,16 +47,17 @@ const categories = [
   },
   {
     title: 'Further Out',
-    description: 'Bareboating, private charters, and island camping. This is the Whitsundays at its least curated — you pick the anchorage, you set the pace. Takes more planning than a day trip, and it\'s worth it.',
+    description: "Bareboating, private charters, and island camping. This is the Whitsundays at its least curated — you pick the anchorage, you set the pace. Takes more planning than a day trip, and it's worth it.",
     image: '/images/things-to-do-bareboat.jpg',
     imageAlt: 'Yacht anchored in a secluded bay in the Whitsunday Islands national park',
     accentColor: '#0B6E72',
-    links: [],
-    comingSoon: 'Bareboating & charters guide — coming soon',
+    links: [
+      { label: 'Bareboating & charters guide', href: '/things-to-do/bareboating-and-private-charters' },
+    ],
   },
   {
     title: 'On the Islands',
-    description: '74 islands — most of them untouched national park, a handful worth staying on. Hamilton has the resort amenities, Daydream suits families, Whitsunday Island is the one most people have seen in photos without knowing its name.',
+    description: "74 islands — most of them untouched national park, a handful worth staying on. Hamilton has the resort amenities, Daydream suits families, Whitsunday Island is the one most people have seen in photos without knowing its name.",
     image: '/images/things-to-do-islands.jpg',
     imageAlt: 'Tropical island with clear turquoise water in the Whitsundays national park',
     accentColor: '#E07B39',
@@ -66,7 +67,7 @@ const categories = [
   },
   {
     title: 'On the Mainland',
-    description: 'Most people come for the water — and they should. But the mainland has things worth your time: Conway National Park rainforest, Cedar Creek Falls, and the coastal lookouts most visitors drive past without stopping. Driftwood Tours is the operator to know here — small groups, accredited guide, and genuine local knowledge.',
+    description: "Most people come for the water — and they should. But the mainland has things worth your time: Conway National Park rainforest, Cedar Creek Falls, and the coastal lookouts most visitors drive past without stopping. Driftwood Tours is the operator to know here — small groups, accredited guide, and genuine local knowledge.",
     image: '/images/things-to-do-mainland.jpg',
     imageAlt: 'Cedar Creek Falls waterfall in Conway National Park near Airlie Beach',
     accentColor: '#0B6E72',
@@ -86,7 +87,7 @@ export default function ThingsToDoPage() {
         <div className="relative h-[380px] md:h-[500px] overflow-hidden">
           <Image
             src="/images/things-to-do-hero.jpg"
-            alt="Overhead view of jetboatin turquoise waters"
+            alt="Overhead view of jetboating in turquoise waters"
             fill
             style={{ objectFit: 'cover' }}
             priority
@@ -109,8 +110,7 @@ export default function ThingsToDoPage() {
         <div className="border-b" style={{ borderColor: '#D1E8E8', backgroundColor: '#fff' }}>
           <div className="container mx-auto px-4 md:px-8 py-10 max-w-3xl">
             <p className="font-body text-base md:text-lg leading-relaxed" style={{ color: '#1A2E35' }}>
-              I've lived here for almost a decade, and I knew from the get-go, this place is all about the water. If you'd rather admire the big blue from a distance, pack a good book and find  a decent cocktail list. If  sea spray is your thing, there's a lot to choose from , and  knowing which operators are worth your time makes a real difference. I've broken it into five areas.
-
+              I&apos;ve lived here for almost a decade, and I knew from the get-go — this place is all about the water. If you&apos;d rather admire the big blue from a distance, pack a good book and find a decent cocktail list. If sea spray is your thing, there&apos;s a lot to choose from, and knowing which operators are worth your time makes a real difference. I&apos;ve broken it into five areas.
             </p>
           </div>
         </div>
