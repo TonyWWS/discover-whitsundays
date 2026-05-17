@@ -31,8 +31,8 @@ const categories = [
     imageAlt: 'Sailing catamaran on the Whitsunday Passage with islands in the background',
     accentColor: '#0B6E72',
     links: [
-      { label: 'Whitehaven Beach day trips', href: '/tours/whitehaven-beach-tours' },
-      { label: 'Overnight sailing', href: '/tours/overnight-sailing' },
+      { label: 'Whitehaven Beach day trips', href: '/whitehaven-beach/whitehaven-beach-tours' },
+      { label: 'Overnight sailing', href: '/things-to-do/overnight-sailing' },
     ],
   },
   {
@@ -42,7 +42,7 @@ const categories = [
     imageAlt: 'Aerial view of Hill Inlet and Whitehaven Beach swirling sands from a scenic flight',
     accentColor: '#E07B39',
     links: [
-      { label: 'Scenic flights guide', href: '/tours/scenic-flights' },
+      { label: 'Scenic flights guide', href: '/things-to-do/scenic-flights' },
     ],
   },
   {
@@ -86,7 +86,7 @@ export default function ThingsToDoPage() {
         <div className="relative h-[380px] md:h-[500px] overflow-hidden">
           <Image
             src="/images/things-to-do-hero.jpg"
-            alt="Sailing boats on the Whitsunday Passage at sunset"
+            alt="Overhead view of jetboatin turquoise waters"
             fill
             style={{ objectFit: 'cover' }}
             priority
