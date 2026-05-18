@@ -55,7 +55,7 @@ export default function AboutTonyPage() {
                     src="/images/about-tony-hillinlet.jpg"
                     alt="Tony at Hill Inlet lookout, Whitsunday Island — the view that keeps locals coming back"
                     fill
-                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                    style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
                     priority
                   />
                 </div>
@@ -79,30 +79,31 @@ export default function AboutTonyPage() {
                   className="font-body text-base leading-relaxed"
                   style={{ color: '#1A2E35' }}
                 >
-                  I moved to Airlie Beach seven years ago and never really left. It&apos;s that
-                  kind of place. Before that I spent over 20 years working in hospitality and
-                  retail — a decade of that in professional kitchens — which gave me a fairly
-                  clear sense of what separates a good experience from a great one.
+                  I moved to Airlie Beach in 2019 and like so many before me, never really left. It's
+                  that kind of place. Before that I spent over 20 years working in hospitality and retail,
+                  everything from cheffing to selling motor vehicles, which gave me a clear sense of what
+                  separates a good experience from a great one.
                 </p>
                 <p
                   className="font-body text-base leading-relaxed"
                   style={{ color: '#1A2E35' }}
                 >
-                  Living here means I watch visitors navigate the Whitsundays every day. Most
-                  of them have done some research but are still not sure which tour to book,
-                  when to go, or how to make the most of limited time. The information that
-                  actually helps — which operator is worth it, what the conditions are really
-                  like in March, which anchorage the overnight boats reach that day tours
-                  don&apos;t — that&apos;s local knowledge, not something you find easily online.
+                  Living here means I watch visitors navigate the Whitsundays every day. Most have done
+                  some research, but the number of booking agents on the main street suggests plenty are
+                  still figuring out how to make the most of limited time. The information that actually
+                  tips the scales is local knowledge: which operator is worth it, what conditions are
+                  really like in March, which anchorage the overnight boats reach that day tours don't.
+                  That's not something you find easily online
                 </p>
                 <p
                   className="font-body text-base leading-relaxed"
                   style={{ color: '#1A2E35' }}
                 >
-                  I completed a Certificate III in IT through TAFE Queensland and used those
-                  skills to build this — a guide to the Whitsundays written by someone who
-                  actually lives here, based on genuine experience rather than aggregated
+                  I completed a Certificate III in IT through TAFE Queensland, and somewhere in the middle
+                  of it, Discover Whitsundays started to make sense. A guide to the Whitsundays written
+                  by someone who actually lives here, based on genuine experience rather than aggregated
                   reviews and sponsored content.
+
                 </p>
               </div>
             </div>
